@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 from uncertainties import ufloat, unumpy
 import numpy as np
-from scipy.optimize import curve_fit
+from scipy import odr
 import ufloat
 """
 Functions separate_uncertainties
@@ -16,19 +16,17 @@ def separate_uncertainties(uarray : unumpy.uarray):
     error=unumpy.std_devs(uarray)
     return (nominal,error)
 ### Functions for data fitting
-def calculate_theta(time,Temperature_mean, amplitude, period, phase_shift):
+def calculate_theta(params, time):
     """
-    Calculates the temperature variation at position 'x' and time 't'.
+    Calculates the temperature variation at position 'x' and time 't' for ODR.
+    Parameters are first, then independent variable.
     
     Parameters:
-    t   : Time (in seconds).
-    A   : Initial amplitude at the heat source (x=0).
-    m   : Attenuation coefficient (how fast the heat wave shrinks).
-    tau : Period of the wave (your 540 seconds).
-    h   : Phase shift parameter.
+    params : [Temperature_mean, amplitude, period, phase_shift]
+    time   : Time (in seconds).
     """
+    Temperature_mean, amplitude, period, phase_shift = params
     theta = Temperature_mean + amplitude * np.cos((2 * np.pi / period) * time - phase_shift)
-    
     return theta
 """
 Fixed parameters for the plot
@@ -82,25 +80,27 @@ plt.show()
 """
 3.Fitting the data
 """
-# Initial guess for the parameters for theta1: Temperature_mean, amplitude, period, phase_shift
-initial_guess_theta1 = [theta1_mean, theta1_amplitude_estimate, 540, 0.01]  # You can adjust these values based on your data
-# Fit the curve to theta1 data
-popt_theta1, pcov_theta1 = curve_fit(calculate_theta, tiempo_nominal, theta1_nominal, p0=initial_guess_theta1)
-# Extract the fitted parameters for theta1
-A_fit_theta1, amp_fit_theta1, tau_fit_theta1, phase_theta1 = popt_theta1
-# Extract the errors from the covariance matrix for theta1
-perr_theta1 = np.sqrt(np.diag(pcov_theta1))
-A_err_theta1, amp_err_theta1, tau_err_theta1, phase_err_theta1 = perr_theta1
+# Initial guess for theta1
+initial_guess_theta1 = [theta1_mean, theta1_amplitude_estimate, 540, 0.01]
+# Create ODR model and fit for theta1, considering errors in both variables
+model_theta1 = odr.Model(calculate_theta)
+data_theta1 = odr.RealData(tiempo_nominal, theta1_nominal, sx=tiempo_error, sy=theta1_error)
+odr_fit_theta1 = odr.ODR(data_theta1, model_theta1, beta0=initial_guess_theta1)
+odr_result_theta1 = odr_fit_theta1.run()
+# Extract the fitted parameters and their errors for theta1
+A_fit_theta1, amp_fit_theta1, tau_fit_theta1, phase_theta1 = odr_result_theta1.beta
+A_err_theta1, amp_err_theta1, tau_err_theta1, phase_err_theta1 = odr_result_theta1.sd_beta
 
-# Initial guess for the parameters for theta2: Temperature_mean, amplitude, period, phase_shift
-initial_guess_theta2 = [theta2_mean, theta2_amplitude_estimate, 540, 0.01]  # You can adjust these values based on your data
-# Fit the curve to theta2 data
-popt_theta2, pcov_theta2 = curve_fit(calculate_theta, tiempo_nominal, theta2_nominal, p0=initial_guess_theta2)
-# Extract the fitted parameters for theta2
-A_fit_theta2, amp_fit_theta2, tau_fit_theta2, phase_theta2 = popt_theta2
-# Extract the errors from the covariance matrix for theta2
-perr_theta2 = np.sqrt(np.diag(pcov_theta2))
-A_err_theta2, amp_err_theta2, tau_err_theta2, phase_err_theta2 = perr_theta2
+# Initial guess for theta2
+initial_guess_theta2 = [theta2_mean, theta2_amplitude_estimate, 540, 0.01]
+# Create ODR model and fit for theta2, considering errors in both variables
+model_theta2 = odr.Model(calculate_theta)
+data_theta2 = odr.RealData(tiempo_nominal, theta2_nominal, sx=tiempo_error, sy=theta2_error)
+odr_fit_theta2 = odr.ODR(data_theta2, model_theta2, beta0=initial_guess_theta2)
+odr_result_theta2 = odr_fit_theta2.run()
+# Extract the fitted parameters and their errors for theta2
+A_fit_theta2, amp_fit_theta2, tau_fit_theta2, phase_theta2 = odr_result_theta2.beta
+A_err_theta2, amp_err_theta2, tau_err_theta2, phase_err_theta2 = odr_result_theta2.sd_beta
 
 # Print fitted parameters with their errors for theta1
 print("\n=== Fitted Parameters for θ₁ ===")
