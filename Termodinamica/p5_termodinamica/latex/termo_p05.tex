@@ -1,0 +1,87 @@
+%====================================================%
+% Termodinámica                                      %
+% Práctica 05                                        %
+% Bomba de calor                                     %
+%====================================================%
+
+% Datos de la práctica (no modificar)
+\def\numeroPractica{5}              % Número de práctica
+\def\tituloPractica{Bomba de calor} % Título de la práctica
+
+% Datos a modificar por el alumnado
+\def\fechaPractica{dd/mm/aaaa} % Fecha de realización de la práctica
+\def\fechaEntrega{dd/mm/aaaa}  % Fecha de entrega del informe
+
+% Generar título automáticamente
+\maketitle
+
+% Resultados
+\section{Resultados}
+
+\subsection{Evolución de la temperatura en función del tiempo}
+
+Representa gráficamente la temperatura $(T)$ en función del tiempo $(t)$ para cada recipiente. Describe el fenómeno observado.
+
+\subsection{Eficiencia de la bomba de calor}
+
+A partir de los datos de temperatura $(T)$, tiempo $(t)$ y potencia suministrada $(P)$, calcula la eficiencia $(\varepsilon)$ o coeficiente de operación (COP) de la bomba de calor en función del tiempo. Explica las ecuaciones y los datos utilizados para realizar todos los cálculos.
+
+\subsection{Eficiencia experimental y eficiencia ideal}
+
+Representa, en una misma gráfica, la eficiencia experimental de la bomba de calor en función de la diferencia de temperaturas $(\Delta T)$, y la eficiencia que se obtendría si se tratase de un ciclo ideal de Carnot. Discute los resultados.
+
+% Esta práctica no contiene cuestiones
+
+% Conclusiones
+\section{Conclusiones}
+
+Resume brevemente en qué ha consistido la práctica, describe los aspectos más relevantes de la misma y reflexiona sobre los principales resultados obtenidos. El contenido de esta sección no debe superar las 300 palabras.
+
+% Anexos
+\section{Anexos}
+
+\subsection{Tablas de datos}
+
+Añade tantas subsecciones y tablas adicionales como consideres necesarias, incluyendo todos los datos que consideres que aportan información valiosa.
+
+\newpage % Este comando no hará falta cuando empecéis a rellenar la plantilla.
+
+\subsubsection{Temperatura de cada foco y potencia suministrada en función del tiempo}
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{c|c|c|c}
+     $t\ (\pm ...\text{ u})$ & $T_{F}\ (\pm ...\text{ u})$ & $T_{C}\ (\pm ...\text{ u})$ & $P\ (\pm ...\text{ u})$ \\
+    \hline
+    ... & ... & ... & ... \\
+    \hline
+    \end{tabular}
+    \caption{Introduce un pie de tabla descriptivo.}
+    \label{tab:t-T-P}
+\end{table}
+
+\subsubsection{Cálculo de las eficiencias experimental e ideal en función de la diferencia de temperatura}
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c}
+    $T_{C} - T_{F}\ (\pm ...\text{ u})$ & $Q_{F}\ (\pm ...\text{ u})$ & $Q_{C}\ (\pm ...\text{ u})$ & $W\ (\pm ...\text{ u})$ & COP & $\varepsilon_{\text{Carnot}}$ \\
+    \hline
+    ... & $...\pm...$ & $...\pm...$ & $...\pm...$ & $...\pm...$ & $...\pm...$ \\
+    \hline
+    \end{tabular}
+    \caption{Introduce un pie de tabla descriptivo.}
+    \label{tab:T-eficiencias}
+\end{table}
+
+\subsection{Incertidumbres}
+
+Discute qué tipos de incertidumbre posee cada magnitud medida y cómo se ha calculado, mencionando en cada caso si se trata de una medida directa o indirecta. Para las medidas indirectas, indica explícitamente el resultado analítico de las derivadas parciales necesarias para calcular la propagación cuadrática de errores.
+
+\subsection{Ajuste lineal de los datos}
+
+Si en el desarrollo de la práctica has tenido que realizar ajuste lineal de los datos, indica en cada caso qué datos se han ajustado. Identifica cada magnitud en la ecuación de la recta y discute qué valores has obtenido a partir del ajuste. Por último, discute la bondad de cada ajuste realizado.
+
+% Referencias
+% Incluye las referencias bibliográficas en el archivo referencias.bib
+\printbibliography

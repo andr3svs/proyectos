@@ -1,0 +1,128 @@
+
+% PREAMBLE
+%===============================%
+\documentclass[a4paper,11pt]{article}
+% Imported packages
+\usepackage[a4paper,top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry} % To control page margins
+\usepackage[utf8]{inputenc} % Characters
+\usepackage[spanish]{babel} % Spanish language
+\usepackage{csquotes} % Package recommended if using babel
+\usepackage{float}
+\usepackage{amsmath} % Required to write mathematical formulas
+\usepackage{graphicx} % Required to include graphics
+\usepackage{hyperref} % To manage links and hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=cyan,
+    citecolor=magenta,
+    pdftitle={Laboratory report},
+    }
+% Added subcaption package for figure mosaics
+\usepackage{subcaption} 
+% Added siunitx for proper unit formatting (good practice)
+\usepackage{siunitx}
+
+% References
+\usepackage[style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib} 
+
+% Document data
+\def\numeroPractica{12}                                    % Número de práctica
+\def\tituloPractica{Ondas térmicas en una barra metálica}  % Título de la práctica
+\def\authorName{Tu Nombre}                                 % Nombre del autor
+\def\groupNumber{Tu Grupo}                                 % Número del grupo
+\def\fechaPractica{dd/mm/aaaa}                             % Fecha de realización de la práctica
+\def\fechaEntrega{dd/mm/aaaa}                              % Fecha de entrega del informe
+
+\title{Práctica \numeroPractica: \tituloPractica}
+\author{\authorName \\ Group \groupNumber}
+\date{Sesión de Laboratorio: \fechaPractica \\ Entrega del informe: \fechaEntrega}
+
+%===============================%
+% DOCUMENT
+%===============================%
+\begin{document}
+
+%-------------------------------%
+% Document title
+\maketitle
+
+%-------------------------------%
+% Abstract
+\begin{abstract}
+[Descripción breve del experimento, objetivos y resultados principales.]
+\end{abstract}
+
+\tableofcontents
+\newpage
+%====================================================%
+% [Nombre del Tema]                                  %
+% Práctica \numeroPractica                           %
+% \tituloPractica                                    %
+%====================================================%
+
+% Resultados
+\section{Resultados}
+
+\subsection{Onda estacionaria}
+
+Realiza la gráfica de $\theta_1$ y $\theta_2$ en función del tiempo cuando se haya alcanzado el estado estacionario. Determina sobre esta gráfica las amplitudes, frecuencia y desfase entre ambas ondas.
+
+\subsection{Conductividad térmica}
+
+Halla los valores de $m$ y $h$ y calcula con ellos $K$ y $\lambda$. Compara el valor de la conductividad térmica $K$ obtenido con el tabulado para el aluminio.
+
+% Cuestiones
+\section{Cuestiones}
+
+\textbf{Pregunta 1:} ¿Depende el resultado obtenido de las unidades en las que se miden las amplitudes de las dos ondas? ¿Por qué?
+
+Justifica tu respuesta. Incluye las referencias de las fuentes de información que hayas utilizado.
+
+\textbf{Pregunta 2:} El dispositivo de medida dispone de un ventilador en uno de los extremos. ¿Cuál es el objetivo del mismo? ¿Qué ocurriría si no estuviera colocado?
+
+Justifica tu respuesta. Incluye las referencias de las fuentes de información que hayas utilizado.
+
+% Conclusiones
+\section{Conclusiones}
+
+Resume brevemente en qué ha consistido la práctica, describe los aspectos más relevantes de la misma y reflexiona sobre los principales resultados obtenidos. El contenido de esta sección no debe superar las 300 palabras.
+
+% Anexos
+\appendix
+
+\section{Anexos}
+
+\subsection{Tablas de datos}
+
+Añade tantas subsecciones y tablas adicionales como consideres necesarias, incluyendo todos los datos que consideres que aportan información valiosa.
+
+\subsubsection{Onda estacionaria}
+Medidas de $\theta_1$ y $\theta_2$ en función del tiempo en el estado estacionario. Incluye \textbf{un único periodo} de la onda para evitar una tabla excesivamente larga.
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{c|c|c}
+    $t\ (\pm ...\text{ u})$ & $\theta_1\ (\pm ...\text{ u})$ & $\theta_2\ (\pm ...\text{ u})$\\
+    \hline
+    ... & ... & ... \\
+    \hline
+    \end{tabular}
+    \caption{Introduce un pie de tabla descriptivo.}
+    \label{tab:R-T}
+\end{table}
+
+\subsection{Incertidumbres}
+
+Discute qué tipos de incertidumbre posee cada magnitud medida y cómo se ha calculado, mencionando en cada caso si se trata de una medida directa o indirecta. Para las medidas indirectas, indica explícitamente el resultado analítico de las derivadas parciales necesarias para calcular la propagación cuadrática de errores.
+
+\subsection{Ajuste lineal de los datos}
+
+Si en el desarrollo de la práctica has tenido que realizar ajuste lineal de los datos, indica en cada caso qué datos se han ajustado. Identifica cada magnitud en la ecuación de la recta y discute qué valores has obtenido a partir del ajuste. Por último, discute la bondad de cada ajuste realizado.
+
+% Referencias
+% Incluye las referencias bibliográficas en el archivo referencias.bib
+\printbibliography
+
+\end{document}
