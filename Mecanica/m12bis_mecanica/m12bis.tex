@@ -142,10 +142,32 @@ The results of the non-linear least squares fit are summarized in Table \ref{tab
 \end{table}
 
 \subsection{Potential Well Analysis (Pozo)}
-% GUIDELINE: Discuss the results obtained from files like '1pozo.txt' or '4pozo.txt'.
-% If you generated energy plots or phase space plots, include them here.
-The dynamics within the potential well were analyzed using the data from the \texttt{*pozo.txt} files. 
+In this section, we qualitatively analyze the six trajectories obtained by launching the sphere towards the attractive potential well. Unlike the case of the hill (repulsive), here the central force tends to attract the sphere towards the origin $(0,0)$. The recorded experimental trajectories are shown in Figure~\ref{fig:trayectorias_pozo}.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{trayectorias_experimentales_pozo.png}
+    \caption{Experimental trajectories around the attractive potential well (center of forces at $(0,0)$). Closed orbits (blue, orange, and green) and open orbits (brown, purple, and red) are observed depending on their initial energy.}
+    \label{fig:trayectorias_pozo}
+\end{figure}
+
+From the observation of Figure~\ref{fig:trayectorias_pozo}, we can individually classify the six trajectories based on the sphere's initial mechanical energy ($E$), ordering them from the most energetic to the least:
+
+\begin{itemize}
+    \item \textbf{Brown Trajectory (Open):} It presents the highest initial kinetic energy ($E > 0$). The sphere enters, undergoes a deflection as it passes through the attractive well, and quickly escapes to infinity. It is the equivalent of a celestial body with a hyperbolic trajectory that visits a star only once and does not return, such as a comet.
+
+    \item \textbf{Purple Trajectory (Open):} This one has an initial kinetic energy that is still large enough not to be trapped in the well and to deviate, although already making a slight curve in its turn due to the attraction of the well in question, which fails to capture it.
+
+    \item \textbf{Red Trajectory (Open):} It has less energy than the purple one, bordering the critical capture limit ($E \approx 0$). It manages to complete almost a full revolution around the center of forces due to the strong attraction, but it retains just enough energy to overcome the well and end up escaping. 
+
+    \item \textbf{Green Trajectory (Closed):} The sphere enters with a low enough energy ($E < 0$ relative to infinity) to be trapped. It forms an elliptical orbit that makes multiple revolutions. Precession, which is the rotation of the ellipse's axis, is clearly observed, caused by the gradual loss of energy due to rolling friction in the system used in the laboratory. 
+
+    \item \textbf{Orange Trajectory (Closed):} It is another bounded orbit where the sphere is strongly captured. It shows a very evident orbital decay as it loses speed and the well irremediably attracts it.
+
+    \item \textbf{Blue Trajectory (Closed):} It represents one of the lowest initial energy cases. The sphere barely manages to open its orbit after the first curve and quickly collapses towards the center of the potential well after completing its spiral path.
+\end{itemize}
+
+This visual analysis excellently demonstrates how the amount of initial mechanical energy and the dissipative effect of friction determine the transition between open orbits and closed orbits in a central attractive force field.
 \section{Discussion}
 % GUIDELINE: Interpret the results. Compare the experimental $\omega$ with the theoretical $\omega_0 = \sqrt{k/m}$.
 % Discuss sources of error (parallax, frame rate, friction modeling).
