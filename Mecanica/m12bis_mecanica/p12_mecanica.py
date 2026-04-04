@@ -110,6 +110,13 @@ data_16=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\1.
 data_17=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\1.7.txt", sep=',', header=None)
 data_18=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\1.8.txt", sep=',', header=None)
 data_19=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\1.9.txt", sep=',', header=None)
+#Data for the well
+data1pozo=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\1pozo.txt", sep=r'\s+', header=None,skiprows=1)
+data2pozo=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\2pozo.txt", sep=r'\s+', header=None,skiprows=1)
+data205pozo=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\2.05pozo.txt", sep=r'\s+', header=None,skiprows=1)
+data4pozo=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\4pozo.txt", sep=r'\s+', header=None,skiprows=1)
+data15pozo=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\1.5pozo.txt", sep=r'\s+', header=None,skiprows=1)
+data24pozo=pd.read_csv("C:\\Users\\Andres\\proyectos\\Mecanica\\m12bis_mecanica\\2.4pozo.txt", sep=r'\s+', header=None,skiprows=1)
 
 
 # The file has 6 cases with columns: t, x, y, v (repeated for each case)
@@ -129,6 +136,21 @@ x_18=data_18[0].values
 y_18=data_18[1].values
 x_19=data_19[0].values
 y_19=data_19[1].values
+#Extract data for the well
+x_1pozo=data1pozo[0].values
+y_1pozo=data1pozo[1].values
+x_2pozo=data2pozo[0].values
+y_2pozo=data2pozo[1].values
+x_205pozo=data205pozo[0].values
+y_205pozo=data205pozo[1].values
+x_4pozo=data4pozo[0].values
+y_4pozo=data4pozo[1].values
+x_15pozo=data15pozo[0].values
+y_15pozo=data15pozo[1].values
+x_24pozo=data24pozo[0].values
+y_24pozo=data24pozo[1].values
+
+
 
 
 ###Uncerainri
@@ -142,11 +164,6 @@ theta_19=np.radians(90+12.3)
 ###r_0
 r_0_exp=0.120e-2 #Distance of the center of the well to the center of forces, in m
 
-
-
-
-
-
 ### The uncertainties will be chosen artificially to chi reduced square=1, since the theory is already proven 
 
 """
@@ -159,12 +176,66 @@ theta_all = np.array([theta_14, theta_15, theta_16, theta_17, theta_18, theta_19
 # Las variables independientes en curve_fit para múltiples dimensiones se pasan juntas en una tupla
 X_data = (v_0_all, theta_all)
 
+
+
 # Variable dependiente. Asumiendo que b_exp (7.5 cm) fue el mismo para todos los tiros
+b_all = np.full(6, b_exp) 
+"""
+Fit - For each height, fit and calculate uncertainties
+"""
+# 2. Agrupar los datos de todos los experimentos en arreglos
+v_0_all = np.array([0.317, 0.329, 0.330, 0.339, 0.381, 0.392])
+theta_all = np.array([theta_14, theta_15, theta_16, theta_17, theta_18, theta_19])
+
+# Las variables independientes en curve_fit se pasan juntas
+X_data = (v_0_all, theta_all)
+
+# Variable dependiente constante
 b_all = np.full(6, b_exp) 
 
 # 3. Hacer el ajuste (curve_fit)
-popt_all, pcov_all = curve_fit(calculate_b, X_data, b_all, p0=[r_0_exp, 1e-5])
-print(f"Valores ajustados: r_0 = {popt_all[0]:.4f}, k = {popt_all[1]:.2e}")
+popt_all, pcov_all = curve_fit(calculate_b, X_data, b_all, p0=[r_0_exp, 1e-5],bounds=([0.0, -np.inf], [np.inf, np.inf]))
+r_0_fit, k_fit = popt_all
+
+print("--- RESULTADOS DEL AJUSTE ---")
+print(f"Valores ajustados: r_0 = {r_0_fit:.4e}, k = {k_fit:.4e}")
+
+# =======================================================
+# 4. ANÁLISIS DE ESTADÍSTICA, RESIDUOS Y CHI CUADRADO
+# =======================================================
+# Recalculamos los valores teóricos con los parámetros ajustados
+b_fit = calculate_b(X_data, r_0_fit, k_fit)
+residuos = b_all - b_fit
+dof = len(b_all) - len(popt_all) # Grados de libertad (N=6 - Params=2 = 4)
+
+# Suma de residuos al cuadrado (SSR)
+ssr = np.sum(residuos**2)
+print(f"\n--- ESTADÍSTICA DE BONDAD ---")
+print(f"Suma de los Residuos al Cuadrado (SSR): {ssr:.4e}")
+
+# Nota sobre Pearson
+# r_pearson = np.corrcoef(b_all, b_fit)[0,1]  <-- Esto daría NaN porque b_all es constante
+print("Coeficiente de Pearson: NaN (No aplicable porque la variable dependiente 'b' es una constante)")
+
+# 5. CÁLCULO DE LA INCERTIDUMBRE PARA VELOCIDAD Y THETA
+# Para encontrar un único número "err_x" tal que Chi_red^2 = 1, usamos propagación de error.
+# Primero, calculamos las derivadas parciales numéricas de 'b' respecto a 'v' y 'theta'
+delta = 1e-6
+db_dv = (calculate_b((v_0_all + delta, theta_all), r_0_fit, k_fit) - b_fit) / delta
+db_dtheta = (calculate_b((v_0_all, theta_all + delta), r_0_fit, k_fit) - b_fit) / delta
+
+# Aplicamos la condición: sum( residuos^2 / varianza_b_propagada ) / dof = 1
+# Sabiendo que: varianza_b_propagada = (db_dv^2 + db_dtheta^2) * err_x^2
+# Despejamos err_x:
+err_x = np.sqrt(np.sum(residuos**2 / (db_dv**2 + db_dtheta**2)) / dof)
+
+print(f"\n--- INCERTIDUMBRES ARTIFICIALES ---")
+print(f"Incertidumbre única requerida para Thetas y Velocidades (sigma): {err_x:.6f}")
+
+# Comprobación de que el Chi-cuadrado reducido ahora es 1
+varianza_b_propagada = (db_dv**2 + db_dtheta**2) * err_x**2
+chi2_red = np.sum(residuos**2 / varianza_b_propagada) / dof
+print(f"Comprobación de Chi-Cuadrado Reducido con esta sigma: {chi2_red:.2f}")
 """
 Plotting - Each curve in a separate figure
 """
@@ -193,7 +264,30 @@ plt.title('Trayectorias experimentales 2', fontsize=14)
 plt.legend()
 plt.grid(False)
 plt.show()
+# =======================================================
+# 6. PLOT DE LAS TRAYECTORIAS DEL POZO
+# =======================================================
+plt.figure(dpi=150)  # Ajusta los DPI para mejor resolución
 
+# Dibujamos cada trayectoria del pozo extraída de tus txt
+plt.errorbar(x_1pozo, y_1pozo, fmt='.-', label="h=1 cm", capsize=3, markersize=4)
+plt.errorbar(x_15pozo, y_15pozo, fmt='.-', label="h=1.5 cm", capsize=3, markersize=4)
+plt.errorbar(x_2pozo, y_2pozo, fmt='.-', label="h=2 cm", capsize=3, markersize=4)
+plt.errorbar(x_205pozo, y_205pozo, fmt='.-', label="h=2.05 cm", capsize=3, markersize=4)
+plt.errorbar(x_24pozo, y_24pozo, fmt='.-', label="h=2.4 cm", capsize=3, markersize=4)
+plt.errorbar(x_4pozo, y_4pozo, fmt='.-', label="h=4 cm", capsize=3, markersize=4)
+
+plt.xlabel('x (cm)', fontsize=12)
+plt.ylabel('y (cm)', fontsize=12)
+plt.title('Trayectorias experimentales - Pozo', fontsize=14)
+
+# Asegura que la escala X e Y sean iguales para que la trayectoria geométrica no se deforme
+plt.axis('equal') 
+
+# Colocamos la leyenda en la mejor posición automáticamente
+plt.legend(loc='best', fontsize=9)
+plt.grid(True, linestyle='--', alpha=0.5) # Un grid suave ayuda a ver la dispersión
+plt.show()
 
 
 print("Plotting completed!")
