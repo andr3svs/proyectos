@@ -250,7 +250,7 @@ plt.errorbar(x_16,y_16, fmt='.--', color="red",
 plt.errorbar(x_18,y_18,fmt='.--', color="blue",label="h=1.8 cm", capsize=3, markersize=4)
 plt.xlabel('x (cm)', fontsize=12)
 plt.ylabel('y (cm)', fontsize=12)
-plt.title('Trayectorias experimentales 1', fontsize=14)
+plt.title('Experimental Trajectories 1', fontsize=14)
 plt.legend()
 plt.grid(False)
 plt.show()
@@ -263,7 +263,7 @@ plt.errorbar(x_17,y_17, fmt='.--', color="red",
 plt.errorbar(x_19,y_19, fmt='.--', color="blue", label="h=1.9 cm", capsize=3, markersize=4)
 plt.xlabel('x (cm)', fontsize=12)
 plt.ylabel('y (cm)', fontsize=12)
-plt.title('Trayectorias experimentales 2', fontsize=14)
+plt.title('Experimental Trajectories 2', fontsize=14)
 plt.legend()
 plt.grid(False)
 plt.show()
@@ -283,14 +283,13 @@ plt.errorbar(x_4pozo, y_4pozo, fmt='.-', label="h=4 cm", capsize=3, markersize=4
 
 plt.xlabel('x (cm)', fontsize=12)
 plt.ylabel('y (cm)', fontsize=12)
-plt.title('Trayectorias experimentales - Pozo', fontsize=14)
+plt.title('Experimental Trajectories - Well', fontsize=14)
 
 # Asegura que la escala X e Y sean iguales para que la trayectoria geométrica no se deforme
 plt.axis('equal') 
 
 # Colocamos la leyenda en la mejor posición automáticamente
 plt.legend(loc='best', fontsize=9)
-plt.grid(True, linestyle='--', alpha=0.5) # Un grid suave ayuda a ver la dispersión
 plt.show()
 # =======================================================
 # 5.5 RE-AJUSTE PARA OBTENER INCERTIDUMBRES DE LOS PARÁMETROS

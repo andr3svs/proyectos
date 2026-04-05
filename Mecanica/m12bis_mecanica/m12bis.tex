@@ -47,7 +47,14 @@
 \maketitle
 
 \begin{abstract}
-    This experiment explores the mechanical analogue of Rutherford scattering using a projectile sphere interacting with a central potential. We analyze two distinct cases: a repulsive "hill" potential and an attractive "well" potential. By tracking trajectories with the software Tracker, we determine the interaction constant $k = \num{1.23(5)e-03} \unit{kg.m^3/s^2}$ and the offset $r_0 \approx 0$ of the center of forces. The results demonstrate a clear transition from scattering trajectories in the repulsive case to a variety of open and closed orbits in the attractive case, illustrating the effects of energy conservation and dissipative friction in a central force field.
+    This experiment explores the mechanical analogue of Rutherford scattering using a projectile sphere
+     interacting with a central potential. 
+     We analyze two distinct cases: a repulsive "hill" potential and an attractive "well" potential. 
+     By tracking trajectories with the software Tracker, using a non-linear regression based on rutherford model adjusted for offset of the center of forces
+     we determine the interaction constant and the offset $r_0$
+    the center of forces. The results demonstrate a clear transition from scattering trajectories in the
+    repulsive case to a variety of open and closed orbits in the attractive case,
+    illustrating the effects of energy conservation and dissipative friction in a central force field.
 \end{abstract}
 
 \tableofcontents
@@ -70,33 +77,51 @@ In the second part, we will discuss the behavior of the system when the projecti
 \begin{figure}[H]
   \centering
    \includegraphics[width=1\textwidth]{trayectorias_experimentales_1.png}
-  \caption{Set of experimental trayectories with even decimal values.}
+  \caption{Some of the experimental trajectories performed on the experiment, h represents the initial height of the ramp used to launch the ball, the axis were located in the center of forces and measures the distance of the ball to it}
   \label{fig:trajectory_1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
    \includegraphics[width=1\textwidth]{trayectorias_experimentales_2.png}
-   \caption{Experimental trajectories with odd decimal values.}
+   \caption{Some of the experimental trajectories performed on the experiment, h represents the initial height of the ramp used to launch the ball,  the axis were located in the center of forces and measures the distance of the ball to it.}
    \label{fig:trajectory_2}
  \end{figure}
 The center of the axis is placed in the effective center of forces, which is the point from which the trajectories appear to be deflected.
-We can observe that since the initial height and thus the velocity is increasided the deflection of the trajectories is reduced, having a less pronounced curve.
-% GEMINI: Tabla con los datos angulos y su incertidumbre, tb v_0 y su incertidumbre, tb b y su incertidumbre.
+We can observe that since the initial height and thus the velocity is increased the deflection of the trajectories is reduced, having a less pronounced curve.
+
+
+% Table with experimental data for scattering
 Although the data obtained from the experiment using the software Tracker is not perfect 
 (i.e., it contains a noticeable amount of noise),
- the introduction of uncertainties in the trajectories does not significantly affect the results of the fit.
+ the introduction of uncertainties in the trajectories does not  affect the results of the fit.
   For this reason, we have not included them in the visual analysis, as they would make the trajectories harder to distinguish
    in the plot; however, if they were to be considered, they would be approximately \SI{5}{\percent}.
-We obtained the followings angles of dispersion, being 180 degrees %GEMINI format 
-the retrodispersion case, i.e when the ball comes back in a straight line
-theta_14=np.radians(90+18.4)
-theta_15=np.radians(90+21.4)
-theta_16=np.radians(90+16)
-theta_17=np.radians(90+13.9)
-theta_18=np.radians(90+12.9)
-theta_19=np.radians(90+12.3)
-%GEMINI HAZ UNA TABLA CON ESTO   
+
+
+We obtained the following scattering angles, where \ang{180} corresponds to the retrodispersion case (i.e., when the ball returns in a straight line). The experimental data for each launching height is summarized in Table~\ref{tab:experimental_data}.
+The uncertainties for the scattering angles and the velocities represent the standard error of these variables, and they were estimated, using the sum of the residues, such that $\chi^2_{\text{reduced}} \approx 1$. 
+Since the theoretical model is well-established, this approach ensures a reasonable estimation of the uncertainties.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+        \toprule
+        $v_0$ (\unit{m/s}) & $\theta$ (\unit{\degree})  \\
+        \midrule
+         $0.317 \pm 0.029$ & $108.400 \pm 0.029$ \\
+         $0.329 \pm 0.029$ & $111.400 \pm 0.029$ \\
+        $0.330 \pm 0.029$ & $106.000 \pm 0.029$ \\
+        $0.339 \pm 0.029$ & $103.900 \pm 0.029$ \\
+        $0.381 \pm 0.029$ & $102.900 \pm 0.029$ \\ 
+        $0.392 \pm 0.029$ & $102.300 \pm 0.029$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{Experimental data for scattering angles, initial velocities at different launch heights, the uncertainties represent the standard error of the fit.}
+    \label{tab:experimental_data}
+\end{table}
+
+
 
 \subsubsection{Theoretical Model and Fitting Process}
 The experimental data was fitted to the following theoretical model:
@@ -108,36 +133,44 @@ Where $k$ is the interaction constant of the hill, $m$ is the mass of the sphere
 We have taken $b$ the distance from the initial to the center of forces, as 7.5 cm in all the cases.
 
 $\theta$ was measured as the angle between the initial trajectory of the sphere and its trajectory after the interaction with the hill. $r_0$ was initially estimated based on the apparent point of retrodispersion of the trajectories and then refined through the fitting process.
+As we statted on the previous part we got a $\chi^2_{\text{reduced}} = 1$. Note that this does not measure the goodness of the fit, instead in the following part we reason why this results are in fact accurate, by using visual methods.
 
 \subsubsection{Results Interpretation}
 
-We observe that the uncertainty of $r_0$ is several orders of magnitude larger than the value itself. This occurs because the fit was constrained to positive values of $r_0$. Since the fitted value is very close to zero, we can conclude that, within our error margin, the effective center coincides with the geometrical center.
 
-The theoretical model for the hill's curvature is given by $z = \frac{k}{r} - r_0$. Using our values for $k$ and $r_0$, the predicted height of the hill at $r = 1$ cm is approximately 11 cm. This is a reasonable value considering the laboratory setup. Minor discrepancies are expected due to rolling friction and surface irregularities (e.g., small bumps), but the result confirms that $k$ is in the correct order of magnitude.
+We begin this section by statting that the value of $r_0$ offers a great degree of insight regarding this experiments, what we have obtained
+is that, basically, if we take the model for granted taking the uncertainties to maximize the goodness of the fit, we obtain that we cannot measure the effective center of forces with our experimental resolution,
+this makes sense, since the data set is not big enough to minimize these errors.
 
-The uncertainties for the scattering angles were estimated such that $\chi^2_{\text{reduced}} \approx 1$. Since the theoretical model is well-established, this approach ensures a reasonable estimation of the uncertainties.
+This tell us that the center of forces is somewhere between a line of 10 centimeters, which is plausible according to the experimental setup,
+but still the value may be overestimated, as we said before, due to the small amount of variation between throws. We believe that with more sophisticated means, an uncertainty of 1cm would make more sense visually.
+But even then, if we consider that statistically, our value is bound to be within the middle of this line, assuming a gaussian distribution, our results are quite decent.
+
+The theoretical model for the hill's curvature is given by $z = \frac{k_g}{r-r_0}$. Using our values for $k$ and neglecting, $r_0$, since it is very small,  the predicted height of the hill at $r = 1$  \unit{cm} is $12 \pm 5$ \unit{cm}, using the propagated uncertainties. This is a reasonable value considering the laboratory setup. Minor discrepancies are expected due to rolling friction and surface irregularities (e.g., small bumps), but the result confirms that $k$ is in the correct order of magnitude.
+
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{lcc}
+   \begin{tabular}{lcc}
         \toprule
         Parameter & Symbol & Value \\
         \midrule
-        Interaction Constant & $k$ & \num{1.1705e-03} \unit{kg.m^3/s^2} \\
-        Center of Forces Offset & $r_0$ & \num{1.8271e-09} \unit{m} \\
+        Interaction Constant & $k$ & $(1.17 \pm 0.54) \times 10^{-3}$ \unit{kg.m^3/s^2} \\
+        Center of Forces Offset & $r_0$ & $(0.00 \pm 0.05)$ \unit{m} \\
         \bottomrule
     \end{tabular}
     \caption{Parameters obtained from the fit of the mechanical scattering model.}
     \label{tab:fit_results}
 \end{table}
-
 \subsection{Potential Well Analysis (Well Scattering)}
+
+
 In this section, we qualitatively analyze the six trajectories obtained by launching the sphere towards the attractive potential well. Unlike the case of the hill (repulsive), here the central force tends to attract the sphere towards the origin $(0,0)$. The recorded experimental trajectories are shown in Figure~\ref{fig:trayectorias_pozo}.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.2\textwidth]{trayectorias_experimentales_pozo.png}
-    \caption{Experimental trajectories around the attractive potential well (center of forces at $(0,0)$). Closed orbits (blue, orange, and green) and open orbits (brown, purple, and red) are observed depending on their initial energy.}
+    \includegraphics[width=1\textwidth]{trayectorias_experimentales_pozo.png}
+    \caption{Experimental trajectories around the attractive potential well (center of forces at $(0,0)$), h indicates here the initial height of the ramp. Closed orbits (blue, orange, and green) and open orbits (brown, purple, and red) are observed depending on their initial energy.}
     \label{fig:trayectorias_pozo}
 \end{figure}
 
@@ -156,16 +189,21 @@ From the observation of Figure~\ref{fig:trayectorias_pozo}, we can individually 
 
     \item \textbf{Blue Trajectory (Closed):} It represents one of the lowest initial energy cases. The sphere barely manages to open its orbit after the first curve and quickly collapses towards the center of the potential well after completing its spiral path.
 \end{itemize}
+
+
 It is worth mentioning that the transition between closed and open orbits is rather gradual, we tried do devise a completely circular one. The central forces theory %cite marion
 tell us that at some height between h=2.05 cm and h=2cm the sphere attains an circular orbit with E=0, but in practice, due to the presence of friction and other non-idealities, this is almost impossible to achieve.
 
 \section{Discussion}
-The fitting of the experimental data for the hill scattering yielded an interaction constant $k = \num{1.1705e-03} \unit{kg.m^3/s^2}$. This value, when used to reconstruct the hill's geometry, results in a central height of approximately 11 cm, which is consistent with the physical dimensions of the laboratory setup. The small value of $r_0$ indicates that the effective center of forces is well-aligned with the geometric center of the potential.
+The value of the interaction constant $k$ that we obtained before,  when used to reconstruct the hill's geometry, results in a height that is consistent with the physical dimensions of the laboratory setup. The small value of $r_0$ indicates that the effective center of forces is well-aligned with the geometric center of the potential.
 
 Regarding the attractive potential well, the transition from open to closed orbits was qualitatively verified. The open trajectories (brown, purple, and red) illustrate scattering at high initial energies, while the closed orbits (green, orange, and blue) represent captured states. The observed precession and orbital decay in the green trajectory are direct evidence of energy dissipation due to rolling friction, which is the primary non-ideality in this mechanical system.
 
 \section{Conclusions}
-In this experiment, we successfully characterized the mechanical scattering of particles in both repulsive and attractive central potentials. The quantitative analysis of the hill scattering confirmed the validity of the Rutherford-like model for this system, while the study of the potential well provided a clear demonstration of the relationship between mechanical energy and orbit topology.
+
+
+In this experiment, we successfully characterized the mechanical scattering of particles in both repulsive and attractive central potentials. The quantitative analysis of the hill scattering confirmed the validity of the Rutherford-like model for this system,
+ while the study of the potential well provided a clear demonstration of the relationship between mechanical energy and orbit topology.
 
 Despite the noise in the experimental tracking and the dissipative effects of friction, the results are in good agreement with the theoretical framework of central forces.
  Future improvements could include using a high-speed camera to increase temporal resolution and a more rigorous treatment of the friction coefficients to better model the orbital decay observed in the attractive potential.
