@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 from uncertainties import unumpy
 import numpy as np
+import os
 """
 Functions separate_uncertainties
 In: unumpy.array
@@ -17,8 +18,14 @@ def separate_uncertainties(uarray : unumpy.uarray):
 INTRODUCING DATA
 The data for the laboratory practice must be taken into an excel file, and this will read it.
 """
+# 1. Obtenemos la ruta absoluta de la carpeta donde está guardado este script .py
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Función auxiliar para crear la ruta exacta a cada archivo
+def ruta(nombre_archivo):
+    return os.path.join(base_dir, nombre_archivo)
 #Excel file location
-excel_path_user="p5\datap05_bomba_calor2.xlsx"
+excel_path_user=ruta("datap05_bomba_calor2.xlsx")
 data_raw=pd.read_excel(excel_path_user,sheet_name="Medidas")
 t_f_ufloat = unumpy.uarray(data_raw["t_f"],data_raw["u_c (T)"])
 t_c_ufloat= unumpy.uarray(data_raw["t_c"],data_raw["u_c (T)"])
@@ -62,19 +69,25 @@ wj_err = unumpy.std_devs(W_J)
 # 2. Formateamos las columnas usando listas por comprensión
 # El .3f indica que queremos 3 decimales. Ajustalo según necesites.
 # Usamos \\pm porque en Python necesitamos doble barra para que escriba una sola en el txt.
-col_cop = [f"${n:.9f} \\pm {e:.9f}$" for n, e in zip(cop_nom, cop_err)]
+col_potencia = [f"${n:.9f} \\pm {e:.9f}$" for n, e in zip(wj_nom, wj_err)]
+col_tiempo = [f"${n:.3f} \\pm {e:.3f}$" for n, e in zip(tiempo_nominal, tiempo_error)]
+col_t_c= [f"${n:.3f} \\pm {e:.3f}$" for n, e in zip(t_c_nominal, t_c_error)]
+col_t_f= [f"${n:.3f} \\pm {e:.3f}$" for n, e in zip(t_f_nominal, t_f_error)]
+
+
+
 
 # 3. Creamos el DataFrame ya formateado
 df_resultados = pd.DataFrame({
-    'COP': col_cop,
+    "Tiempo (s)": col_tiempo,
+    "Potencia (W)": col_potencia,
+    "Temperatura foco caliente (°C)": col_t_c,
+    "Temperatura foco frío (°C)": col_t_f
 })
-
-# Al tener los símbolos de $ y \, Pandas lo exportará tal cual al documento.
-estilo = df_resultados.style.hide(axis="index")
-
-with open('tabla_con_errores.tex', 'w') as f:
-    f.write(estilo.to_latex(hrules=True))
-"""
+# 4. Exportamos a txt 
+txt_path=ruta("resultados.txt")
+df_resultados.to_csv(txt_path, index=False, sep='\t')  # Usa tabulador como separador, sin índice
+""""
 Plotting
 """
 #First Plot Temperature vs Time

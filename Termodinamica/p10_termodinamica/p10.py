@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import odr
 import openpyxl
+import os
 """
 Functions separate_uncertainties
 In: unumpy.array
@@ -33,8 +34,15 @@ Fixed parameters for the plot
 INTRODUCING DATA
 The data for the laboratory practice must be taken into an excel file, and this will read it.
 """
+# 1. Obtenemos la ruta absoluta de la carpeta donde está guardado este script .py
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Función auxiliar para crear la ruta exacta a cada archivo
+def ruta(nombre_archivo):
+    return os.path.join(base_dir, nombre_archivo)
+
 #Excel file location
-excel_path_user="C:\\Users\\Andres\\proyectos\\Termodinamica\\p10_termodinamica\\p10.xlsx"
+excel_path_user=ruta("p10.xlsx")
 workbook = openpyxl.load_workbook(excel_path_user)
 sheet = workbook["Sheet1"]  # Acceder a la hoja específica
 data_raw=pd.read_excel(excel_path_user,sheet_name="Sheet1")

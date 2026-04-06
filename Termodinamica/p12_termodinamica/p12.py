@@ -5,12 +5,14 @@ import matplotlib as mpl
 from uncertainties import ufloat, unumpy
 import numpy as np
 from scipy import odr
-import ufloat
+import os
+
 """
 Functions separate_uncertainties
 In: unumpy.array
 Returns the nominal and the error part as two separate numpy arrays arr
 """
+
 def separate_uncertainties(uarray : unumpy.uarray):
     nominal=unumpy.nominal_values(uarray)
     error=unumpy.std_devs(uarray)
@@ -39,9 +41,16 @@ distance_between_sensors = ufloat(0.05, 0.001) # meters, distance between the tw
 INTRODUCING DATA
 The data for the laboratory practice must be taken into an excel file, and this will read it.
 """
+
+# 1. Obtenemos la ruta absoluta de la carpeta donde está guardado este script .py
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Función auxiliar para crear la ruta exacta a cada archivo
+def ruta(nombre_archivo):
+    return os.path.join(base_dir, nombre_archivo)
 #Excel file location
-excel_path_user="C:/Users/Andres/proyectos/p12_termodinamica/p12.xlsx"
-data_raw=pd.read_excel(excel_path_user,sheet_name="Sheet")
+excel_path_user="p12.xlsx"
+data_raw=pd.read_excel(ruta(excel_path_user),sheet_name="Sheet1")
 tiempo  = unumpy.uarray(data_raw["tiempo"],data_raw["u_tiempo"])
 theta1= unumpy.uarray(data_raw["theta1"],data_raw["u_theta1"])
 theta2= unumpy.uarray(data_raw["theta2"],data_raw["u_theta2"])
