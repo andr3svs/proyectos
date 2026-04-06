@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.3)  6 APR 2026 11:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.3)  6 APR 2026 13:50
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Andres/Practicas-Fisica/Termodinamica/p5_termodinamica/latex/p5.tex
-(c:/Users/Andres/Practicas-Fisica/Termodinamica/p5_termodinamica/latex/p5.tex
+**./p5.tex
+(p5.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -23,14 +22,18 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count283
@@ -45,23 +48,35 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen155
 \Gm@layoutvoffset=\dimen156
 \Gm@dimlist=\toks18
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
+) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/03/24 v26.5 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/03/24 v26.5 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
 \babel@savecnt=\count286
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2111.
 \U@D=\dimen157
 \l@unhyphenated=\language79
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count287
 Package babel Info: Configuration files are deprecated, as
@@ -72,11 +87,16 @@ Package babel Info: Configuration files are deprecated, as
 * Local config file bblopts.cfg used
 *
 (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel-spanish.tex)
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babe
+l-spanish.tex)
 Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 4330.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.
+ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
 \es@quottoks=\toks21
 \es@quotdepth=\count288
@@ -85,11 +105,15 @@ Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 8.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 8.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
+on input line 8.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
+ on input line 8.
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count289
 )
@@ -100,12 +124,12 @@ Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \csq@maxlvl=\count294
 \csq@tshold=\count295
 \csq@ltx@everypar=\toks22
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
 )) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -114,21 +138,25 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box53
 \@float@everytoks=\toks24
 \@floatcapt=\box54
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks25
 \ex@=\dimen158
-)) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+))
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen159
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count297
@@ -178,66 +206,98 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
+cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
+f
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen167
 \Gin@req@width=\dimen168
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.st
+y
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
+ekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
+sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
+s.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
+sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+))
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
+tlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
+y
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count309
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.
+sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 )
 \@linkdim=\dimen169
 \Hy@linkcounter=\count310
 \Hy@pagecounter=\count311
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count312
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -250,16 +310,21 @@ Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count313
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen170
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
+c.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count314
 \Field@Width=\dimen171
@@ -276,25 +341,33 @@ Package hyperref Info: PDF/A mode OFF on input line 6114.
 \c@Hfootnote=\count317
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count318
 \c@bookmark@seq@number=\count319
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
+lecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
+counter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
 )
 \Hy@SectionHShift=\skip54
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 19.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen173
 \captionmargin=\dimen174
@@ -329,8 +402,11 @@ Package: siunitx 2026-03-26 v3.5.1 A comprehensive (SI) units package
 \l__siunitx_number_group_min_int=\count333
 \l__siunitx_number_group_minimum_int=\count334
 \l__siunitx_compound_count_int=\count335
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/translations\translati
+ons.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
 )
 \l__siunitx_table_tmp_box=\box57
 \l__siunitx_table_tmp_dim=\dimen181
@@ -348,7 +424,8 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages 
 \l__siunitx_sexagesimal_tmp_dim=\dimen185
 \l__siunitx_sexagesimal_marker_box=\box63
 \l__siunitx_sexagesimal_unit_box=\box64
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen186
 \ar@mcellbox=\box65
@@ -357,14 +434,18 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \extratabsurround=\skip55
 \backup@length=\skip56
 \ar@cellbox=\box66
-)) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+))
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count339
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+))
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
 \c@tabx@nest=\count340
@@ -426,7 +507,8 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \c@mincompwidth=\count385
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -517,12 +599,15 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip78
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.de
+f
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 \c@textcitecount=\count454
 \c@textcitetotal=\count455
@@ -540,18 +625,24 @@ File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.b
+bx
 File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.
+bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count463
 \c@bbx:relatedtotal=\count464
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.c
+bx
 File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -567,14 +658,17 @@ Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2026-01-19 L3 programming layer (loader) 
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count465
 ))
@@ -582,7 +676,11 @@ Package biblatex Info: ... and expl3
 (biblatex)             2026-01-19 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl
+3.sty
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpar
+se.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
@@ -591,13 +689,17 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)) (p5.aux
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
+)) (p5.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
@@ -660,7 +762,9 @@ LaTeX Font Info:    ... okay on input line 44.
 
 LaTeX Info: Redefining \. on input line 44.
 LaTeX Info: Redefining \% on input line 44.
-(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
+kii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count466
 \scratchdimen=\dimen188
@@ -673,10 +777,15 @@ LaTeX Info: Redefining \% on input line 44.
 \MPnumerator=\count470
 \makeMPintoPDFobject=\count471
 \everyMPtoPDFconversion=\toks32
-) (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+)
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
+base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.
+cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring ON on input line 44.
@@ -686,13 +795,19 @@ Package hyperref Info: Link coloring ON on input line 44.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
-File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tra
+nslations-basic-dictionary-spanish.trsl
+File: translations-basic-dictionary-spanish.trsl (spanish translation file `tra
+nslations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 44.
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `spanish'. on input line 44.
 Package biblatex Info: Trying to load language 'spanish'...
 Package biblatex Info: ... file 'spanish.lbx' found.
- (C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
+
+(C:\Users\Andres\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.l
+bx
 File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -731,16 +846,16 @@ Package pdftex.def Info: cop_t_log.png  used on input line 99.
 
 LaTeX Warning: Float too large for page by 79.6169pt on input line 186.
 
-[4]
 
-LaTeX Warning: Float too large for page by 66.01689pt on input line 270.
+LaTeX Warning: Float too large for page by 66.01689pt on input line 268.
 
-[5]
+[4] [5]
 Overfull \vbox (131.48978pt too high) has occurred while \output is active []
 
- [6] [7]
 
-LaTeX Warning: Empty bibliography on input line 422.
+[6] [7]
+
+LaTeX Warning: Empty bibliography on input line 420.
 
 [8] [9] [10] [11] (p5.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -758,14 +873,34 @@ Package logreq Info: Writing requests to 'p5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24452 strings out of 467867
- 487492 string characters out of 5417851
+ 24450 strings out of 467867
+ 487282 string characters out of 5417851
  1380701 words of memory out of 5000000
  53075 multiletter control sequences out of 15000+600000
  635066 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,772b,1895s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+ 75i,13n,79p,704b,1895s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmex10.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Andres/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Andres/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Andres/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/
+Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr6.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/Andres/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Andres/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Andres/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Andres/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/
+Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+<C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb>
 Output written on p5.pdf (11 pages, 320279 bytes).
 PDF statistics:
  243 PDF objects out of 1000 (max. 8388607)
