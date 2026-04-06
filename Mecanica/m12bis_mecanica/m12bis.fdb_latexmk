@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber m12bis"] 1775384135.42012 "m12bis.bcf" "m12bis.bbl" "m12bis" 1775389460.66897 0
-  "m12bis.bcf" 1775389460 107342 2a0e2983fd8bcc9422b616ecef8088aa "pdflatex"
+["biber m12bis"] 1775384135.42012 "m12bis.bcf" "m12bis.bbl" "m12bis" 1775389695.09506 0
+  "m12bis.bcf" 1775389694 107342 2a0e2983fd8bcc9422b616ecef8088aa "pdflatex"
   (generated)
   "m12bis.bbl"
   "m12bis.blg"
   (rewritten before read)
-["pdflatex"] 1775389459.2642 "c:/Users/Andres/Practicas-Fisica/Mecanica/m12bis_mecanica/m12bis.tex" "m12bis.pdf" "m12bis" 1775389460.66942 0
+["pdflatex"] 1775389693.75513 "c:/Users/Andres/Practicas-Fisica/Mecanica/m12bis_mecanica/m12bis.tex" "m12bis.pdf" "m12bis" 1775389695.09558 0
   "C:/Users/Andres/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775301541 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Andres/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1775301544 12668 d9b2d4ffcbe256cf69c8703b41ddfbab ""
   "C:/Users/Andres/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1775201237 13334332 7dda395558c002b80e72d90816cb5559 ""
@@ -128,13 +128,13 @@
   "C:/Users/Andres/AppData/Local/Programs/MiKTeX/tex/latex/translations/dicts/translations-basic-dictionary-english.trsl" 1644048522 5588 0c1628daf15f4411ff1f463114c634a3 ""
   "C:/Users/Andres/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/Andres/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Andres/Practicas-Fisica/Mecanica/m12bis_mecanica/m12bis.tex" 1775389458 14658 5f180267f041d30a85ef6a7a33c181df ""
-  "m12bis.aux" 1775389460 4275 ebce409acedcc90b1d3383c39541575d "pdflatex"
+  "c:/Users/Andres/Practicas-Fisica/Mecanica/m12bis_mecanica/m12bis.tex" 1775389691 14714 93026e28c047e866bd15790c8095fe06 ""
+  "m12bis.aux" 1775389694 4393 9ccdcdf3671e3813a105f93d9b261871 "pdflatex"
   "m12bis.bbl" 1775384137 486 76d65a242ec496c9b4361af646ff12cb "biber m12bis"
-  "m12bis.out" 1775389460 1655 b9a53d4927357837c2b7571d3a3353f4 "pdflatex"
-  "m12bis.run.xml" 1775389460 2319 ca240c8f333a5515a70714d7c3658d75 "pdflatex"
-  "m12bis.tex" 1775389458 14658 5f180267f041d30a85ef6a7a33c181df ""
-  "m12bis.toc" 1775389460 835 9f0be434e0a4ed6f70e79259c2178563 "pdflatex"
+  "m12bis.out" 1775389694 1655 b9a53d4927357837c2b7571d3a3353f4 "pdflatex"
+  "m12bis.run.xml" 1775389694 2319 ca240c8f333a5515a70714d7c3658d75 "pdflatex"
+  "m12bis.tex" 1775389691 14714 93026e28c047e866bd15790c8095fe06 ""
+  "m12bis.toc" 1775389694 835 9f0be434e0a4ed6f70e79259c2178563 "pdflatex"
   "trayectorias_experimentales_1.png" 1775387588 51526 7d4f252a4cc97ee94dbed1371ee0d72c ""
   "trayectorias_experimentales_2.png" 1775387599 49462 692e0fc374cd9dca37b44d62644ee129 ""
   "trayectorias_experimentales_pozo.png" 1775387612 70907 9ef609324886f21c3c5538c10024f7a5 ""
