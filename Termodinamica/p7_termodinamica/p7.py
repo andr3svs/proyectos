@@ -24,6 +24,7 @@ gamma_teorico_aire = 1.4  # Diatomic gas (like air) using the equipartition theo
 gamma_teorico_co2 = 1.3 # Triatomic linear molecule (like CO2)
 gamma_biblio_aire = 1.41 #+-0.05  #https://www.researchgate.net/profile/Jose-Faro-2/publication/243492025_A_simple_experiment_for_measuring_the_adiabatic_coefficient_of_air/links/57768c9008ae1b18a7e1acd1/A-simple-experiment-for-measuring-the-adiabatic-coefficient-of-air.pdf
 gamma_biblio_co2 = 1.294   # https://sci-hub.ru/10.1063/1.1723788
+p_atmosferica=101325 #Pa
 """
 INTRODUCING DATAx
 The data for the laboratory practice must be taken into an excel file, and this will read it.
@@ -39,8 +40,13 @@ h2_co2_ufloat= unumpy.uarray(data_raw["h2_co2"],data_raw["u_h2_co2"])
 """
 Data manipulation
 """
-coeficiente_adiabatico_aire_experimental=(h1_aire_ufloat)/(h1_aire_ufloat-h2_aire_ufloat)
-coeficiente_adiabatico_co2_experimental=(h1_co2_ufloat)/(h1_co2_ufloat-h2_co2_ufloat)
+coeficiente_adiabatico_aire_experimental=(unumpy.log(p_atmosferica+h1_aire_ufloat)-unumpy.log(p_atmosferica)/
+                                          unumpy.log(p_atmosferica+h1_aire_ufloat)-unumpy.log(p_atmosferica+h2_aire_ufloat))
+coeficiente_adiabatico_co2_experimental=(unumpy.log(p_atmosferica+h1_co2_ufloat)-unumpy.log(p_atmosferica)/
+                                          unumpy.log(p_atmosferica+h1_co2_ufloat)-unumpy.log(p_atmosferica+h2_co2_ufloat))
+coeficiente_adiabatico_aire_experimental_taylor=h1_aire_ufloat/h1_aire_ufloat-h2_aire_ufloat
+coeficiente_adiabatico_co2_experimental_taylor=h1_co2_ufloat/h1_co2_ufloat-h2_co2_ufloat
+
 #Get data into numpy usable form
 h1_aire_nominal,h1_aire_error= separate_uncertainties(h1_aire_ufloat)
 h2_aire_nominal,h2_aire_error= separate_uncertainties(h2_aire_ufloat)
@@ -48,7 +54,8 @@ h1_co2_nominal,h1_co2_error= separate_uncertainties(h1_co2_ufloat)
 h2_co2_nominal,h2_co2_error= separate_uncertainties(h2_co2_ufloat)
 coeficiente_adiabatico_aire_nominal, coeficiente_adiabatico_aire_error= separate_uncertainties(coeficiente_adiabatico_aire_experimental)
 coeficiente_adiabatico_co2_nominal, coeficiente_adiabatico_co2_error= separate_uncertainties(coeficiente_adiabatico_co2_experimental)   
-
+coeficiente_adiabatico_aire_experimental_taylor_nominal, coeficiente_adiabatico_aire_experimental_taylor_error= separate_uncertainties(coeficiente_adiabatico_aire_experimental_taylor)
+coeficiente_adiabatico_co2_experimental_taylor_nominal, coeficiente_adiabatico_co2_experimental_taylor_error= separate_uncertainties(coeficiente_adiabatico_co2_experimental_taylor)
 """
 Plotting
 """
@@ -99,3 +106,25 @@ plt.show()
 
 
 print("Proceso finalizado.")
+"""
+Formateo latex
+"""
+# 2. Formateamos las columnas usando listas por comprensión
+# El .3f indica que queremos 3 decimales. Ajustalo según necesites.
+# Usamos \\pm porque en Python necesitamos doble barra para que escriba una sola en el txt.
+col_coeficiente_bueno_aire = [f"${n:.9f} \\pm {e:.9f}$" for n, e in zip(coeficiente_adiabatico_aire_nominal, coeficiente_adiabatico_aire_error)]
+col_coeficiente_taylor_aire = [f"${n:.9f} \\pm {e:.9f}$" for n, e in zip(coeficiente_adiabatico_aire_experimental_taylor_nominal, coeficiente_adiabatico_aire_experimental_taylor_error)]
+col_coeficiente_bueno_co2 = [f"${n:.9f} \\pm {e:.9f}$" for n, e in zip(coeficiente_adiabatico_co2_nominal, coeficiente_adiabatico_co2_error)]
+col_coeficiente_taylor_co2 = [f"${n:.9f} \\pm {e:.9f}$" for n, e in zip(coeficiente_adiabatico_co2_experimental_taylor_nominal, coeficiente_adiabatico_co2_experimental_taylor_error)]
+
+# 3. Creamos el DataFrame ya formateado
+df_resultados = pd.DataFrame({
+    "$\Gamma_1$ aire ": col_coeficiente_bueno_aire,
+    "$\Gamma_1$ aproximación ": col_coeficiente_taylor_aire,
+    "$\Gamma_1$ $CO_2$ ": col_coeficiente_bueno_co2,
+    "$\Gamma_1$ aproximación ": col_coeficiente_taylor_co2,
+
+})
+# 4. Exportamos a txt 
+txt_path=ruta("resultados.txt")
+df_resultados.to_csv(txt_path, index=False, sep='\t')  # Usa tabulador como separador, sin índice
