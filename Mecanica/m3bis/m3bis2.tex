@@ -2,6 +2,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=1.5cm,top=1.2cm,bottom=1.2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{booktabs}
@@ -9,14 +10,24 @@
 \usepackage{float}
 \usepackage{microtype}
 \usepackage{newtxtext,newtxmath}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\setstretch{1.15}
 
 \bibliographystyle{apsrev}
 \setcounter{secnumdepth}{3}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+\setlength{\footskip}{14pt}
 
 \begin{document}
 
 \title{Coupled Oscillations: Analysis of Symmetric and Asymmetric Modes}
-\author{Laboratory Group}
+\author{Andrés Vinuesa Espinosa \and Jose María Martínez Herrada}
 \maketitle
 
 \begin{abstract}
@@ -26,19 +37,100 @@ This report analyzes coupled oscillations in a rigid bar connected to two spring
 \section{Introduction and Objectives}
 
 \subsection{Theoretical Background}
-Coupled oscillatory systems provide a simple model for many physical phenomena, from mechanical structures to electrical circuits. In this experiment, a rigid bar supported by two springs is treated as a two-degree-of-freedom system in the small-oscillation regime.
+Coupled oscillatory systems are fundamental in physics, the phenoma although symple is most profound than what it appears.
+We can describe a wide range of phenomena, from the vibrations of molecules to the behavior of coupled pendulums, and even we can study waves as an infinite superposition of coupled oscillators.
+For gaining an intuitive understanding of the behaviour of coupled oscillators, we use a simple model of one rod connected by two springs
+
 
 For the uncoupled coordinates $z_1$ and $z_2$, the kinetic and potential energies are
+\begin{align}
+    T &= \frac{1}{2}m\dot{z}_{CM}^2 + \frac{1}{2}I_{CM}\omega^2 = \frac{1}{8}m(\dot{z}_1 + \dot{z}_2)^2 + \frac{1}{24}m(\dot{z}_1 - \dot{z}_2)^2 \\
+    U &= \frac{1}{2}kz_1^2 + \frac{1}{2}kz_2^2
+\end{align}
+where $m$ is the mass, $k$ is the restoring constant of each spring  and $z_1$ and $z_2$ are the displacements from equilibrium.
 
+Then, we will decouple the system by diagonalizing the kinetic and potential energy matrices, which is easier to do in the normal coordinates
 \begin{equation}
-T = \frac{1}{2} m \dot{z}_1^2 + \frac{1}{2} m \dot{z}_2^2,
+z_s = \frac{z_1 + z_2}{\sqrt{2}}, \qquad z_a = \frac{z_1 - z_2}{\sqrt{2}}.
+\end{equation}
+%mira esto que es geminada
+\textbf{Step 1: Define the Mass ($M$) and Stiffness ($K$) Matrices}
+
+Based on the kinetic and potential energy equations, the matrices are:
+\begin{equation}
+    M = \frac{m}{6} 
+    \begin{pmatrix} 
+        2 & 1 \\ 
+        1 & 2 
+    \end{pmatrix}, \quad
+    K = 
+    \begin{pmatrix} 
+        k & 0 \\ 
+        0 & k 
+    \end{pmatrix}
 \end{equation}
 
+\vspace{0.5cm}
+\textbf{Step 2: Set up the Eigenvalue Problem}
+
+To find the natural frequencies ($\omega$), we solve the characteristic equation by setting the determinant of $(K - \omega^2 M)$ to zero. Let $\lambda = \omega^2$:
 \begin{equation}
-U = \frac{1}{2} k z_1^2 + \frac{1}{2} k z_2^2 + \frac{1}{2} k'(z_1 - z_2)^2,
+    \det(K - \lambda M) = 0
 \end{equation}
 
-where $m$ is the mass, $k$ is the restoring constant of each spring, $k'$ is the coupling constant, and $z_1$ and $z_2$ are the displacements from equilibrium.
+Substituting our matrices into the equation:
+\begin{equation}
+    K - \lambda M = 
+    \begin{pmatrix} 
+        k & 0 \\ 
+        0 & k 
+    \end{pmatrix} 
+    - \lambda \frac{m}{6} 
+    \begin{pmatrix} 
+        2 & 1 \\ 
+        1 & 2 
+    \end{pmatrix}
+    = 
+    \begin{pmatrix} 
+        k - \frac{m}{3}\lambda & -\frac{m}{6}\lambda \\ 
+        -\frac{m}{6}\lambda & k - \frac{m}{3}\lambda 
+    \end{pmatrix}
+\end{equation}
+
+\vspace{0.5cm}
+\textbf{Step 3: Calculate the Determinant}
+
+Now, calculate the determinant of the resulting matrix and set it to zero:
+\begin{equation}
+    \left(k - \frac{m}{3}\lambda\right)^2 - \left(-\frac{m}{6}\lambda\right)^2 = 0
+\end{equation}
+
+This is a difference of squares ($A^2 - B^2 = 0$), which implies $A = \pm B$:
+\begin{equation}
+    k - \frac{m}{3}\lambda = \pm \frac{m}{6}\lambda
+\end{equation}
+
+\vspace{0.5cm}
+\textbf{Step 4: Solve for the Eigenvalues and Natural Frequencies}
+
+\textit{Case 1 (Positive):}
+\begin{equation}
+    k = \frac{m}{3}\lambda + \frac{m}{6}\lambda \implies k = \frac{m}{2}\lambda \implies \lambda_1 = \frac{2k}{m}
+\end{equation}
+Since $\lambda = \omega^2$, the first natural frequency is:
+\begin{equation}
+    \omega_1 = \sqrt{\frac{2k}{m}}
+\end{equation}
+
+\textit{Case 2 (Negative):}
+\begin{equation}
+    k = \frac{m}{3}\lambda - \frac{m}{6}\lambda \implies k = \frac{m}{6}\lambda \implies \lambda_2 = \frac{6k}{m}
+\end{equation}
+Since $\lambda = \omega^2$, the second natural frequency is:
+\begin{equation}
+    \omega_2 = \sqrt{\frac{6k}{m}}
+\end{equation}
+
 
 Diagonalizing the system is easier in the normal coordinates
 \begin{equation}
@@ -66,15 +158,7 @@ Therefore, the characteristic frequencies are
 
 corresponding to the symmetric (slow) and asymmetric (fast) modes, respectively.
 
-\subsection{Experimental Objectives}
-This experiment aims to:
-\begin{itemize}
-\item Measure the natural frequency $\omega_0$ of the system.
-\item Determine the symmetric mode frequency $\omega_s$.
-\item Determine the asymmetric mode frequency $\omega_a$.
-\item Characterize the superposition of modes in the complex motion.
-\item Compare the measured frequencies with the theoretical expectations.
-\end{itemize}
+
 
 \subsection{Measurement Methodology}
 The system was driven in four configurations: one fixed end for the natural mode, equal displacement 
@@ -120,16 +204,16 @@ Table~\ref{tab:frequencies} summarizes the characteristic frequencies extracted 
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lccc}
 \toprule
-\textbf{Mode} & \textbf{Angular Frequency (\unit{rad/s})} & \textbf{Description} \\
+\textbf{Mode} & \textbf{FFT (\unit{rad/s})} & \textbf{Fit (\unit{rad/s})} & \textbf{Description} \\
 \midrule
-Natural ($\omega_0$) & $14.84 \pm 0.13$ & Center reference oscillator \\
-Symmetric ($\omega_s$) & $12.72 \pm 0.06$ & Both oscillators in phase \\
-Asymmetric ($\omega_a$) & $19.80 \pm 0.16$ & Oscillators out of phase \\
+Natural ($\omega_0$) & $14.84 \pm 0.13$ & [TODO: fit] & Center reference oscillator \\
+Symmetric ($\omega_s$) & $12.72 \pm 0.06$ & [TODO: fit] & Both oscillators in phase \\
+Asymmetric ($\omega_a$) & $19.80 \pm 0.16$ & [TODO: fit] & Oscillators out of phase \\
 \bottomrule
 \end{tabular}
-\caption{Measured angular frequencies for the three characteristic vibrational modes of the coupled oscillator system. The uncertainty is the sample standard deviation of the repeated measurements.}
+\caption{Measured angular frequencies for the three characteristic vibrational modes of the coupled oscillator system. FFT values are reported with their sample-standard-deviation uncertainty; fitting values are left as placeholders.}
 \label{tab:frequencies}
 \end{table}
 
@@ -139,15 +223,15 @@ When one end of the bar is displaced while the other remains at rest, the motion
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lccc}
 \toprule
-\textbf{Mode} & \textbf{Angular Frequency (\unit{rad/s})} & \textbf{Description} \\
+\textbf{Mode} & \textbf{FFT (\unit{rad/s})} & \textbf{Fit (\unit{rad/s})} & \textbf{Description} \\
 \midrule
-Minimum ($\omega_{min}$) & $12.80 \pm 0.10$ & Superposition slow mode \\
-Maximum ($\omega_{max}$) & $19.31 \pm 0.49$ & Superposition fast mode \\
+Minimum ($\omega_{min}$) & $12.80 \pm 0.10$ & [TODO: fit] & Superposition slow mode \\
+Maximum ($\omega_{max}$) & $19.31 \pm 0.49$ & [TODO: fit] & Superposition fast mode \\
 \bottomrule
 \end{tabular}
-\caption{Extracted angular frequencies from the superposed motion. The uncertainty is the sample standard deviation from repeated peak-frequency measurements.}
+\caption{Extracted angular frequencies from the superposed motion. FFT values are reported with sample-standard-deviation uncertainty; fitting values are left as placeholders.}
 \label{tab:superposition_frequencies}
 \end{table}
 
