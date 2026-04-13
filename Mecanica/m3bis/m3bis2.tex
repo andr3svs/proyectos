@@ -1,0 +1,182 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{newtxtext,newtxmath}
+
+\bibliographystyle{apsrev}
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+
+\title{Coupled Oscillations: Analysis of Symmetric and Asymmetric Modes}
+\author{Laboratory Group}
+\maketitle
+
+\begin{abstract}
+This report analyzes coupled oscillations in a rigid bar connected to two springs. Frequency-response measurements were used to identify the natural, symmetric, and asymmetric modes of motion and to characterize mode splitting due to coupling. A superposition experiment was also examined to recover the slow and fast components of the composite signal. The results are consistent with the expected normal-mode behavior of a linear two-degree-of-freedom oscillator.
+\end{abstract}
+
+\section{Introduction and Objectives}
+
+\subsection{Theoretical Background}
+Coupled oscillatory systems provide a simple model for many physical phenomena, from mechanical structures to electrical circuits. In this experiment, a rigid bar supported by two springs is treated as a two-degree-of-freedom system in the small-oscillation regime.
+
+For the uncoupled coordinates $z_1$ and $z_2$, the kinetic and potential energies are
+
+\begin{equation}
+T = \frac{1}{2} m \dot{z}_1^2 + \frac{1}{2} m \dot{z}_2^2,
+\end{equation}
+
+\begin{equation}
+U = \frac{1}{2} k z_1^2 + \frac{1}{2} k z_2^2 + \frac{1}{2} k'(z_1 - z_2)^2,
+\end{equation}
+
+where $m$ is the mass, $k$ is the restoring constant of each spring, $k'$ is the coupling constant, and $z_1$ and $z_2$ are the displacements from equilibrium.
+
+Diagonalizing the system is easier in the normal coordinates
+\begin{equation}
+z_s = \frac{z_1 + z_2}{\sqrt{2}}, \qquad z_a = \frac{z_1 - z_2}{\sqrt{2}}.
+\end{equation}
+
+In these coordinates, the equations of motion decouple into
+\begin{equation}
+m\ddot{z}_s + 2k z_s = 0,
+\end{equation}
+
+\begin{equation}
+m\ddot{z}_a + 6k z_a = 0.
+\end{equation}
+
+Therefore, the characteristic frequencies are
+
+\begin{equation}
+\omega_s = \sqrt{\frac{2k}{m}},
+\end{equation}
+
+\begin{equation}
+\omega_a = \sqrt{\frac{6k}{m}},
+\end{equation}
+
+corresponding to the symmetric (slow) and asymmetric (fast) modes, respectively.
+
+\subsection{Experimental Objectives}
+This experiment aims to:
+\begin{itemize}
+\item Measure the natural frequency $\omega_0$ of the system.
+\item Determine the symmetric mode frequency $\omega_s$.
+\item Determine the asymmetric mode frequency $\omega_a$.
+\item Characterize the superposition of modes in the complex motion.
+\item Compare the measured frequencies with the theoretical expectations.
+\end{itemize}
+
+\subsection{Measurement Methodology}
+The system was driven in four configurations: one fixed end for the natural mode, equal displacement 
+for the symmetric mode, opposite displacement for the asymmetric mode.
+For every configuration we made sure that the displacement was small enough to ensure that linear behaviour holds,
+by giving a small initial displacement to the system, in the form of a small push, and then letting it vibrate freely, 
+whilst the \textit{DataStudio} software recorded the force signals from both ends. 
+and one end excitation for the superposition case, without any constraints so it can vibrate as a superposition of the two modes.
+The force signals were recorded with PASCO sensors that measured the force of each end, and analyzed by sinusoidal fitting in the first three cases and sinusoidal fitting in the last one, and FFT peak identification.
+
+
+
+The data analyzed with DataStudio software, presents the advantage of having built-in uncertainties for the fitting parameters, 
+which are used to report the uncertainties in the measured frequencies.
+Nonetheless, we deciced that due to the nature of the measurements, a fast fourier transform (FFT) analysis would be more appropriate for the superposition case, as it allows us to identify the individual frequency components,
+by taking the relatives maxima of the spectrum, and then we took the uncertainty as the sample standard deviation of the repeated measurements, we should note that the uncertainty reported by the software
+should be the main consideration to analyze the results, as it is based on the fittingn procedure, a much more powerful algorithm that the standart deviation.
+
+
+
+
+
+\section{Materials and Methods}
+
+\subsection{Experimental Setup}
+The apparatus consists of a rigid bar suspended by two identical springs and monitored with two force sensors.
+The system then is supported on air by a metallic apparatus that also serves as a way to carry the different experiments
+%% me he aburrido de hacer esto, chema hazlo tu
+
+\subsection{Data Acquisition and Analysis}
+Frequency sweeps were performed for the center reference and left/right configurations. The measured frequencies were converted from cycles per second to angular frequency using $\omega = 2\pi f$.
+
+For repeated measurements, the reported uncertainty is the sample standard deviation of the repeated values unless the source file explicitly provides a different uncertainty.
+%haz esto, falta profundidad
+
+\section{Results and Data Analysis}
+As the two methods are different at a fundamental level, we have decided to report the results of the two methods separately,
+then we will compare the results of the two methods and see if they are consistent with each other, which should be the case
+if the model describes the system correctly, and if the measurements are accurate enough.
+
+\subsection{Measured Frequencies}
+Table~\ref{tab:frequencies} summarizes the characteristic frequencies extracted from the frequency-response measurements.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+\textbf{Mode} & \textbf{Angular Frequency (\unit{rad/s})} & \textbf{Description} \\
+\midrule
+Natural ($\omega_0$) & $14.84 \pm 0.13$ & Center reference oscillator \\
+Symmetric ($\omega_s$) & $12.72 \pm 0.06$ & Both oscillators in phase \\
+Asymmetric ($\omega_a$) & $19.80 \pm 0.16$ & Oscillators out of phase \\
+\bottomrule
+\end{tabular}
+\caption{Measured angular frequencies for the three characteristic vibrational modes of the coupled oscillator system. The uncertainty is the sample standard deviation of the repeated measurements.}
+\label{tab:frequencies}
+\end{table}
+
+
+\subsection{Mode Superposition}
+When one end of the bar is displaced while the other remains at rest, the motion contains two frequency components. These were identified as the slow and fast peaks of the spectrum.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+\textbf{Mode} & \textbf{Angular Frequency (\unit{rad/s})} & \textbf{Description} \\
+\midrule
+Minimum ($\omega_{min}$) & $12.80 \pm 0.10$ & Superposition slow mode \\
+Maximum ($\omega_{max}$) & $19.31 \pm 0.49$ & Superposition fast mode \\
+\bottomrule
+\end{tabular}
+\caption{Extracted angular frequencies from the superposed motion. The uncertainty is the sample standard deviation from repeated peak-frequency measurements.}
+\label{tab:superposition_frequencies}
+\end{table}
+
+% [FIGURE: Insert frequency-response plots showing resonance peaks and the beating pattern of the superposed motion]
+
+\section{Discussion and Conclusions}
+% [TODO: Human investigator must complete the discussion on the relationship between \omega_s, \omega_a, \omega_{min}, \omega_{max}, and \omega_0]
+% [TODO: Discuss the proportions between the frequencies according to theoretical equations]
+
+The measured frequencies can be compared directly with the theoretical ratios expected from
+\begin{equation}
+\omega_0 = \sqrt{\frac{3k}{m}}, \qquad \omega_s = \sqrt{\frac{2k}{m}}, \qquad \omega_a = \sqrt{\frac{6k}{m}}.
+\end{equation}
+From these expressions, the theoretical proportions are
+\begin{equation}
+\frac{\omega_s}{\omega_0} = \sqrt{\frac{2}{3}} \approx 0.82, \qquad
+\frac{\omega_a}{\omega_0} = \sqrt{2} \approx 1.41, \qquad
+\frac{\omega_a}{\omega_s} = \sqrt{3} \approx 1.73.
+\end{equation}
+%Comprueba chema que esto es asi porfavor
+
+Using the measured values, we obtain
+\begin{equation}
+\frac{\omega_s}{\omega_0} = \frac{12.72}{14.84} \approx 0.86, \qquad
+\frac{\omega_a}{\omega_0} = \frac{19.80}{14.84} \approx 1.33, \qquad
+\frac{\omega_a}{\omega_s} = \frac{19.80}{12.72} \approx 1.56.
+\end{equation}
+We see that the biggest deviation from the theorical proportions is of the order of 0.10,the same as the experimental error, which make our experimental results,
+consistent with the theory up to a resonable degree of accuracy, accountiing for the experimtal error.
+\bibliography{biblio}
+
+\end{document}
