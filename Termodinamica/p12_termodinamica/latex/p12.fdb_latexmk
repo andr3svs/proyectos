@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber p12"] 1775201499.47865 "p12.bcf" "p12.bbl" "p12" 1775201751.52296 0
-  "p12.bcf" 1775201751 107747 c04167c2d9f6d37705ec282e110c3482 "pdflatex"
+["biber p12"] 1775768468.40824 "p12.bcf" "p12.bbl" "p12" 1775768471.78735 0
+  "p12.bcf" 1775768471 107747 c04167c2d9f6d37705ec282e110c3482 "pdflatex"
   (generated)
   "p12.bbl"
   "p12.blg"
   (rewritten before read)
-["pdflatex"] 1775201750.1317 "c:/Users/Andres/proyectos/Termodinamica/p12_termodinamica/latex/p12.tex" "p12.pdf" "p12" 1775201751.52348 0
-  "C:/Users/Andres/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775201296 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1775768470.35447 "c:/Users/Andres/Practicas-Fisica/Termodinamica/p12_termodinamica/latex/p12.tex" "p12.pdf" "p12" 1775768471.78793 0
+  "C:/Users/Andres/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775301541 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Andres/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1775201237 13334332 7dda395558c002b80e72d90816cb5559 ""
   "C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/Andres/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -113,13 +113,13 @@
   "C:/Users/Andres/AppData/Local/Programs/MiKTeX/tex/latex/translations/dicts/translations-basic-dictionary-spanish.trsl" 1644048522 5850 2ef40dd7b6b9ada125cd1d90b7f7b307 ""
   "C:/Users/Andres/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/Andres/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Andres/proyectos/Termodinamica/p12_termodinamica/latex/p12.tex" 1775201749 5220 1fe06ec51d383d6329980718fffa2a80 ""
-  "p12.aux" 1775201751 1993 5ff7fc1b62c6edc2a96229f000e3df1a "pdflatex"
-  "p12.bbl" 1775201501 486 76d65a242ec496c9b4361af646ff12cb "biber p12"
-  "p12.out" 1775201751 1335 5083d82fee949f3cdfe4f216183a2f91 "pdflatex"
-  "p12.run.xml" 1775201751 2298 6ada8f01717b3eb78703630bef02a57e "pdflatex"
-  "p12.tex" 1775201749 5220 1fe06ec51d383d6329980718fffa2a80 ""
-  "p12.toc" 1775201751 830 797db728a91656b48c87a8eba0fea74d "pdflatex"
+  "c:/Users/Andres/Practicas-Fisica/Termodinamica/p12_termodinamica/latex/p12.tex" 1775328970 5220 1fe06ec51d383d6329980718fffa2a80 ""
+  "p12.aux" 1775768471 1993 5ff7fc1b62c6edc2a96229f000e3df1a "pdflatex"
+  "p12.bbl" 1775768470 486 76d65a242ec496c9b4361af646ff12cb "biber p12"
+  "p12.out" 1775768471 1335 5083d82fee949f3cdfe4f216183a2f91 "pdflatex"
+  "p12.run.xml" 1775768471 2298 6ada8f01717b3eb78703630bef02a57e "pdflatex"
+  "p12.tex" 1775328970 5220 1fe06ec51d383d6329980718fffa2a80 ""
+  "p12.toc" 1775768471 830 797db728a91656b48c87a8eba0fea74d "pdflatex"
   (generated)
   "p12.aux"
   "p12.bcf"

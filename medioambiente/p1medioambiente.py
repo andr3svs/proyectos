@@ -61,9 +61,9 @@ def generate_uncertainties_for_chi2_1(data=None, fit=None, num_params=None,
 """
 # ------------------ Parámetros ------------------"""
 ### Medidas directas
-temperatura_cuerpo=ufloat(304.37222, 0.1) # K
+temperatura_cuerpo=ufloat(304.3722222, 0.1) # K
 temperatura_suelo=ufloat(294.55, 0.1) # K
-area_pie=ufloat(0.017, 0.001) # m^2
+area_pie=ufloat(0.0169730236, 0.001) # m^2
 espesor_suela=ufloat(0.024, 0.01) # m
 temperatura_ropa=ufloat(298.05, 0.1) # K
 radio_interior=ufloat(0.2, 0.01) # m
@@ -110,9 +110,9 @@ flujo_cabeza_conveccion = h_cabeza*(temperatura_cuerpo - temperatura_ambiente)*a
 # Radiación: usar temperatura de la ropa (B7) según la hoja
 flujo_radiacion = 0.85*0.7*5.67e-8*(temperatura_ropa**4 - temperatura_ambiente**4)*superficie_cuerpo
 flujo_perdido_neto=flujo_calor_pies + flujo_calor_cuerpo + flujo_conveccion + flujo_cabeza_conveccion + flujo_radiacion
-intercambio_calor_evaporacion = 3.05e-3*(5733 - 6.99*indice_metabolico - presion_parcial_vapor_agua + 0.42*(indice_metabolico - 58.15))
-intercambio_conveccion_respiracion = 0.0014*indice_metabolico*(34 - temperatura_ambiente + 273.15)
-intercambio_evaporacion_respiracion = 1.72e-5*indice_metabolico*(5867 - presion_parcial_vapor_agua)
+intercambio_calor_evaporacion = 3.05e-3*(5733 - 6.99*indice_metabolico - presion_parcial_vapor_agua + 0.42*(indice_metabolico - 58.15))*superficie_cuerpo
+intercambio_conveccion_respiracion = 0.0014*indice_metabolico*(34 - temperatura_ambiente + 273.15)*superficie_cuerpo
+intercambio_evaporacion_respiracion = 1.72e-5*indice_metabolico*(5867 - presion_parcial_vapor_agua)*superficie_cuerpo
 
 
 """
@@ -258,44 +258,52 @@ print(f"Tabla LaTeX de incertidumbres guardada en: {out_tex}")
 # ----- Gráfica: flujos en función del índice metabólico -----
 def compute_flows_for_met(met):
     """Devuelve (flujo_superficies, flujo_total) como ufloat para un índice metabólico dado."""
-    intercambio_calor_evaporacion_m = 3.05e-3*(5733 - 6.99*met - presion_parcial_vapor_agua + 0.42*(met - 58.15))
-    intercambio_conveccion_respiracion_m = 0.0014*met*(34 - temperatura_ambiente + 273.15)
-    intercambio_evaporacion_respiracion_m = 1.72e-5*met*(5867 - presion_parcial_vapor_agua)
+    intercambio_calor_evaporacion_m = 3.05e-3*(5733 - 6.99*met - presion_parcial_vapor_agua + 0.42*(met - 58.15))*superficie_cuerpo
+    intercambio_conveccion_respiracion_m = 0.0014*met*(34 - temperatura_ambiente + 273.15)*superficie_cuerpo
+    intercambio_evaporacion_respiracion_m = 1.72e-5*met*(5867 - presion_parcial_vapor_agua)*superficie_cuerpo
     flujo_perdido_neto_m = flujo_calor_pies + flujo_calor_cuerpo + flujo_conveccion + flujo_cabeza_conveccion + flujo_radiacion
     flujo_total_m = flujo_perdido_neto_m + intercambio_calor_evaporacion_m + intercambio_conveccion_respiracion_m + intercambio_evaporacion_respiracion_m
     return flujo_perdido_neto_m, flujo_total_m
 
 met_values = [70, 40, 235, 115]
 met_labels = ['70 (de pie)', '40 (dormir)', '235 (trabajo pesado)', '115 (limpieza)']
-super_vals = []
-total_vals = []
-super_err = []
-total_err = []
+
+# Calcular flujos usando compute_flows_for_met
+total_vals_w = []
 for m in met_values:
     f_super, f_total = compute_flows_for_met(m)
-    super_vals.append(unumpy.nominal_values(f_super))
-    total_vals.append(unumpy.nominal_values(f_total))
-    super_err.append(unumpy.std_devs(f_super))
-    total_err.append(unumpy.std_devs(f_total))
+    total_vals_w.append(unumpy.nominal_values(f_total))
 
 # Convertir a kcal/día
-super_vals = [v * KCAL_PER_W for v in super_vals]
-super_err = [e * KCAL_PER_W for e in super_err]
-total_vals = [v * KCAL_PER_W for v in total_vals]
-total_err = [e * KCAL_PER_W for e in total_err]
+total_vals = [v * KCAL_PER_W for v in total_vals_w]
+
+# Imprimir valores del segundo gráfico
+print("\n----- Flujos en función del índice metabólico (kcal/día) -----")
+for label, total_val in zip(met_labels, total_vals):
+    print(f"{label}: {total_val} kcal/día")
 
 fig, ax = plt.subplots(figsize=(10,6))
 ind = np.arange(len(met_values))
-width = 0.35
-ax.bar(ind, super_vals, width, color='#4c72b0')
+width = 0.5
+
+# Crear barras solo para el flujo total
+bars = ax.bar(ind, total_vals, width, color='#c44e52')
+
+# Agregar valores encima de las barras
+for bar in bars:
+    height = bar.get_height()
+    ax.text(bar.get_x() + bar.get_width()/2., height,
+            f'{height}',
+            ha='center', va='bottom', fontsize=10)
+
 ax.set_xticks(ind)
 ax.set_xticklabels(met_labels)
 ax.set_ylabel('Flujo (kcal/día)')
-ax.set_title('Flujos de calor según índice metabólico')
+ax.set_title('Flujo total según índice metabólico')
 ax.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 # Ajustar escala vertical para la gráfica metabólica
-ymax_m = max(super_vals) if len(super_vals)>0 else 1
+ymax_m = max(total_vals) if len(total_vals)>0 else 1
 ax.set_ylim(0, float(ymax_m) * 1.3)
 out2 = ruta('flows_vs_metabolism.png')
 plt.savefig(out2, dpi=200)

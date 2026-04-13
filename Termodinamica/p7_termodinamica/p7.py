@@ -132,7 +132,7 @@ plt.show()
 
 #h1_co2 vs coeficiente adiabatico experimental
 plt.figure(dpi=150)  # Adjust dpi value as needed for higher resolution
-plt.errorbar(h1_co2_nominal, coeficiente_adiabatico_co2_nominal, yerr=coeficiente_adiabatico_co2_error, xerr=h1_co2_error, fmt='none', color="blue",
+plt.errorbar(h1_co2_nominal, coeficiente_adiabatico_co2_nominal, yerr=coeficiente_adiabatico_co2_error, xerr=h1_co2_error, fmt='o', color="blue",
               label="Coeficiente adiabático CO2", capsize=3, markersize=4)
 # 2. LÍNEA TEÓRICA (axhline)
 # y: valor donde se dibuja. linestyle: estilo de línea ('-' continua, '--' discontinua)
@@ -165,98 +165,7 @@ plt.grid(False)
 #Do the plot
 plt.show()
 
-"""
-PLOT COMPARATIVO DE TODAS LAS VARIABLES
-"""
-# Crear figura con subplots para comparar medidas y métodos
-fig, axes = plt.subplots(2, 2, figsize=(14, 10), dpi=300)
-fig.suptitle('Análisis integral del coeficiente adiabático experimental', 
-             fontsize=16, fontweight='bold', y=0.995)
 
-# Subplot 1: Alturas iniciales vs finales AIRE
-ax = axes[0, 0]
-x_pos = np.arange(4)
-width = 0.35
-ax.bar(x_pos - width/2, h1_aire_nominal, width, label=r'$h_1$ (inicial)', 
-       color='#d62728', alpha=0.85, capsize=3, xerr=None)
-ax.bar(x_pos + width/2, h2_aire_nominal, width, label=r'$h_2$ (final)', 
-       color='#1f77b4', alpha=0.85, capsize=3, xerr=None)
-ax.set_ylabel('Altura (m)', fontsize=11, fontweight='bold')
-ax.set_title('Medidas de altura - AIRE', fontsize=12, fontweight='bold')
-ax.set_xticks(x_pos)
-ax.set_xticklabels([f'Med. {i+1}' for i in range(4)])
-ax.legend(fontsize=10, framealpha=0.9)
-ax.grid(True, alpha=0.3, axis='y')
-
-# Subplot 2: Alturas iniciales vs finales CO2
-ax = axes[0, 1]
-ax.bar(x_pos - width/2, h1_co2_nominal, width, label=r'$h_1$ (inicial)', 
-       color='#d62728', alpha=0.85, capsize=3, xerr=None)
-ax.bar(x_pos + width/2, h2_co2_nominal, width, label=r'$h_2$ (final)', 
-       color='#1f77b4', alpha=0.85, capsize=3, xerr=None)
-ax.set_ylabel('Altura (m)', fontsize=11, fontweight='bold')
-ax.set_title(r'Medidas de altura - $\mathregular{CO_2}$', fontsize=12, fontweight='bold')
-ax.set_xticks(x_pos)
-ax.set_xticklabels([f'Med. {i+1}' for i in range(4)])
-ax.legend(fontsize=10, framealpha=0.9)
-ax.grid(True, alpha=0.3, axis='y')
-
-# Subplot 3: Comparación de métodos AIRE
-ax = axes[1, 0]
-x_labels = [f'Med. {i+1}' for i in range(4)]
-ax.errorbar(x_pos, coeficiente_adiabatico_aire_nominal, 
-            yerr=coeficiente_adiabatico_aire_error, fmt='o', color='#d62728', 
-            label='Logarítmico', capsize=5, markersize=8, linewidth=2, marker='o')
-ax.errorbar(x_pos + 0.15, coeficiente_adiabatico_aire_experimental_taylor_nominal, 
-            yerr=coeficiente_adiabatico_aire_experimental_taylor_error, fmt='s', 
-            color='#ff7f0e', label='Aproximación Taylor', capsize=5, markersize=8, linewidth=2)
-ax.axhline(y=media_aire_nominal, color='green', linestyle='--', linewidth=2.2, 
-           label=f'Media: {media_aire_nominal:.4f}±{media_aire_error:.4f}', alpha=0.8)
-ax.axhline(y=gamma_biblio_aire, color='gray', linestyle=':', linewidth=2, 
-           label=f'Bibliográfico: {gamma_biblio_aire}', alpha=0.7)
-ax.set_ylabel(r'Coeficiente $\gamma$', fontsize=11, fontweight='bold')
-ax.set_title('Comparación de métodos - AIRE', fontsize=12, fontweight='bold')
-ax.set_xticks(x_pos + 0.075)
-ax.set_xticklabels(x_labels)
-ax.legend(fontsize=9, framealpha=0.9)
-ax.grid(True, alpha=0.3, axis='y')
-
-# Subplot 4: Comparación de métodos CO2
-ax = axes[1, 1]
-ax.errorbar(x_pos, coeficiente_adiabatico_co2_nominal, 
-            yerr=coeficiente_adiabatico_co2_error, fmt='o', color='#9467bd', 
-            label='Logarítmico', capsize=5, markersize=8, linewidth=2, marker='o')
-ax.errorbar(x_pos + 0.15, coeficiente_adiabatico_co2_experimental_taylor_nominal, 
-            yerr=coeficiente_adiabatico_co2_experimental_taylor_error, fmt='s', 
-            color='#ff7f0e', label='Aproximación Taylor', capsize=5, markersize=8, linewidth=2)
-ax.axhline(y=media_co2_nominal, color='green', linestyle='--', linewidth=2.2, 
-           label=f'Media: {media_co2_nominal:.4f}±{media_co2_error:.4f}', alpha=0.8)
-ax.axhline(y=gamma_biblio_co2, color='gray', linestyle=':', linewidth=2, 
-           label=f'Bibliográfico: {gamma_biblio_co2}', alpha=0.7)
-ax.set_ylabel(r'Coeficiente $\gamma$', fontsize=11, fontweight='bold')
-ax.set_title(r'Comparación de métodos - $\mathregular{CO_2}$', fontsize=12, fontweight='bold')
-ax.set_xticks(x_pos + 0.075)
-ax.set_xticklabels(x_labels)
-ax.legend(fontsize=9, framealpha=0.9)
-ax.grid(True, alpha=0.3, axis='y')
-
-fig.tight_layout()
-plt.show()
-
-print("\n" + "="*60)
-print("RESUMEN DE INCERTIDUMBRES Y RESULTADOS")
-print("="*60)
-print(f"\nAire - Método Logarítmico:")
-print(f"  Media: {media_aire_nominal:.9f} +/- {media_aire_error:.9f}")
-print(f"  Valor bibliográfico: {gamma_biblio_aire}")
-print(f"  Valor teórico: {gamma_teorico_aire}")
-
-print(f"\nCO2 - Método Logarítmico:")
-print(f"  Media: {media_co2_nominal:.9f} +/- {media_co2_error:.9f}")
-print(f"  Valor bibliográfico: {gamma_biblio_co2}")
-print(f"  Valor teórico: {gamma_teorico_co2}")
-
-print("="*60)
 print("Proceso finalizado.")
 """
 Formateo latex

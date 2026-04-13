@@ -1,9 +1,9 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'p12.blg'
-[90] biber-MSWIN64:342> INFO - === 
-[130] Biber.pm:421> INFO - Reading 'p12.bcf'
-[227] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[238] bbl.pm:676> INFO - Writing 'p12.bbl' with encoding 'UTF-8'
-[239] bbl.pm:779> INFO - Output to p12.bbl
-[239] Biber.pm:132> WARN - The file 'p12.bcf' does not contain any citations!
-[239] Biber.pm:134> INFO - WARNINGS: 1
+[101] biber-MSWIN64:342> INFO - === 
+[137] Biber.pm:421> INFO - Reading 'p12.bcf'
+[224] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[237] bbl.pm:676> INFO - Writing 'p12.bbl' with encoding 'UTF-8'
+[237] bbl.pm:779> INFO - Output to p12.bbl
+[237] Biber.pm:132> WARN - The file 'p12.bcf' does not contain any citations!
+[237] Biber.pm:134> INFO - WARNINGS: 1
