@@ -1,0 +1,115 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=1.5cm,top=1.2cm,bottom=1.2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{newtxtext,newtxmath}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\setstretch{1.15}
+
+\bibliographystyle{apsrev}
+\setcounter{secnumdepth}{3}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+\setlength{\footskip}{14pt}
+
+\begin{document}
+
+\title{[TITLE]}
+\author{[AUTHOR 1] \and [AUTHOR 2]}
+\maketitle
+
+\begin{abstract}
+[ABSTRACT: 4-6 sentences, no numerical values unless explicitly requested.]
+\end{abstract}
+
+\section{Introduction and Objectives}
+
+\subsection{Theoretical Background}
+[PLACEHOLDER: concise theoretical framework for the experiment.]
+
+% Example equations block (replace with experiment-specific model)
+\begin{equation}
+[MODEL EQUATION 1]
+\end{equation}
+
+\begin{equation}
+[MODEL EQUATION 2]
+\end{equation}
+
+\subsection{Measurement Methodology}
+[PLACEHOLDER: apparatus operation, measurement modes, and data acquisition workflow.]
+
+\section{Materials and Methods}
+
+\subsection{Experimental Setup}
+[PLACEHOLDER: apparatus and sensor description.]
+
+\subsection{Data Acquisition and Analysis}
+[PLACEHOLDER: describe data source only (human-provided script arrays or Excel fields).]
+
+\section{Results and Data Analysis}
+
+\subsection{Measured Frequencies}
+Table~\ref{tab:frequencies} summarizes the characteristic frequencies.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Mode} & \textbf{FFT (\unit{rad/s})} & \textbf{Fit (\unit{rad/s})} & \textbf{Description} \\
+\midrule
+Natural ($\omega_0$) & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & Center reference oscillator \\
+Symmetric ($\omega_s$) & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & Both oscillators in phase \\
+Asymmetric ($\omega_a$) & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & Oscillators out of phase \\
+\bottomrule
+\end{tabular}
+\caption{Measured angular frequencies. Values must come from human-provided data with explicit provenance.}
+\label{tab:frequencies}
+\end{table}
+
+\subsection{Mode Superposition}
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Mode} & \textbf{FFT (\unit{rad/s})} & \textbf{Fit (\unit{rad/s})} & \textbf{Description} \\
+\midrule
+Minimum ($\omega_{min}$) & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & Superposition slow mode \\
+Maximum ($\omega_{max}$) & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & [TODO_VALUE $\pm$ TODO_UNCERTAINTY] & Superposition fast mode \\
+\bottomrule
+\end{tabular}
+\caption{Extracted angular frequencies from superposed motion.}
+\label{tab:superposition_frequencies}
+\end{table}
+
+% [FIGURE: Insert frequency-response plots and superposition/beating visualization]
+
+\section{Discussion and Conclusions}
+% [TODO: Human investigator must complete this section]
+% [TODO: If value source is uncertain, keep placeholders and do not infer]
+
+\begin{equation}
+\omega_0 = [TODO], \qquad \omega_s = [TODO], \qquad \omega_a = [TODO].
+\end{equation}
+
+\begin{equation}
+\frac{\omega_s}{\omega_0} = [TODO], \qquad
+\frac{\omega_a}{\omega_0} = [TODO], \qquad
+\frac{\omega_a}{\omega_s} = [TODO].
+\end{equation}
+
+\bibliography{biblio}
+
+\end{document}
