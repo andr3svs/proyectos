@@ -1,13 +1,13 @@
 ---
 name: mecanica-mxbis-latex
-description: "Use when: modifying, populating, or structuring LaTeX documents in Mecanica/m[XX] or m[XX]bis experiment folders. Analyzes reference PDF first to determine document structure and required results, then extracts data from either Excel or Python sources. Follows m11bis/M3bis2 reference patterns for consistency."
+description: "Use when: modifying, populating, or structuring LaTeX documents in Mecanica/m[XX] or m[XX]bis experiment folders. First ask if a Python script exists; if yes, use arrays under \"\"\" LATEX GENERATION \"\"\". If no script exists, read Excel. In all cases, map PDF-required columns and store uncertainty-aware values with the uncertainties module. Follows m11bis/M3bis2 reference patterns for consistency."
 applyTo: "Mecanica/m[0-9]*/**/*.tex"
 ---
 
 # Physics Practice - Mechanics Experiment (mXX/mXXbis) LaTeX Structure Guide
 
 ## Overview
-Documents in the `Mecanica/m[XX]/` or `Mecanica/m[XX]bis*/` folders follow a standardized structure for laboratory reports. The workflow starts by asking the user if they want to use the Python analysis file. After that choice is confirmed, the **PDF reference document is always examined first** to establish the proper structure and identify what results must be extracted. Instructions then guide you to extract data from either Excel or Python sources.
+Documents in the `Mecanica/m[XX]/` or `Mecanica/m[XX]bis*/` folders follow a standardized structure for laboratory reports. The workflow is deterministic: always ask the user first whether they already have a Python script. If they do, locate a `""" LATEX GENERATION """` section and use the arrays defined there for report population. If they do not, extract from Excel. Then analyze the reference PDF to determine required outputs, store uncertainty-aware values using the `uncertainties` module (`ufloat`/`unumpy`), and write a debug TXT log with all used data and provenance.
 
 ---
 
@@ -21,6 +21,13 @@ All reports must meet the following requirements:
 - Conclusions must be written by human investigator
 - Agent only populates: Data, Results, Tables, Figures, Abstract
 - Agent leaves Discussion/Conclusions sections **empty or with placeholders** for human to complete
+
+### **CRITICAL: No Autonomous Fitting or Value Derivation**
+🔴 **Agent NEVER runs fits, regressions, optimizations, or uncertainty estimation on its own**
+- Use only human-provided values and uncertainties from approved sources (Python `""" LATEX GENERATION """` arrays or Excel fields prepared by human)
+- Do not run `curve_fit`, chi-squared minimization, or any derived-parameter computation unless explicit human-provided results already exist
+- If a value or uncertainty is missing, ambiguous, or method is unclear, insert a clear placeholder instead of inferring
+- Preferred placeholder format: `TODO_VALUE`, `TODO_UNCERTAINTY`, or table cell `-- (pending human value)`
 
 ### **Data Presentation**
 1. **Significant figures**: Present all numerical results with **2 significant figures only**
@@ -41,6 +48,7 @@ All reports must meet the following requirements:
    - ✓ Mention: "The model fits well with χ²_red ≈ 1"
    - ✗ Avoid: "The model fits well with R² = 0.95"
    - Explain briefly in Results Interpretation section what χ²_red ≈ 1 means
+   - Do not create scripts for fits on your own, use the data under #LATEX SECTION.
 
 ### **Figure Management**
 1. **Placeholder comments**: When a figure should be inserted, add a clear comment
@@ -91,102 +99,101 @@ Before making any modifications, check the `Mecanica/examples/` or similar refer
 
 ---
 
-## Workflow: PDF-First Approach
+## Workflow: Ask Script First, Then Python-or-Excel, PDF-Guided Columns
 
-### **Step 0: Ask Data Source Preference First** (Mandatory First Interaction)
+### **Step 0: Ask User for Existing Python Script** (Mandatory First Interaction)
 
-Before any extraction or edits, I will ask:
+Before modifying the `.tex` file, ask this exact question first:
 
-> **"Do you want me to use the Python analysis file first? (Yes/No)"**
+> **"Do you already have a Python analysis script for this experiment? (Yes/No)"**
 
-Rules:
-1. If **Yes**: proceed with Python-driven extraction as primary source.
-2. If **No**: proceed with Excel/manual extracted results.
-3. If unclear: ask one clarifying follow-up before proceeding.
-4. If any required uncertainty is missing from the source, ask explicitly before computing it:
+Routing rules:
+1. If **Yes**: locate that script and search for a section labeled `""" LATEX GENERATION """`.
+2. If the section exists: use arrays/variables from that section as the primary report data source.
+3. If the section is missing: ask one follow-up whether to use the rest of the script outputs or fallback to Excel.
+4. If **No**: use Excel as source of values.
 
-> **"Some uncertainties are not explicitly provided. Do you want me to compute them using sample standard deviation (stdev) from repeated trials? (Yes/No)"**
+If uncertainty values are missing in either source, do not estimate them.
 
-### **Step 1: Identify and Analyze Reference PDF** (Always Done After Step 0)
+Use this prompt instead:
+
+> **"Some uncertainties are missing or unclear. I will leave placeholders unless you provide the exact values and source. Continue? (Yes/No)"**
+
+### **Step 1A: Python Path (When User Has Script)**
+
+Required behavior:
+1. Locate script with experiment base name (for example `m3bis.py`, `p12_mecanica.py`).
+2. Parse/inspect `""" LATEX GENERATION """` block.
+3. Extract arrays used for tables/results exactly as defined there.
+4. Keep a mapping record: `report_quantity -> script_variable`.
+
+### **Step 1B: Excel Path (When User Has No Script)**
+
+Required behavior:
+1. Locate Excel file with experiment base name (for example `m3bis2.xlsx`).
+2. Read all relevant sheets and normalize column names.
+3. Produce a column inventory (sheet, column name, units if available).
+4. Build mapping record: `report_quantity -> sheet.column`.
+
+### **Step 2: Identify and Analyze Reference PDF**
+
+After selecting and loading the data source, analyze the PDF (or text/markdown fallback) to determine required report outputs.
 
 When I begin work on a `.tex` file, I will:
+1. Identify the experiment folder base name (for example `m3bis`, `m12`, `m12bis`).
+2. Search for reference PDF (`M[XX]bis[N]*.pdf` or `m[XX]bis*.pdf`).
+3. If PDF cannot be read, use a same-name markdown/text fallback.
+4. Extract required sections, tables, figures, and numerical outputs.
 
-1. **Identify the experiment folder**: Extract base name (e.g., `m3bis`, `m12`, `m12bis`)
-2. **Search for reference PDF**: Look for `M[XX]bis[N]*.pdf` or `m[XX]bis*.pdf` with experiment name
-   - Example: `M3bis2. Oscilaciones acopladas.pdf` for `m3bis/`
-   - Example: `m11bis.pdf` for `m11bis_mecanica/`
-3. **If PDF cannot be read**: Search for alternate format (markdown, text, or HTML version) with similar name
-   - Example: If `M3bis2. COUPLED OSCILLATIONS.pdf` is unreadable, check for `M3bis2. COUPLED OSCILLATIONS.md` or similar
-   - Use the markdown/text file as the structure reference instead
-   - This allows proceeding with document organization even if PDF extraction fails
-4. **Analyze PDF structure**: Identify sections, subsections, tables, figures, and required results
-5. **Extract structure to `.tex`**: Map PDF organization to your `.tex` template
-6. **Identify data needs**: Determine exactly what numerical/table content is needed from PDF
+### **Step 3: Map PDF Requirements to Source Data and Store Uncertainties**
 
-### **Step 2: Confirm and Apply Data Source** (After PDF Structure is Clear)
+Using the selected source from Step 1A or Step 1B and the PDF-required outputs from Step 2:
+1. Build an explicit mapping from required PDF quantities to source fields (script arrays or Excel columns).
+2. For each measured quantity, pair value and uncertainty fields.
+3. Store uncertainty-aware values using `uncertainties` module types:
+   - Scalar values: `ufloat(value, sigma)`
+   - Arrays/series: `uncertainties.unumpy.uarray(values, sigmas)`
+4. Keep mapped uncertainty-aware data in named structures (for example dictionaries/DataFrames) that can be consumed by `.tex` table generation.
+5. Ensure each uncertainty has traceable provenance (sheet/column and method).
+6. If any value/uncertainty is not explicitly present in the source, write a placeholder and mark provenance as pending human confirmation.
 
-Once the PDF structure is understood, I will apply the choice made in Step 0 and confirm before extraction:
+### **Step 4: Mandatory Debug TXT Export (Data + Provenance)**
 
-> **"Confirmed source: Python or Excel. I will now extract the required results from that source."**
+Before populating `.tex`, write a debug text file in the experiment folder (for example `debug_data_provenance.txt`) containing:
+1. Timestamp and selected data source (Python script or Excel).
+2. For every value used in the report:
+   - Report quantity name.
+   - Numeric value and uncertainty.
+   - Provenance:
+     - Python path: script filename + variable/array name + `""" LATEX GENERATION """` reference.
+     - Excel path: workbook + sheet + column (+ row/index when applicable).
+   - Uncertainty method (explicit source, stdev, propagated, etc.).
+3. A final summary block with counts of quantities, direct-source uncertainties, and computed uncertainties.
 
-#### **Option A: Extract From Excel File**
-**Use when**: Results are already computed and stored in `.xlsx` with matching base name.
+Important policy for this debug file:
+- Computed uncertainties count should be `0` unless values were explicitly provided by human as computed outputs.
+- Add a `PENDING_PLACEHOLDERS` section listing every unresolved quantity.
 
-**What I will do** (after PDF structure is analyzed):
-1. Locate Excel file: `m[XX]bis[N].xlsx` (base name matching PDF)
-2. Read sheets to identify available data: Experimental Data, Fitted Parameters, Figure References, etc.
-3. Extract rows/tables that correspond to PDF structure sections
-4. Populate `.tex` placeholders with formatted data
-5. Preserve all explanatory text unchanged
+Also print one debug line to console when file is generated, for example:
+`DEBUG: wrote debug_data_provenance.txt with N mapped quantities`.
 
-**Folder structure**:
+### **Step 5: Populate `.tex` with Processed Values**
+
+1. Insert tables/results according to the PDF structure.
+2. Format numbers with 2 significant figures and proper `siunitx` units.
+3. Preserve explanatory text unless the user requests wording edits.
+
+### **Reference Folder Structure**
 ```
 Mecanica/m3bis/
-├── M3bis2. Oscilaciones acopladas.pdf    (← Always analyzed first)
-├── m3bis2.xlsx                           (results data, if using Option A)
-├── Template.tex                          (.tex file to populate)
-├── m3bis.py                              (optional: if using Option B)
+├── M3bis2. Oscilaciones acopladas.pdf  (structure contract)
+├── m3bis2.xlsx                         (source data)
+├── read_m3bis2.py                      (mandatory preprocessing script)
+├── m3bis2.tex                          (target report)
 └── references.bib
 ```
 
-**When PDF+Excel approach makes sense**:
-- Results are finalized in Excel
-- PDF structure clearly shows what sections/tables are needed
-- Data already formatted with uncertainties
-- Excel sheets organized to match PDF layout
-
-#### **Option B: Extract From Python Script**
-**Use when**: You want to regenerate results from raw data or update existing computations.
-
-**What I will do** (after PDF structure is analyzed):
-1. Locate Python script: `p[XX]_mecanica.py` or `p[XX]bis.py` in experiment folder
-2. Execute script (ensuring dependencies and data files are available)
-3. Extract results identified as needed by PDF structure:
-   - Generated tables (DataFrames)
-   - Fitted parameters with uncertainties
-   - Generated plots (`.png` files)
-   - Computed statistics (χ², residuals, etc.)
-4. Populate `.tex` template with fresh results
-5. Ensure proper siunitx formatting for all values
-
-**Folder structure**:
-```
-Mecanica/m12bis_mecanica/
-├── m11bis.pdf  (or similar reference)     (← Always analyzed first)
-├── p12_mecanica.py                        (generates results, if using Option B)
-├── m12bis.tex                             (.tex file to populate)
-├── references.bib
-├── [raw data files: .txt, .trk, etc.]
-└── [generated figures: trayectorias_*.png]
-```
-
-**When Python approach makes sense**:
-- Raw data files are available and need fresh analysis
-- Results need updating due to data corrections
-- You want reproducible, version-controlled results
-- Excel file doesn't exist, is outdated, or you prefer computational verification
-
-### **Step 3: Final Compile Validation of the `.tex` File** (Mandatory Before Finish)
+### **Step 6: Final Compile Validation of the `.tex` File** (Mandatory Before Finish)
 
 Before considering the task complete, I must ensure the generated `.tex` file compiles successfully.
 
@@ -228,7 +235,7 @@ Required checks:
 3. Key results or discoveries
 4. Physical significance
 
-**Data Integration**: Extract from Python analysis output (e.g., final fitted parameters, main conclusion)
+**Data Integration**: Extract only from human-provided outputs (Python `""" LATEX GENERATION """` arrays or Excel fields).
 
 ### 3. **Introduction and Objectives**
 **Purpose**: Establish physics context and experiment goals.
@@ -263,7 +270,7 @@ Required checks:
   - Example row: `$0.317 \pm 0.029$ & $108.400 \pm 0.029$ \\`
 
 **Auto-Population Checklist**:
-- [ ] Run Python analysis script (`p[X]_mecanica.py`) to generate tables and figures
+- [ ] Read human-provided script outputs (`""" LATEX GENERATION """`) or Excel fields
 - [ ] Copy generated tables with `\unit{}` formatting
 - [ ] Place figures in `Mecanica/m[X]bis_mecanica/` directory
 - [ ] Reference with `\label{fig:...}` and `\ref{fig:...}`
@@ -282,15 +289,15 @@ Required checks:
   - `θ` = scattering angle
   - `r_0` = center of forces offset
   
-- **Fitting Method**: Explain how Python code fits data (e.g., scipy's `curve_fit`, chi-squared minimization, uncertainty estimation strategy)
+- **Fitting Method**: Report only the fitting method description already provided by the human source; do not execute or infer fitting steps.
 
 - **Key Assumption**: Document fixed parameters
   - Example: "We have taken `b = 4.75 cm` in all cases" (impact parameter, adjusted per experiment)
 
-**Auto-Population from Python**:
-- Extract fitted equation from comments in `p[X]_mecanica.py`
-- Pull chi-squared reduced value: `χ²_red = 1` (verify in Python output)
-- Document fitting confidence threshold
+**Auto-Population from Source**:
+- Extract equation/fit summaries only if explicitly present in source fields
+- Pull chi-squared reduced value only if explicitly provided
+- If absent, leave placeholders and mark pending human input
 
 ##### **4.1.3 Results Interpretation** (subsubsection)
 **Purpose**: Analyze fitted parameters and their physical meaning.
@@ -324,10 +331,10 @@ Required checks:
   - Compare with theoretical or measured value
   - Example: "Using k = 1.17 × 10⁻³, the predicted hill height at r = 1 cm is 12 ± 5 cm, consistent with laboratory setup"
 
-**Auto-Population from Python**:
-- Extract fitted parameters with uncertainties from Python output
-- Include chi-squared checks
-- Reference residual analysis or goodness-of-fit metrics
+**Auto-Population from Source**:
+- Extract fitted parameters with uncertainties only when explicitly present in source data
+- Include chi-squared or residual metrics only when explicitly provided
+- Otherwise use placeholders and add pending notes
 
 #### **4.2 Subsection: Second Analysis (e.g., "Potential Well Analysis")**
 
@@ -336,7 +343,7 @@ Follow same structure as 4.1:
 - **Theoretical Model**: Expected behavior (energy-dependent orbit types)
 - **Results/Classification**: Categorize trajectories (open vs. closed orbits, energy analysis)
 
-**For Qualitative Analysis** (when fitting is not done):
+**For Qualitative Analysis** (when fitting data is not provided):
 - Describe trajectories visually with reference to theory
 - Classify by energy regime (high E → open, low E → bound/precessing)
 - Note observable effects (orbital decay, precession, friction)
@@ -375,7 +382,7 @@ When using PDF + Excel approach, the `.xlsx` file should follow this pattern:
 
 ### **How I Extract From Excel**
 
-When you choose **Option A (PDF + Excel)**:
+When using the Excel path:
 
 1. **Open** `m[X]bis*.xlsx` (matching base name of instructions file)
 2. **Read sheet names** to find: "Experimental Data", "Fitted Results", "Figure References", etc.
@@ -383,12 +390,13 @@ When you choose **Option A (PDF + Excel)**:
 4. **Format values** with uncertainties using siunitx syntax
 5. **Match** rows to corresponding `.tex` table placeholders
 6. **Preserve** existing table structure and captions (only replace data rows)
+7. **Do not derive missing values**; keep placeholders for missing/uncertain entries
 
 ---
 
 ## To-Populate Checklist Before Running Agent
 
-### **If Using PDF + Excel Approach**:
+### **If Using Excel Path**:
 - [ ] **PDF reference identified**: `M3bis2. Oscilaciones acopladas.pdf` or similar
   - Confirms document structure and section order
   - Provides reference formatting examples
@@ -406,9 +414,9 @@ When you choose **Option A (PDF + Excel)**:
   - Lacks numerical data (placeholders only)
 
 ### **If Using Python Approach**:
-- [ ] **Python analysis complete**: Run `python p[X]_mecanica.py`
-  - Generates: fitted parameters, tables, plots/figures
-  - Outputs stored in directory or as `.png` files
+- [ ] **Python source prepared by human**: `""" LATEX GENERATION """` section exists
+   - Contains: tables/arrays/values already prepared for LaTeX population
+   - Agent reads only, does not run new fitting computations
 
 - [ ] **Figures present** in the experiment folder:
   - `trayectorias_experimentales_*.png` (trajectory plots)
@@ -445,7 +453,7 @@ When you choose **Option A (PDF + Excel)**:
 4. Reference: `\label{fig:...}` for cross-referencing
 
 ### **When to Update Results Section**
-1. New Python analysis produces fitted parameters
+1. Human-provided source includes fitted parameters
 2. Results Interpretation subsection has a parameter table
 3. Extract parameter names, values, uncertainties, units
 4. Format using `\times 10^{n}` for scientific notation when needed
