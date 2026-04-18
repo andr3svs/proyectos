@@ -127,7 +127,8 @@ plt.title('Coeficiente adiabático experimental vs h1 aire', fontsize=14)
 plt.legend()
 plt.grid(False)
 #Do the plot
-plt.show()
+plt.savefig('grafica_aire.png', dpi=150, bbox_inches='tight')
+plt.close()
 
 
 #h1_co2 vs coeficiente adiabatico experimental
@@ -163,7 +164,8 @@ plt.title('Coeficiente adiabático experimental vs h1 $CO_2$', fontsize=14)
 plt.legend()
 plt.grid(False)
 #Do the plot
-plt.show()
+plt.savefig('grafica_co2.png', dpi=150, bbox_inches='tight')
+plt.close()
 
 
 print("Proceso finalizado.")

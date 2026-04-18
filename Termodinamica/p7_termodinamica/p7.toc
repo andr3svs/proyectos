@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Resultados}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Coeficiente adiabático del aire}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Coeficiente adiabático del $CO_2$}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Conclusiones}{3}{section.2}%
+\contentsline {section}{\numberline {3}Anexos}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tablas de datos}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Incertidumbres}{5}{subsection.3.2}%
+\contentsline {paragraph}{Medidas Directas (Incertidumbre Tipo B):}{5}{section*.6}%
+\contentsline {paragraph}{Medidas Indirectas (Propagación Cuadrática de Errores):}{5}{section*.7}%
