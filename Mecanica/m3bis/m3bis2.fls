@@ -141,6 +141,9 @@ INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtlf.fd
 INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtlf.fd
 INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtlf.fd
 INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT .\m3bis2.aux
+INPUT .\m3bis2.aux
+INPUT m3bis2.aux
 OUTPUT m3bis2.aux
 INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\tex\latex\newtx\omlntxmi.fd
 INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\tex\latex\newtx\omlntxmi.fd
@@ -260,6 +263,15 @@ INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\stxscr
 INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntxexx.vf
 INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txexs.tfm
 INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Italic-tlf-t1.tfm
+INPUT .\descarga (5).png
+INPUT .\descarga (5).png
+INPUT .\descarga (5).png
+INPUT .\descarga (5).png
+INPUT .\descarga (5).png
+INPUT .\descarga (5).png
+INPUT .\descarga (5).png
+INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
+INPUT C:\Users\josma\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-t1.tfm
 INPUT .\m3bis2.bbl
 INPUT .\m3bis2.bbl
 INPUT m3bis2.bbl

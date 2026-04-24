@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  22 APR 2026 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  24 APR 2026 12:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -480,13 +480,12 @@ File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 27.
-
-No file m3bis2.aux.
+ (m3bis2.aux)
 \openout1 = `m3bis2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 27.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 27.
-(C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/newtx\omlntxmi.fd
+ (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/newtx\omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 27.
@@ -737,179 +736,39 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 {C:/Users/josma/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 116.
- [2]
-
-LaTeX Warning: Reference `tab:frequencies' on page 3 undefined on input line 203.
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:209: Undefined control sequence.
-<argument> ...int_\l__siunitx_print_unit_mode_str 
-                                                  :n
-l.209 \textbf{Mode} & \textbf{FFT (\unit{rad/s})}
-                                                  & \textbf{Fit (\unit{rad/s...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:209: LaTeX Error: \mathrm allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 \textbf{Mode} & \textbf{FFT (\unit{rad/s})}
-                                                  & \textbf{Fit (\unit{rad/s...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:209: LaTeX Error: \mathrm allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 \textbf{Mode} & \textbf{FFT (\unit{rad/s})}
-                                                  & \textbf{Fit (\unit{rad/s...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:209: Undefined control sequence.
-<argument> ...int_\l__siunitx_print_unit_mode_str 
-                                                  :n
-l.209 ...it{rad/s})} & \textbf{Fit (\unit{rad/s})}
-                                                   & \textbf{Description} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:209: LaTeX Error: \mathrm allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ...it{rad/s})} & \textbf{Fit (\unit{rad/s})}
-                                                   & \textbf{Description} \\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:209: LaTeX Error: \mathrm allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ...it{rad/s})} & \textbf{Fit (\unit{rad/s})}
-                                                   & \textbf{Description} \\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:228: Undefined control sequence.
-<argument> ...int_\l__siunitx_print_unit_mode_str 
-                                                  :n
-l.228 \textbf{Mode} & \textbf{FFT (\unit{rad/s})}
-                                                  & \textbf{Fit (\unit{rad/s...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:228: LaTeX Error: \mathrm allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 \textbf{Mode} & \textbf{FFT (\unit{rad/s})}
-                                                  & \textbf{Fit (\unit{rad/s...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:228: LaTeX Error: \mathrm allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 \textbf{Mode} & \textbf{FFT (\unit{rad/s})}
-                                                  & \textbf{Fit (\unit{rad/s...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:228: Undefined control sequence.
-<argument> ...int_\l__siunitx_print_unit_mode_str 
-                                                  :n
-l.228 ...it{rad/s})} & \textbf{Fit (\unit{rad/s})}
-                                                   & \textbf{Description} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:228: LaTeX Error: \mathrm allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 ...it{rad/s})} & \textbf{Fit (\unit{rad/s})}
-                                                   & \textbf{Description} \\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex:228: LaTeX Error: \mathrm allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 ...it{rad/s})} & \textbf{Fit (\unit{rad/s})}
-                                                   & \textbf{Description} \\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[3] (m3bis2.bbl
+ [2] [3]
+<descarga (5).png, id=20, 714.7503pt x 354.123pt>
+File: descarga (5).png Graphic file (type png)
+<use descarga (5).png>
+Package pdftex.def Info: descarga (5).png  used on input line 261.
+(pdftex.def)             Requested size: 435.3303pt x 215.69049pt.
+ [4 <./descarga (5).png>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 278.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.1pt on input line 278.
+ [5] (m3bis2.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 15.
 
-) [4] (m3bis2.aux)
+) [6] (m3bis2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 15317 strings out of 474486
- 303194 string characters out of 5743756
+ 15372 strings out of 474486
+ 304381 string characters out of 5743756
  1941542 words of memory out of 5000000
- 37341 multiletter control sequences out of 15000+600000
- 619616 words of font info for 141 fonts, out of 8000000 for 9000
+ 37358 multiletter control sequences out of 15000+600000
+ 627014 words of font info for 161 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,12n,93p,1055b,713s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,12n,93p,1055b,527s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/NewTXMI.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/NewTXMI7.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txexs.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on m3bis2.pdf (4 pages, 164631 bytes).
+Output written on m3bis2.pdf (6 pages, 311017 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 23553 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 27654 words of extra memory for PDF output out of 29859 (max. 10000000)
 

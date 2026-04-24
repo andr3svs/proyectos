@@ -37,9 +37,9 @@ This report analyzes coupled oscillations in a rigid bar connected to two spring
 \section{Introduction and Objectives}
 
 \subsection{Theoretical Background}
-Coupled oscillatory systems are fundamental in physics, the phenoma although symple is most profound than what it appears.
+Coupled oscillatory systems are fundamental in physics, the phenomena although simple is most profound than what it appears.
 We can describe a wide range of phenomena, from the vibrations of molecules to the behavior of coupled pendulums, and even we can study waves as an infinite superposition of coupled oscillators.
-For gaining an intuitive understanding of the behaviour of coupled oscillators, we use a simple model of one rod connected by two springs
+For gaining an intuitive understanding of the behavior of coupled oscillators, we use a simple model of one rod connected by two springs
 
 
 For the uncoupled coordinates $z_1$ and $z_2$, the kinetic and potential energies are
@@ -53,7 +53,7 @@ Then, we will decouple the system by diagonalizing the kinetic and potential ene
 \begin{equation}
 z_s = \frac{z_1 + z_2}{\sqrt{2}}, \qquad z_a = \frac{z_1 - z_2}{\sqrt{2}}.
 \end{equation}
-%mira esto que es geminada
+
 \textbf{Step 1: Define the Mass ($M$) and Stiffness ($K$) Matrices}
 
 Based on the kinetic and potential energy equations, the matrices are:
@@ -173,9 +173,9 @@ The force signals were recorded with PASCO sensors that measured the force of ea
 
 The data analyzed with DataStudio software, presents the advantage of having built-in uncertainties for the fitting parameters, 
 which are used to report the uncertainties in the measured frequencies.
-Nonetheless, we deciced that due to the nature of the measurements, a fast fourier transform (FFT) analysis would be more appropriate for the superposition case, as it allows us to identify the individual frequency components,
+Nonetheless, we decided that due to the nature of the measurements, a fast fourier transform (FFT) analysis would be more appropriate for the superposition case, as it allows us to identify the individual frequency components,
 by taking the relatives maxima of the spectrum, and then we took the uncertainty as the sample standard deviation of the repeated measurements, we should note that the uncertainty reported by the software
-should be the main consideration to analyze the results, as it is based on the fittingn procedure, a much more powerful algorithm that the standart deviation.
+should be the main consideration to analyze the results, as it is based on the fitting procedure, a much more powerful algorithm that the standard deviation.
 
 
 
@@ -185,14 +185,12 @@ should be the main consideration to analyze the results, as it is based on the f
 
 \subsection{Experimental Setup}
 The apparatus consists of a rigid bar suspended by two identical springs and monitored with two force sensors.
-The system then is supported on air by a metallic apparatus that also serves as a way to carry the different experiments
-%% me he aburrido de hacer esto, chema hazlo tu
+The system then is supported on air by a metallic apparatus that also serves as a way to carry the different experiments.
 
 \subsection{Data Acquisition and Analysis}
 Frequency sweeps were performed for the center reference and left/right configurations. The measured frequencies were converted from cycles per second to angular frequency using $\omega = 2\pi f$.
 
 For repeated measurements, the reported uncertainty is the sample standard deviation of the repeated values unless the source file explicitly provides a different uncertainty.
-%haz esto, falta profundidad
 
 \section{Results and Data Analysis}
 As the two methods are different at a fundamental level, we have decided to report the results of the two methods separately,
@@ -206,7 +204,7 @@ Table~\ref{tab:frequencies} summarizes the characteristic frequencies extracted 
 \centering
 \begin{tabular}{lccc}
 \toprule
-\textbf{Mode} & \textbf{FFT (\unit{rad/s})} & \textbf{Fit (\unit{rad/s})} & \textbf{Description} \\
+\textbf{Mode} & \textbf{FFT ($\mathrm{rad/s}$)} & \textbf{Fit ($\mathrm{rad/s}$)} & \textbf{Description} \\
 \midrule
 Natural ($\omega_0$) & $14.84 \pm 0.13$ & $14.66\pm0.23$ & Center reference oscillator \\
 Symmetric ($\omega_s$) & $12.720 \pm 0.060$ & $12.51\pm0.47$ & Both oscillators in phase \\
@@ -225,7 +223,7 @@ When one end of the bar is displaced while the other remains at rest, the motion
 \centering
 \begin{tabular}{lccc}
 \toprule
-\textbf{Mode} & \textbf{FFT (\unit{rad/s})} & \textbf{Fit (\unit{rad/s})} & \textbf{Description} \\
+\textbf{Mode} & \textbf{FFT ($\mathrm{rad/s}$)} & \textbf{Fit ($\mathrm{rad/s}$)} & \textbf{Description} \\
 \midrule
 Minimum ($\omega_{min}$) & $12.80 \pm 0.10$ & $12.77\pm0.30$ & Superposition slow mode \\
 Maximum ($\omega_{max}$) & $19.31 \pm 0.49$ & $13.41\pm0.30$ & Superposition fast mode \\
@@ -235,32 +233,81 @@ Maximum ($\omega_{max}$) & $19.31 \pm 0.49$ & $13.41\pm0.30$ & Superposition fas
 \label{tab:superposition_frequencies}
 \end{table}
 
-% [FIGURE: Insert frequency-response plots showing resonance peaks and the beating pattern of the superposed motion]
+\subsection{Normal Coordinates Analysis}
+To further analyze the system's dynamics, the complex motion recorded in the superposition experiment was treated to extract the normal coordinates. Although the sensors measure individual forces, these are proportional to the vertical displacements $z_1$ and $z_2$. Thus, the normal coordinates were calculated as:
+\begin{equation}
+z_{CM} = z_1 + z_2, \qquad z_{12} = z_1 - z_2.
+\end{equation}
+By applying the Fast Fourier Transform (FFT) to the composite signal, the two fundamental frequency components were isolated. These frequencies, representing the symmetric and asymmetric modes within the superposed motion, are presented in Table \ref{tab:normal_coords} and compared with the pure modes measured in Section 3.1.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llcc}
+\toprule
+\textbf{Coordinate} & \textbf{FFT Freq. ($\mathrm{rad/s}$)} & \textbf{Pure Mode ($\mathrm{rad/s}$)} & \textbf{Rel. Error (\%)} \\
+\midrule
+$z_{CM}$ (Symmetric) & $\omega_{CM} = 12.83 \pm 0.10$ & $\omega_s = 12.51 \pm 0.47$ & $2.56\%$ \\
+$z_{12}$ (Asymmetric) & $\omega_{12} = 19.34 \pm 0.49$ & $\omega_a = 19.95 \pm 0.11$ & $3.06\%$ \\
+\bottomrule
+\end{tabular}
+\caption{Comparison between frequencies extracted from normal coordinates via FFT and the previously measured pure modes.}
+\label{tab:normal_coords}
+\end{table}
+
+The resulting time evolution of these coordinates was simulated using the experimental frequencies to visualize the decoupling of the motion (see Figure \ref{fig:normal_coords_plot}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{descarga (5).png}
+    \caption{Time evolution of the isolated normal coordinates $z_{CM}$ (blue) and $z_{12}$ (red). The plot shows the transition from a complex beating pattern to two independent harmonic oscillations.}
+    \label{fig:normal_coords_plot}
+\end{figure}
 
 \section{Discussion and Conclusions}
-% [TODO: Human investigator must complete the discussion on the relationship between \omega_s, \omega_a, \omega_{min}, \omega_{max}, and \omega_0]
-% [TODO: Discuss the proportions between the frequencies according to theoretical equations]
 
-The measured frequencies can be compared directly with the theoretical ratios expected from
+\subsection{Comparative Analysis of Theoretical Ratios and Experimental Data}
+The validity of the physical model is based on the consistency of the relationships between the frequencies of the normal modes. According to the theoretical development presented in section 1.1, the angular frequencies for the natural ($\omega_0$), symmetric ($\omega_s$), and asymmetric ($\omega_a$) modes are governed by the system's constants ($k$ and $m$). From the theoretical equations, the following ideal proportions are derived:
 \begin{equation}
-\omega_0 = \sqrt{\frac{3k}{m}}, \qquad \omega_s = \sqrt{\frac{2k}{m}}, \qquad \omega_a = \sqrt{\frac{6k}{m}}.
+\frac{\omega_s}{\omega_0} = \sqrt{\frac{2}{3}} \approx 0.816, \qquad
+\frac{\omega_a}{\omega_0} = \sqrt{2} \approx 1.414, \qquad
+\frac{\omega_a}{\omega_s} = \sqrt{3} \approx 1.732.
 \end{equation}
-From these expressions, the theoretical proportions are
-\begin{equation}
-\frac{\omega_s}{\omega_0} = \sqrt{\frac{2}{3}} \approx 0.82, \qquad
-\frac{\omega_a}{\omega_0} = \sqrt{2} \approx 1.41, \qquad
-\frac{\omega_a}{\omega_s} = \sqrt{3} \approx 1.73.
-\end{equation}
-%Comprueba chema que esto es asi porfavor
 
-Using the measured values, we obtain
+When contrasting these values with our experimental results, we observe coherent behavior but with systematic deviations that merit analysis. Using the data obtained through Fast Fourier Transform (FFT) analysis, the resulting ratios are:
 \begin{equation}
-\frac{\omega_s}{\omega_0} = \frac{12.72}{14.84} \approx 0.86, \qquad
-\frac{\omega_a}{\omega_0} = \frac{19.80}{14.84} \approx 1.33, \qquad
-\frac{\omega_a}{\omega_s} = \frac{19.80}{12.72} \approx 1.56.
+\frac{\omega_{s,\text{fft}}}{\omega_{0,\text{fft}}} = \frac{12.72}{14.84} \approx 0.86, \qquad
+\frac{\omega_{a,\text{fft}}}{\omega_{0,\text{fft}}} = \frac{19.80}{14.84} \approx 1.33, \qquad
+\frac{\omega_{a,\text{fft}}}{\omega_{s,\text{fft}}} = \frac{19.80}{12.72} \approx 1.56.
 \end{equation}
-We see that the biggest deviation from the theorical proportions is of the order of 0.10,the same as the experimental error, which make our experimental results,
-consistent with the theory up to a resonable degree of accuracy, accountiing for the experimtal error.
+
+On the other hand, the values extracted from the sinusoidal fit (\textit{Fit}) in the time domain yield similar proportions:
+\begin{equation}
+\frac{\omega_{s,\text{fit}}}{\omega_{0,\text{fit}}} = \frac{12.51}{14.66} \approx 0.85, \qquad
+\frac{\omega_{a,\text{fit}}}{\omega_{0,\text{fit}}} = \frac{19.95}{14.66} \approx 1.36, \qquad
+\frac{\omega_{a,\text{fit}}}{\omega_{s,\text{fit}}} = \frac{19.95}{12.51} \approx 1.59.
+\end{equation}
+
+The most notable discrepancy is found in the $\omega_a / \omega_s$ factor, where the experimental value ($\approx 1.58$) falls below the theoretical one ($1.73$). This deviation indicates that the real system presents a lower effective stiffness in the asymmetric mode than what the ideal rigid bar model predicts. Factors such as the finite elasticity of the bar, friction in the supports, and the possible lack of linearity in the springs under large extensions contribute to this result. But in general, we can observe that despite the discrepancies present, the obtained data fits the theory in question.
+
+\subsection{Discussion on Methodology: Sinusoidal Fitting vs. Spectral Analysis}
+One of the key points of this analysis has been to evaluate data processing techniques for complex signals. The sinusoidal fit proved to be the most accurate tool for characterizing the pure modes ($\omega_0, \omega_s, \omega_a$), since the signal is interpreted by the program itself using the data provided, and the minimization of the squared error by the DataStudio software is extremely efficient in these cases.
+
+However, this technique failed critically when analyzing the superposition experiment. As detailed in Table \ref{tab:superposition_frequencies}, the sinusoidal fit for the high-frequency component in superposition yielded a value of $13.41 \pm 0.30$ rad/s. This result lacks physical sense, as it should approach the $\sim 19$ rad/s of the asymmetric mode. The explanation may be due to a failure of the program itself, since in the rest of the modes it yields what it should and in this case it does not, yet if we take the program's data and run it through the FFT, it gives a value quite close to the theoretical one.
+
+In contrast, the FFT has proven to be the superior method for studying coupled systems. By transforming the signal to the frequency domain, the FFT allows us to visually and mathematically "decouple" the motion components. The spectral peaks in the superposition turned out to be $\omega_{min} = 12.83$ rad/s and $\omega_{max} = 19.34$ rad/s. When comparing these values with the independently measured pure mode frequencies ($\omega_s = 12.72$ and $\omega_a = 19.80$), the relative errors are below $3\%$. This constitutes definitive proof that the observed complex motion is a linear superposition of the system's normal modes.
+
+\subsection{Interpretation of Normal Coordinates and Decoupling}
+Looking at Table \ref{tab:normal_coords}, we can see that the theory of normal modes holds up perfectly in the lab. The errors between the frequencies hidden inside that motion and the pure modes we measured earlier are really low (under $3.1\%$). This basically proves that when the bar does that motion, it isn't doing anything new; it’s just playing the symmetric and asymmetric modes at the same time.
+
+Calculating $z_{CM}$ and $z_{12}$ is a great way to see how it actually works in real life. If we just look at the raw sensor data ($z_1$ and $z_2$), the springs and the bar are pushing against each other, passing energy back and forth (which creates the beats). But when we switch to normal coordinates (the sum and the difference), it's like looking at two completely independent oscillators. 
+
+Physically, the sum ($\omega_{CM}$) is just the whole bar bouncing up and down. The difference ($\omega_{12}$) is the bar rocking back and forth. This second motion oscillates much faster because the springs are stretching in opposite directions, making the whole setup feel much stiffer.
+
+\subsection{Final Remarks}
+In conclusion, the experiment conforms to the theory of coupled oscillators and the phenomenon of mode splitting. It has been verified that the degree of coupling of the system, determined by the interaction of the springs through the inertia of the bar, defines a characteristic frequency spectrum that remains constant regardless of the initial displacement conditions. 
+
+The results highlight the importance of using tools such as the FFT when working with this type of system, as conventional fitting methods prove insufficient to resolve simultaneous frequency components. Finally, the observed deviations from the theoretical proportions provide a measure of the non-ideality of the experimental setup, suggesting that energy dissipation and the actual mass distribution are factors that must be considered in more advanced models. Nevertheless, the internal consistency of the data and results obtained during this practice show that the experiment aligns with the theory.
+
 \bibliography{biblio}
 
 \end{document}
