@@ -308,6 +308,25 @@ In conclusion, the experiment adapts to the theory of coupled oscillators and th
 
 The results highlight the importance of using tools such as the FFT when working with this type of system, as conventional fitting methods prove insufficient to resolve simultaneous frequency components. Finally, the observed deviations from the theoretical proportions provide a measure of the non-ideality of the experimental setup, suggesting that energy dissipation and the actual mass distribution are factors that must be considered in more advanced models. Nevertheless, the internal consistency of the data and results obtained during this practice show that the experiment aligns with the theory.
 
+\appendix
+\section{Uncertainty Analysis}
+This appendix details the statistical and mathematical methodology used to determine the experimental uncertainties reported in the results section.
+
+\subsection{Sinusoidal Fitting Uncertainties}
+The \textit{DataStudio} software uses a non-linear least-squares fitting algorithm to match the experimental force-time data to a sinusoidal function of the form $F(t) = A \sin(\omega t + \phi) + C$. While the software provides an instrumental standard error for the angular frequency parameter $\omega$ based on the mathematical goodness of the fit, the dominant source of error in this experiment comes from random physical variations, such as the exact force and angle of the initial manual displacement.
+
+To account for these random experimental variations, the experiment was repeated multiple times ($N=3$) for each configuration. The final reported uncertainty for the pure modes ($\omega_0$, $\omega_s$, $\omega_a$) is the sample standard deviation ($s$) of these repeated measurements. It was calculated using the standard statistical formula:
+\begin{equation}
+s = \sqrt{\frac{1}{N-1} \sum_{i=1}^{N} (\omega_i - \bar{\omega})^2}
+\end{equation}
+where $\bar{\omega}$ is the arithmetic mean of the measured angular frequencies and $\omega_i$ represents the value obtained in each individual trial.
+
+\subsection{Fast Fourier Transform (FFT) Uncertainties}
+For the FFT, a longer recording time gives us more precise uncertainties of values. To maintain thee consistency with the sinusoidal fittt and to calculate the experimental variance between different physical runs, the reported uncertainty for the FFT frequencies was also defined as the sample standard deviation of the peak values across the repeated trials. 
+
+By prioritizing the standard deviation over the raw instrumental error in both methods.
+
+
 \bibliography{biblio}
 
 \end{document}

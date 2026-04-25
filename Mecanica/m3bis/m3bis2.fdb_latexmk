@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex m3bis2"] 1777066504.20202 "m3bis2.aux" "m3bis2.bbl" "m3bis2" 1777066510.00567 0
+["bibtex m3bis2"] 1777134084.48799 "m3bis2.aux" "m3bis2.bbl" "m3bis2" 1777134524.80942 0
   "./biblio.bib" 1776202521 566 50c247457253c561d572d2c115416a5d ""
   "C:/Users/josma/AppData/Local/Programs/MiKTeX/bibtex/bst/revtex4/apsrev.bst" 1602107563 43844 78e58abfb2d07832103f1e2f30cf6375 ""
-  "m3bis2.aux" 1777066508 3252 7fbc738e6571a5aeae086c81b8585add "pdflatex"
+  "m3bis2.aux" 1777134522 3620 f6988c8b37985bede04da8687c585c10 "pdflatex"
   (generated)
   "m3bis2.bbl"
   "m3bis2.blg"
   (rewritten before read)
-["pdflatex"] 1777066505.01975 "c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex" "m3bis2.pdf" "m3bis2" 1777066510.00797 0
+["pdflatex"] 1777134518.38542 "c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex" "m3bis2.pdf" "m3bis2" 1777134524.81188 0
   "C:/Users/josma/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1777020027 161609 ed5f950be6671ee0fff6dd76bd8a8f6e ""
   "C:/Users/josma/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1743672493 24225045 2f57ae6ceecae960d826f5d067b7f97d ""
   "C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1736607166 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
@@ -128,11 +128,11 @@
   "C:/Users/josma/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/josma/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/josma/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex" 1777066497 18389 6d56cbd645d34a9232a00a310dc889a8 ""
+  "c:/vscode/practicas/Practicas-Fisica/Mecanica/m3bis/m3bis2.tex" 1777134516 20259 a69b2ab435accad136689b990c8db30c ""
   "descarga (5).png" 1777025368 146521 df8c687f6db858c79b827cc4c32fff2f ""
-  "m3bis2.aux" 1777066508 3252 7fbc738e6571a5aeae086c81b8585add "pdflatex"
-  "m3bis2.bbl" 1777066504 599 9411fe63aa1c4dcc3282b86a381435fa "bibtex m3bis2"
-  "m3bis2.tex" 1777066497 18389 6d56cbd645d34a9232a00a310dc889a8 ""
+  "m3bis2.aux" 1777134522 3620 f6988c8b37985bede04da8687c585c10 "pdflatex"
+  "m3bis2.bbl" 1777134085 599 9411fe63aa1c4dcc3282b86a381435fa "bibtex m3bis2"
+  "m3bis2.tex" 1777134516 20259 a69b2ab435accad136689b990c8db30c ""
   (generated)
   "m3bis2.aux"
   "m3bis2.log"
