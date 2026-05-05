@@ -1,0 +1,10 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Experimental Results}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Thermal Wave Analysis}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Derived Physical Parameters}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Discusión}{3}{section.3}%
+\contentsline {section}{\numberline {4}Conclusiones}{3}{section.4}%
+\contentsline {section}{\numberline {5}Cuestiones Teóricas}{4}{section.5}%
+\contentsline {section}{\numberline {A}Experimental Data}{4}{appendix.A}%
+\contentsline {section}{\numberline {B}References}{7}{appendix.B}%
