@@ -63,8 +63,10 @@ Los datos se ajustaron a un modelo sinusoidal utilizando Regresión Ortogonal de
 \begin{equation}
     \theta(t) = A + \text{Amp} \cdot \cos\left(\frac{2\pi}{\tau}t - \phi\right)
 \end{equation}
-
-Los resultados del ajuste, siguiendo la normativa GUM para cifras significativas, se resumen en la Tabla~\ref{tab:fit_results}.
+Mediante este ajuste, se extrajeron los parámetros físicos de la onda, consideramos este método
+más riguroso que determinarlos gráficamente, ya que se obtiene un resultado más exacto.
+No obstante, se deben tener en cuenta los límites físicos del problema, ya que la amplitud ha de ser siempre positiva,
+aunque esto es fácilmente programable mediante unas condiciones de contorno en el algoritmo de ajuste.
 
 \begin{table}[H]
     \centering
@@ -75,7 +77,7 @@ Los resultados del ajuste, siguiendo la normativa GUM para cifras significativas
         Parámetro & {Sensor 1 ($\theta_1$)} & {Sensor 2 ($\theta_2$)} \\
         \midrule
         Temp. media $A$ ($^\circ$C) & $53.110 \pm 0.018$ & $60.471 \pm 0.031$ \\
-        Amplitud $Amp$ ($^\circ$C) & $1.399 \pm 0.025$ & $-3.978 \pm 0.044$ \\
+        Amplitud $Amp$ ($^\circ$C) & $1.399 \pm 0.025$ & $ 3.978 \pm 0.044$ \\
         Periodo $\tau$ (s) & $475.8 \pm 1.3$ & $474.81 \pm 0.72$ \\
         Desfase $\phi$ (rad) & $0.201 \pm 0.037$ & $2.486 \pm 0.021$ \\
         \bottomrule
@@ -91,25 +93,44 @@ A partir de la atenuación y el desfase, se calcularon los parámetros $m$ y $h$
     \item $K_{exp} = (16.75 \pm 0.81)\,\mathrm{m^2\,s^{-1}}$
     \item $\lambda_{exp} = (138.4 \pm 5.8)\,\mathrm{W\,m^{-1}\,K^{-1}}$
 \end{itemize}
+El análisis de los datos experimentales obtenidos en el estado estacionario nos ha permitido ver el comportamiento ondulatorio del flujo de calor a lo largo de la barra de aluminio. 
 
-\section{Discusión}
+A partir del ajuste, se han determinado unas amplitudes de oscilación térmica de $A_1 = 1.399 \pm 0.025$~$^\circ$C y $A_2 = 3.978 \pm 0.044$~$^\circ$C. 
 
-El análisis de los datos experimentales obtenidos en el estado estacionario nos ha permitido ver el comportamiento ondulatorio del flujo de calor a lo largo de la barra de aluminio. A partir del ajuste, se han determinado unas amplitudes de oscilación térmica de $A_1 = 1.399 \pm 0.025$~$^\circ$C y $|A_2| = 3.978 \pm 0.044$~$^\circ$C. Ambos sensores registran un periodo de oscilación prácticamente idéntico ($\tau \approx 475$~s), lo que confirma que la frecuencia de excitación térmica se conserva durante la propagación.
+Ambos sensores registran un periodo de oscilación prácticamente idéntico ($\tau \approx 475$~s), lo que confirma que la frecuencia de excitación térmica se conserva durante la propagación.
 
-Utilizando la distancia conocida entre los sensores ($d = 0.0500 \pm 0.0010$~m) y la diferencia de fase extraída de los ajustes, se han calculado los parámetros cinemáticos de la onda térmica. Hemos obtenido el coeficiente $m = 20.91 \pm 0.60$~m$^{-1}$ y por otro lado, la otra constante obtenida es $h = 45.7 \pm 1.3$~m$^{-1}$. 
+Utilizando la distancia conocida entre los sensores ($d = 0.0500 \pm 0.0010$~m) y la diferencia de fase extraída de los ajustes, se han calculado los parámetros cinemáticos de la onda térmica. 
 
-A partir de estos parámetros ondulatorios, se ha deducido la conductividad térmica experimental del material, obteniendo un valor de $\lambda_{exp} = 138.4 \pm 5.8$~W$\cdot$m$^{-1}$K$^{-1}$. Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\lambda_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$), se observa un error significativo, siendo la o tenida un poco menos que la mitad de la teórica. Esta discrepancia, puede deberse al montaje experimental. 
+Hemos obtenido el coeficiente $m = 20.91 \pm 0.60$~m$^{-1}$ y por otro lado, la otra constante obtenida es $h = 45.7 \pm 1.3$~m$^{-1}$. 
 
-En las ecuaciones del método que usamos asumimos un flujo de calor a través de una barra perfectamente aislada. Sin embargo, en el laboratorio, el dispositivo experimental puede no estar perfectamente aislado, permitiendo la entradad de aire. Esto quiere decir que existe una transferencia de calor no despreciable hacia el ambiente mediante mecanismos de convección natural y radiación térmica. Estas pérdidas provocan que la energía de la onda térmica se disipe más rápidamente que si únicamente operase el mecanismo de conducción interna. Por tanto, los resultados obtenidos son coherentes con las condiciones no ideales del contorno, demostrando la alta sensibilidad del método dinámico frente a las pérdidas de calor transversales.
+A partir de estos parámetros ondulatorios, se ha deducido la conductividad térmica experimental del material, obteniendo un valor de $\lambda_{exp} = 138.4 \pm 5.8$~W$\cdot$m$^{-1}$K$^{-1}$. 
 
-\section{Conclusiones}
-En conclusión, en esta práctica hemos determinado la conductividad térmica de una barra de aluminio. A través del estudio del estado estacionario, hemoes estudiado con éxito los fenómenos de propagación del calor en el aluminio: la amplitud térmica y el desfase entre dos sensores separados por una distancia conocida.
+Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\lambda_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la o tenida un poco menos que la mitad de la bibliográfica.
 
-A partir del ajuste analítico riguroso de los datos experimentales, se aislaron los parámetros ondulatorios ($m$ y $h$) necesarios para deducir las propiedades térmicas del metal, culminando en un valor de conductividad experimental de $\lambda_{exp} = 138.4 \pm 5.8$~W$\cdot$m$^{-1}$K$^{-1}$.
+Esta discrepancia, puede deberse tanto a errores en el propio montaje experimental como a los casos que se plantean a continuación por orden de severidad:
+\paragraph{}
+En primer lugar, podemos encontrar una fuente de error en los métodos de transferencia de calor que operan en el sistema, y que el modelo no registra,
+ya que se asume una barra infinita aislada, lo que no es el caso real.
+En las ecuaciones del método que usamos asumimos un flujo de calor a través de una barra perfectamente aislada. 
+\paragraph{}
+Sin embargo, en el laboratorio, el dispositivo experimental puede no estar perfectamente aislado, permitiendo la entrada de aire. 
 
-Al comparar este resultado con el valor teórico (aproximadamente $237$~W$\cdot$m$^{-1}$K$^{-1}$), vemos claramente un error muy grande si lo comparamos con el obtenido experimenmentalmente. Pero esto no signfica que esté mal el experimento, es por la asunción de un aislamiento térmico perfecto. En el montaje real, la barra experimenta continuas pérdidas de calor hacia el ambiente circundante por convección y radiación. Estas transferencias provocan una caída bastante graned de la amplitud de onda. 
+Esto quiere decir que existe una transferencia de calor no despreciable hacia el ambiente mediante mecanismos de convección natural y radiación térmica,
+siendo la convección el mecanismo de transferencia de calor más relevante en este caso, ya que el calor por radiación para temperaturas tan bajas es despreciable.
 
-La práctica muestra lla transmisión de calor por ondas, y a la vez recalca la importancia de las condiciones experimentales a la hora de aplicar un modelo teórico a un sistema físico real que no es ideal y hace que la teoría pueda fallar.
+Estas pérdidas provocan que la energía de la onda térmica se disipe más rápidamente que si únicamente operase el mecanismo de conducción interna. 
+
+
+
+
+\paragraph{}
+En segundo lugar, se puede considerar que el modelo matemático utilizado para describir la propagación de las ondas térmicas, es
+insuficientemente preciso, ya que se usa el primer término de la serie de Fourier, lo que implica una solución despreciando términos de segundo orden,
+que podrían ser relevantes en el caso de una barra de longitud finita, como es el caso real.
+\paragraph{}
+
+Por último, es posible que la propia barra de aluminio posea una cierta cantidad de impurecas y heterogeneidades internas, tanto en su composición, como en su densidad,
+así mismo, la calibración de los termómetros así como el pequeño resquicio del estado transitorio de la onda han podido influir en la medida.
 
 \section{Cuestiones Teóricas}
 
@@ -310,6 +331,8 @@ Sustituyendo en la expresión general de propagación cuadrática, la \textbf{f�
 \begin{thebibliography}{99}
     
     \bibitem{guiones_pract} Universidad de Granada (2026). \textit{Guiones de Prácticas de Física}. Disponible en: \url{https://pradogrado2526.ugr.es/pluginfile.php/710739/mod_resource/content/2/guiones_pract.pdf}
+
+    \bibitem{Lunn2025} Lunn, K. F. y Apelian, D. (2025). \textit{Thermal and Electrical Conductivity of Aluminum Alloys: Fundamentals, structure-property relationships, and pathways to enhance conductivity}. \textit{Materials Science and Engineering: A}, 924, 147766. \url{https://doi.org/10.1016/j.msea.2024.147766}
     
 \end{thebibliography}
 
