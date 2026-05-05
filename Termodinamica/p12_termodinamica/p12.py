@@ -17,6 +17,15 @@ def separate_uncertainties(uarray : unumpy.uarray):
     nominal=unumpy.nominal_values(uarray)
     error=unumpy.std_devs(uarray)
     return (nominal,error)
+
+
+def normalize_cosine_fit(amplitude, phase):
+    if amplitude < 0:
+        amplitude = -amplitude
+        phase = phase + np.pi
+    phase = phase % (2 * np.pi)
+    return amplitude, phase
+
 ### Functions for data fitting
 def calculate_theta(params, time):
     """
@@ -127,15 +136,21 @@ print(f"τ (Period):            {tau_fit_theta2:.4f} ± {tau_err_theta2:.4f}")
 print(f"φ (Phase shift):       {phase_theta2:.6f} ± {phase_err_theta2:.6f}")
 #Parameters calculation
 temp_mean=ufloat(A_fit_theta1, A_err_theta1)
+amp_fit_theta1, phase_theta1 = normalize_cosine_fit(amp_fit_theta1, phase_theta1)
+amp_fit_theta2, phase_theta2 = normalize_cosine_fit(amp_fit_theta2, phase_theta2)
+
 amp1=ufloat(amp_fit_theta1, amp_err_theta1)
 amp2=ufloat(amp_fit_theta2, amp_err_theta2)
 tau=ufloat(tau_fit_theta1, tau_err_theta1)  # Assuming the period is the same for both fits, you can also use tau_fit_theta2 if needed
 phase1=ufloat(phase_theta1, phase_err_theta1)
 phase2=ufloat(phase_theta2, phase_err_theta2)
-disphase=abs(phase1-phase2)
+
+phase_lag_nominal = abs((phase2.n - phase1.n + np.pi) % (2 * np.pi) - np.pi)
+phase_lag_error = np.hypot(phase1.s, phase2.s)
+disphase=ufloat(phase_lag_nominal, phase_lag_error)
 
 m_parameter=abs(unumpy.log(abs(amp1/amp2)))/distance_between_sensors
-h_parameter=abs(phase1-phase2)/distance_between_sensors
+h_parameter=disphase/distance_between_sensors
 
 K_exp=(specific_heat_capacity*density_aluminum*np.pi)/(h_parameter*m_parameter*(tau_fit_theta1+tau_fit_theta2)/2) 
 lambda_exp=K_exp*radius_of_cylinder*(h_parameter**2-m_parameter**2 )/2.0

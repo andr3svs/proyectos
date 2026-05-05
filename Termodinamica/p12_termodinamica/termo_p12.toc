@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {4.1}Datos Experimentales}{4}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Incertidumbres}{7}{subsection.4.2}%
 \contentsline {paragraph}{1. Coeficiente de atenuación ($m$):}{7}{section*.10}%
-\contentsline {paragraph}{2. Constante de desfase ($h$):}{7}{section*.11}%
-\contentsline {paragraph}{3. Difusividad térmica ($\lambda _{exp}$):}{8}{section*.12}%
-\contentsline {paragraph}{4. Conductividad térmica ($K_{exp}$):}{8}{section*.13}%
+\contentsline {paragraph}{2. Constante de desfase ($h$):}{8}{section*.11}%
+\contentsline {paragraph}{3. Difusividad térmica ($K_{exp}$):}{8}{section*.12}%
+\contentsline {paragraph}{4. Conductividad térmica ($\lambda _{exp}$):}{8}{section*.13}%
 \contentsline {section}{\numberline {5}References}{9}{section.5}%

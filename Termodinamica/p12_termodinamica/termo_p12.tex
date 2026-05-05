@@ -1,7 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[a4paper,top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish,es-tabla]{babel} % Modificado a español
+\usepackage[spanish,es-tabla]{babel} 
 \usepackage{csquotes}
 \usepackage{float}
 \usepackage{amsmath}
@@ -63,10 +63,7 @@ Los datos se ajustaron a un modelo sinusoidal utilizando Regresión Ortogonal de
 \begin{equation}
     \theta(t) = A + \text{Amp} \cdot \cos\left(\frac{2\pi}{\tau}t - \phi\right)
 \end{equation}
-Mediante este ajuste, se extrajeron los parámetros físicos de la onda, consideramos este método
-más riguroso que determinarlos gráficamente, ya que se obtiene un resultado más exacto.
-No obstante, se deben tener en cuenta los límites físicos del problema, ya que la amplitud ha de ser siempre positiva,
-aunque esto es fácilmente programable mediante unas condiciones de contorno en el algoritmo de ajuste.
+Mediante este ajuste, se extrajeron los parámetros físicos de la onda. Se ha optado por este método analítico frente a la estimación gráfica al proporcionar mayor rigor y menor incertidumbre en los resultados. No obstante, se deben tener en cuenta los límites físicos del problema, ya que la amplitud ha de ser siempre positiva, aunque esto es fácilmente programable mediante unas condiciones de contorno en el algoritmo de ajuste.
 
 \begin{table}[H]
     \centering
@@ -76,8 +73,8 @@ aunque esto es fácilmente programable mediante unas condiciones de contorno en 
         \toprule
         Parámetro & {Sensor 1 ($\theta_1$)} & {Sensor 2 ($\theta_2$)} \\
         \midrule
-        Temp. media $A$ ($^\circ$C) & $53.110 \pm 0.018$ & $60.471 \pm 0.031$ \\
-        Amplitud $Amp$ ($^\circ$C) & $1.399 \pm 0.025$ & $ 3.978 \pm 0.044$ \\
+        Temp. media $A$ ($^\circ$C) & $60.471 \pm 0.031$ & $53.110 \pm 0.018$ \\
+        Amplitud $Amp$ ($^\circ$C) & $3.978 \pm 0.044$ & $1.399 \pm 0.025$ \\
         Periodo $\tau$ (s) & $475.8 \pm 1.3$ & $474.81 \pm 0.72$ \\
         Desfase $\phi$ (rad) & $0.201 \pm 0.037$ & $2.486 \pm 0.021$ \\
         \bottomrule
@@ -95,7 +92,7 @@ A partir de la atenuación y el desfase, se calcularon los parámetros $m$ y $h$
 \end{itemize}
 El análisis de los datos experimentales obtenidos en el estado estacionario nos ha permitido ver el comportamiento ondulatorio del flujo de calor a lo largo de la barra de aluminio. 
 
-A partir del ajuste, se han determinado unas amplitudes de oscilación térmica de $A_1 = 1.399 \pm 0.025$~$^\circ$C y $A_2 = 3.978 \pm 0.044$~$^\circ$C. 
+A partir del ajuste, se han determinado unas amplitudes de oscilación térmica de $A_1 = 3.978 \pm 0.044$~$^\circ$C y $A_2 = 1.399 \pm 0.025$~$^\circ$C. 
 
 Ambos sensores registran un periodo de oscilación prácticamente idéntico ($\tau \approx 475$~s), lo que confirma que la frecuencia de excitación térmica se conserva durante la propagación.
 
@@ -105,40 +102,35 @@ Hemos obtenido el coeficiente $m = 20.91 \pm 0.60$~m$^{-1}$ y por otro lado, la 
 
 A partir de estos parámetros ondulatorios, se ha deducido la conductividad térmica experimental del material, obteniendo un valor de $\lambda_{exp} = 138.4 \pm 5.8$~W$\cdot$m$^{-1}$K$^{-1}$. 
 
-Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\lambda_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la o tenida un poco menos que la mitad de la bibliográfica.
+Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\lambda_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la obtenida un poco menos que la mitad de la bibliográfica.
 
-Esta discrepancia, puede deberse tanto a errores en el propio montaje experimental como a los casos que se plantean a continuación por orden de severidad:
+Esta discrepancia puede deberse tanto a errores en el propio montaje experimental como a los casos que se plantean a continuación por orden de severidad:
 \paragraph{}
-En primer lugar, podemos encontrar una fuente de error en los métodos de transferencia de calor que operan en el sistema, y que el modelo no registra,
-ya que se asume una barra infinita aislada, lo que no es el caso real.
-En las ecuaciones del método que usamos asumimos un flujo de calor a través de una barra perfectamente aislada. 
+En primer lugar, podemos encontrar una fuente de error en los métodos de transferencia de calor que operan en el sistema, y que el modelo no registra, ya que se asume una barra infinita aislada, lo que no es el caso real. En las ecuaciones del método que usamos asumimos un flujo de calor a través de una barra perfectamente aislada. 
 \paragraph{}
 Sin embargo, en el laboratorio, el dispositivo experimental puede no estar perfectamente aislado, permitiendo la entrada de aire. 
 
-Esto quiere decir que existe una transferencia de calor no despreciable hacia el ambiente mediante mecanismos de convección natural y radiación térmica,
-siendo la convección el mecanismo de transferencia de calor más relevante en este caso, ya que el calor por radiación para temperaturas tan bajas es despreciable.
+Esto quiere decir que existe una transferencia de calor no despreciable hacia el ambiente mediante mecanismos de convección natural y radiación térmica, siendo la convección el mecanismo de transferencia de calor más relevante en este caso, ya que el calor por radiación para temperaturas tan bajas es despreciable.
 
 Estas pérdidas provocan que la energía de la onda térmica se disipe más rápidamente que si únicamente operase el mecanismo de conducción interna. 
 
-
-
-
 \paragraph{}
-En segundo lugar, se puede considerar que el modelo matemático utilizado para describir la propagación de las ondas térmicas, es
-insuficientemente preciso, ya que se usa el primer término de la serie de Fourier, lo que implica una solución despreciando términos de segundo orden,
-que podrían ser relevantes en el caso de una barra de longitud finita, como es el caso real.
+En segundo lugar, se puede considerar que el modelo matemático utilizado para describir la propagación de las ondas térmicas es insuficientemente preciso, ya que se usa el primer término de la serie de Fourier, lo que implica una solución despreciando términos de segundo orden que podrían ser relevantes en el caso de una barra de longitud finita, como es el caso real.
 \paragraph{}
 
-Por último, es posible que la propia barra de aluminio posea una cierta cantidad de impurecas y heterogeneidades internas, tanto en su composición, como en su densidad,
-así mismo, la calibración de los termómetros así como el pequeño resquicio del estado transitorio de la onda han podido influir en la medida.
+Por último, es posible que la propia barra de aluminio posea una cierta cantidad de impurezas y heterogeneidades internas, tanto en su composición como en su densidad; asimismo, la calibración de los termómetros así como un efecto residual del régimen transitorio de la onda han podido influir en la medida.
+En caso de ser este el caso, podemos ver que según \cite{aluminio}, si nuestro material se tratase de una aleación de aluminio 7000, nuestra constante obtenida estaría muy cerca del valor bibliográfico.
+No obstante, hemos decidido mencionar esto en próximo lugar ya que aunque es una explicación plausible, no tenemos forma de confirmarla y no tiene en cuenta los fallos del modelo,
+es decir, podríamos tener una confluencia de varios motivos, podriamos tener una aleación de aluminio con una conductividad térmica menor, que disminuye aún más
+por la disipación de calor por convección, y a su vez el modelo matemático que usamos no es lo suficientemente preciso, lo que explicaría la gran diferencia entre el valor obtenido y el valor teórico del aluminio puro.
 
 \section{Cuestiones Teóricas}
 
 En relación con las cuestiones teóricas planteadas en la práctica de laboratorio, estas son las respuestas a las preguntas:
 \begin{itemize}
-    \item \textbf{Q1:} El resultado analítico obtenido no depende de las unidades en las que se midan las amplitudes térmicas. El cálculo del coeficiente de atenuación, $m$, se basa en el logaritmo neperiano de ambas amplitudes, $\ln(A_2/A_1)$ \cite{guiones_pract}. Al tratarse de un cociente, cualquier factor de escala o conversión entre unidades de incremento de temperatura se cancela matemáticamente, al estar dividiendo dos cosas con las mismas unidades, manteniendo igual el resultado para todas las unidades en las que se ponga la amplitud.
+    \item \textbf{Q1:} El resultado analítico obtenido no depende de las unidades en las que se midan las amplitudes térmicas. El cálculo del coeficiente de atenuación, $m$, se basa en el logaritmo neperiano de ambas amplitudes, $\ln(A_2/A_1)$ \cite{guiones_pract}. Al tratarse de un cociente, cualquier factor de escala o conversión entre unidades de incremento de temperatura se cancela matemáticamente al tratarse del cociente de dos magnitudes con idénticas unidades, manteniendo igual el resultado para todas las unidades en las que se ponga la amplitud.
     
-    \item \textbf{Q2:} La incorporación de un ventilador en uno de los extremos del dispositivo tiene como objetivo principal forzar la convección térmica. Esto permite disipar el flujo de calor continuo que alcanza dicho extremo. Si el ventilador no estuviera colocado, el calor se iría acumulando, elevando la temperatura media de toda la barra metálica. En consecuencia, la temperatura global del sistema continuaría aumentando de forma indefinida, lo que impediría que las oscilaciones se estabilizaran en torno a un valor medio fijo. Sin alcanzar el régimen estacionario, resultaría matemáticamente imposible aplicar las ecuaciones teóricas usadas y no podríamos saber como es el comportamiento de la barra de alumino.
+    \item \textbf{Q2:} La incorporación de un ventilador en uno de los extremos del dispositivo tiene como objetivo principal forzar la convección térmica. Esto permite disipar el flujo de calor continuo que alcanza dicho extremo. Si el ventilador no estuviera colocado, el calor se iría acumulando, elevando la temperatura media de toda la barra metálica. En consecuencia, la temperatura global del sistema continuaría aumentando de forma indefinida, lo que impediría que las oscilaciones se estabilizaran en torno a un valor medio fijo. Sin alcanzar el régimen estacionario, resultaría matemáticamente imposible aplicar las ecuaciones teóricas usadas y no podríamos saber cómo es el comportamiento de la barra de aluminio.
 \end{itemize}
 
 \section{Anexos}
@@ -149,12 +141,12 @@ Todos los datos obtenidos durante el experimento se presentan en la Tabla~\ref{t
 \begin{longtable}{rrrrrr}
     \caption{Datos experimentales de temperatura en función del tiempo.} \label{tab:raw_data} \\
     \toprule
-    {$t$ (s)} & {$u_t$ (s)} & {$\theta_1$ (deg C)} & {$u_{\theta_1}$ (deg C)} & {$\theta_2$ (deg C)} & {$u_{\theta_2}$ (deg C)} \\
+    {$t$ (s)} & {$u_t$ (s)} & {$\theta_1$ (\unit{\celsius})} & {$u_{\theta_1}$ (\unit{\celsius})} & {$\theta_2$ (\unit{\celsius})} & {$u_{\theta_2}$ (\unit{\celsius})} \\
     \midrule
     \endfirsthead
     \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
     \toprule
-    {$t$ (s)} & {$u_t$ (s)} & {$\theta_1$ (deg C)} & {$u_{\theta_1}$ (deg C)} & {$\theta_2$ (deg C)} & {$u_{\theta_2}$ (deg C)} \\
+    {$t$ (s)} & {$u_t$ (s)} & {$\theta_1$ (\unit{\celsius})} & {$u_{\theta_1}$ (\unit{\celsius})} & {$\theta_2$ (\unit{\celsius})} & {$u_{\theta_2}$ (\unit{\celsius})} \\
     \midrule
     \endhead
     \midrule
@@ -269,7 +261,7 @@ Las medidas de temperatura ($\theta_1$, $\theta_2$), el tiempo ($t$) y la distan
 Adicionalmente, las amplitudes ($A_1$, $A_2$), el periodo ($\tau$) y el desfase temporal ($\phi$) proceden del ajuste, por lo que su incertidumbre es el error estándar de los parámetros que lo da el algoritmo que hemos usado.
 
 \subsubsection*{Medidas indirectas}
-Para el cálculo de las variables físicas derivadas ($m$, $h$, difusividad $\lambda_{exp}$ y conductividad térmica $K_{exp}$) se ha empleado la ley de propagación cuadrática de incertidumbres:
+Para el cálculo de las variables físicas derivadas ($m$, $h$, difusividad $K_{exp}$ y conductividad térmica $\lambda_{exp}$) se ha empleado la ley de propagación cuadrática de incertidumbres:
 \begin{equation}
     u_y = \sqrt{\sum_{i} \left( \frac{\partial y}{\partial x_i} u_{x_i} \right)^2}
 \end{equation}
@@ -299,29 +291,29 @@ Sustituyendo, la \textbf{fórmula final de la incertidumbre} es:
     u_h = \sqrt{ \left( \frac{u_{\phi}}{d} \right)^2 + \left( -\frac{\phi}{d^2} u_d \right)^2 }
 \end{equation}
 
-\paragraph{3. Difusividad térmica ($\lambda_{exp}$):}
-A partir de $\lambda_{exp} = \frac{\omega}{2 m h}$ (donde $\omega = 2\pi / \tau$), las derivadas parciales resultan:
+\paragraph{3. Difusividad térmica ($K_{exp}$):}
+A partir de $K_{exp} = \frac{\omega}{2 m h}$ (donde $\omega = 2\pi / \tau$), las derivadas parciales resultan:
 \begin{align}
-    \frac{\partial \lambda_{exp}}{\partial \omega} &= \frac{1}{2 m h} \\
-    \frac{\partial \lambda_{exp}}{\partial m} &= -\frac{\omega}{2 m^2 h} \\
-    \frac{\partial \lambda_{exp}}{\partial h} &= -\frac{\omega}{2 m h^2}
+    \frac{\partial K_{exp}}{\partial \omega} &= \frac{1}{2 m h} \\
+    \frac{\partial K_{exp}}{\partial m} &= -\frac{\omega}{2 m^2 h} \\
+    \frac{\partial K_{exp}}{\partial h} &= -\frac{\omega}{2 m h^2}
 \end{align}
 \textit{Nota: La incertidumbre de la frecuencia angular se propaga como $u_{\omega} = \frac{2\pi}{\tau^2} u_{\tau}$.}
 
 Sustituyendo, la \textbf{fórmula final de la incertidumbre} es:
 \begin{equation}
-    u_{\lambda_{exp}} = \sqrt{ \left( \frac{u_{\omega}}{2 m h} \right)^2 + \left( -\frac{\omega}{2 m^2 h} u_m \right)^2 + \left( -\frac{\omega}{2 m h^2} u_h \right)^2 }
+    u_{K_{exp}} = \sqrt{ \left( \frac{u_{\omega}}{2 m h} \right)^2 + \left( -\frac{\omega}{2 m^2 h} u_m \right)^2 + \left( -\frac{\omega}{2 m h^2} u_h \right)^2 }
 \end{equation}
 
-\paragraph{4. Conductividad térmica ($K_{exp}$):}
-Asumiendo que la densidad ($\rho$) y el calor específico ($c$) del material se toman como valores tabulados exactos (es decir, sin incertidumbre apreciable frente a las medidas experimentales), la conductividad viene dada por $K_{exp} = \lambda_{exp} \rho c$. Su derivada parcial respecto a la única variable con error es:
+\paragraph{4. Conductividad térmica ($\lambda_{exp}$):}
+Asumiendo que la densidad ($\rho$) y el calor específico ($c$) del material se toman como valores tabulados exactos (es decir, sin incertidumbre apreciable frente a las medidas experimentales), la conductividad viene dada por $\lambda_{exp} = K_{exp} \rho c$. Su derivada parcial respecto a la única variable con error es:
 \begin{align}
-    \frac{\partial K_{exp}}{\partial \lambda_{exp}} &= \rho c
+    \frac{\partial \lambda_{exp}}{\partial K_{exp}} &= \rho c
 \end{align}
 
 Sustituyendo en la expresión general de propagación cuadrática, la \textbf{fórmula final de la incertidumbre} es:
 \begin{equation}
-    u_{K_{exp}} = \sqrt{ \left( \rho c \cdot u_{\lambda_{exp}} \right)^2 }
+    u_{\lambda_{exp}} = \sqrt{ \left( \rho c \cdot u_{K_{exp}} \right)^2 }
 \end{equation}
 
 
@@ -333,6 +325,8 @@ Sustituyendo en la expresión general de propagación cuadrática, la \textbf{f�
     \bibitem{guiones_pract} Universidad de Granada (2026). \textit{Guiones de Prácticas de Física}. Disponible en: \url{https://pradogrado2526.ugr.es/pluginfile.php/710739/mod_resource/content/2/guiones_pract.pdf}
 
     \bibitem{Lunn2025} Lunn, K. F. y Apelian, D. (2025). \textit{Thermal and Electrical Conductivity of Aluminum Alloys: Fundamentals, structure-property relationships, and pathways to enhance conductivity}. \textit{Materials Science and Engineering: A}, 924, 147766. \url{https://doi.org/10.1016/j.msea.2024.147766}
+    
+    \bibitem{aluminio} Aerospace Metals (2023). \textit{Aluminum 7178-O: Technical Data Sheet}. Disponible en: \url{https://www.aerospacemetals.com/wp-content/uploads/2023/06/Aluminum-7178-O.pdf}
     
 \end{thebibliography}
 

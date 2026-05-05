@@ -6,12 +6,12 @@ A_{\theta_1} = 53.1101 \pm 0.0181
 
 % Fitted Parameters for θ₂
 A_{\theta_2} = 60.4713 \pm 0.0313
-\text{Amp}_{\theta_2} = -3.977787 \pm 0.044384
+\text{Amp}_{\theta_2} = 3.977787 \pm 0.044384
 \tau_{\theta_2} = 474.8073 \pm 0.7225
-\phi_{\theta_2} = 2.486117 \pm 0.021063
+\phi_{\theta_2} = 5.627710 \pm 0.021063
 
 % Derived Parameters
 m = 20.906088 \pm 0.595951
-h = 45.709780 \pm 1.250628
-K_{\exp} = 16.752219 \pm 0.814023
-\lambda_{\exp} = 138.400090 \pm 5.838424
+h = 17.122073 \pm 0.919556
+K_{\exp} = 44.722403 \pm 2.999043
+\lambda_{\exp} = -32.177577 \pm 8.788667
