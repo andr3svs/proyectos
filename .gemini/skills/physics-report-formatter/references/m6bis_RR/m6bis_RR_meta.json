@@ -1,0 +1,534 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Experiment M6 bis: Study of oscillatory motion",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          131.81300354003906,
+          112.23175048828125
+        ],
+        [
+          463.10614013671875,
+          112.23175048828125
+        ],
+        [
+          463.10614013671875,
+          129.44720458984375
+        ],
+        [
+          131.81300354003906,
+          129.44720458984375
+        ]
+      ]
+    },
+    {
+      "title": "Andres Vinuesa Espinosa and Jose Maria Martinez Herrada\nGroup B2.2",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          144.052734375,
+          146.6396484375
+        ],
+        [
+          451.947265625,
+          146.36328125
+        ],
+        [
+          450.9424743652344,
+          172.5418701171875
+        ],
+        [
+          142.888671875,
+          172.67578125
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          273.845703125,
+          240.1015625
+        ],
+        [
+          319.5245361328125,
+          240.1015625
+        ],
+        [
+          319.5245361328125,
+          250.986572265625
+        ],
+        [
+          273.845703125,
+          250.986572265625
+        ]
+      ]
+    },
+    {
+      "title": "Contents",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          70.8659896850586,
+          397.74810791015625
+        ],
+        [
+          133.87449645996094,
+          396.7431640625
+        ],
+        [
+          133.87449645996094,
+          412.09429931640625
+        ],
+        [
+          70.8659896850586,
+          412.09429931640625
+        ]
+      ]
+    },
+    {
+      "title": "1 Results and Discussion",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          70.716796875,
+          70.71484375
+        ],
+        [
+          256.9648742675781,
+          70.71484375
+        ],
+        [
+          256.9648742675781,
+          85.0692138671875
+        ],
+        [
+          70.716796875,
+          85.0692138671875
+        ]
+      ]
+    },
+    {
+      "title": "1.1 Part A: Period of free oscillations",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          70.716796875,
+          96.6162109375
+        ],
+        [
+          299.377685546875,
+          96.6162109375
+        ],
+        [
+          299.377685546875,
+          109.29779052734375
+        ],
+        [
+          70.716796875,
+          109.29779052734375
+        ]
+      ]
+    },
+    {
+      "title": "1.2 Part B: Damped oscillator",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          70.716796875,
+          443.5606384277344
+        ],
+        [
+          256.888916015625,
+          442.37890625
+        ],
+        [
+          256.888916015625,
+          455.5158386230469
+        ],
+        [
+          70.716796875,
+          455.5158386230469
+        ]
+      ]
+    },
+    {
+      "title": "1.3 Part C: Forced and damped oscillator",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          70.86602783203125,
+          727.6468124389648
+        ],
+        [
+          324.482421875,
+          726.8828125
+        ],
+        [
+          323.7621154785156,
+          739.6018142700195
+        ],
+        [
+          70.134765625,
+          739.6018142700195
+        ]
+      ]
+    },
+    {
+      "title": "1.4 Part D: Relative error",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          69.80856423173803,
+          455.53515625
+        ],
+        [
+          232.69521410579344,
+          455.53515625
+        ],
+        [
+          232.69521410579344,
+          467.11130899376667
+        ],
+        [
+          69.80856423173803,
+          467.11130899376667
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          68
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "TableCell",
+          18
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "TableOfContents",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          267
+        ],
+        [
+          "Line",
+          49
+        ],
+        [
+          "TableCell",
+          12
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          115
+        ],
+        [
+          "Line",
+          27
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          64
+        ],
+        [
+          "Line",
+          53
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          42
+        ],
+        [
+          "Line",
+          41
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          209
+        ],
+        [
+          "TableCell",
+          24
+        ],
+        [
+          "Line",
+          17
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data\\m6bis_RR"
+}

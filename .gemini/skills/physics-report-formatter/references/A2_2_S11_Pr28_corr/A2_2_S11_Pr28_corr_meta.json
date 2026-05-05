@@ -1,0 +1,1096 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Experiment 28\nLenses",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          245.45591939546597,
+          111.71682991985752
+        ],
+        [
+          349.80078125,
+          110.5947265625
+        ],
+        [
+          349.80078125,
+          147.70614425645593
+        ],
+        [
+          245.45591939546597,
+          147.70614425645593
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          272.97265625,
+          261.48046875
+        ],
+        [
+          320.5188916876574,
+          261.48046875
+        ],
+        [
+          320.5188916876574,
+          272.1691896705254
+        ],
+        [
+          272.97265625,
+          272.1691896705254
+        ]
+      ]
+    },
+    {
+      "title": "Contents",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          69.80856423173803,
+          395.9208984375
+        ],
+        [
+          135.11335012594458,
+          395.9208984375
+        ],
+        [
+          135.11335012594458,
+          407.8788958147818
+        ],
+        [
+          69.80856423173803,
+          407.8788958147818
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          70.86599731445312,
+          70.72296142578125
+        ],
+        [
+          183.84231567382812,
+          69.4814453125
+        ],
+        [
+          183.84231567382812,
+          85.0692138671875
+        ],
+        [
+          70.86599731445312,
+          85.0692138671875
+        ]
+      ]
+    },
+    {
+      "title": "1.1 Sign Convention",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          69.80856423173803,
+          71.9482421875
+        ],
+        [
+          198.9168765743073,
+          71.9482421875
+        ],
+        [
+          198.9168765743073,
+          83.22528940338378
+        ],
+        [
+          69.80856423173803,
+          83.22528940338378
+        ]
+      ]
+    },
+    {
+      "title": "1.1.1 Real and Virtual Images",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          69.80856423173803,
+          386.8759765625
+        ],
+        [
+          244.70528967254407,
+          385.2314453125
+        ],
+        [
+          244.70528967254407,
+          397.3820124666073
+        ],
+        [
+          69.552734375,
+          397.5654296875
+        ]
+      ]
+    },
+    {
+      "title": "1.2 Experimental Determination of Lens Parameters",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          70.716796875,
+          611.8183437221727
+        ],
+        [
+          389.5768261964735,
+          611.765625
+        ],
+        [
+          389.5768261964735,
+          623.0650044523597
+        ],
+        [
+          69.552734375,
+          623.27734375
+        ]
+      ]
+    },
+    {
+      "title": "1.2.1 Lens Power",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          69.80856423173803,
+          675.4912109375
+        ],
+        [
+          172.6448362720403,
+          675.4912109375
+        ],
+        [
+          172.6448362720403,
+          685.2965271593945
+        ],
+        [
+          69.80856423173803,
+          685.2965271593945
+        ]
+      ]
+    },
+    {
+      "title": "1.2.2 Determining Visual Characteristics of an Image",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          70.86599731445312,
+          71.9482421875
+        ],
+        [
+          371.804443359375,
+          71.9482421875
+        ],
+        [
+          371.804443359375,
+          84.31829833984375
+        ],
+        [
+          70.86599731445312,
+          84.31829833984375
+        ]
+      ]
+    },
+    {
+      "title": "2 Materials and Methods",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          69.05793450881612,
+          70.3037109375
+        ],
+        [
+          260.46851385390426,
+          70.3037109375
+        ],
+        [
+          260.46851385390426,
+          82.47551202137133
+        ],
+        [
+          69.05793450881612,
+          82.47551202137133
+        ]
+      ]
+    },
+    {
+      "title": "2.1 Determining the Focal Length of the Converging Lens",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          69.05793450881612,
+          319.0390625
+        ],
+        [
+          421.10327455919395,
+          317.39453125
+        ],
+        [
+          421.10327455919395,
+          329.9020480854853
+        ],
+        [
+          68.970703125,
+          330.55078125
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Determining the Focal Length of the Diverging Lens",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          69.80856423173803,
+          642.5592163846839
+        ],
+        [
+          411.34508816120905,
+          641.3671875
+        ],
+        [
+          411.34508816120905,
+          653.0560997328583
+        ],
+        [
+          69.26171875,
+          653.0560997328583
+        ]
+      ]
+    },
+    {
+      "title": "2.3 Different Focus Points",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          70.86599731445312,
+          361.9676513671875
+        ],
+        [
+          232.8125,
+          360.5634765625
+        ],
+        [
+          232.4525146484375,
+          373.9228515625
+        ],
+        [
+          69.84375,
+          373.9228515625
+        ]
+      ]
+    },
+    {
+      "title": "2.3.1 Thin Lens Equation",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          70.42578125,
+          439.29217529296875
+        ],
+        [
+          218.36793518066406,
+          438.267578125
+        ],
+        [
+          218.36793518066406,
+          450.2012939453125
+        ],
+        [
+          69.26171875,
+          450.2012939453125
+        ]
+      ]
+    },
+    {
+      "title": "2.3.2 Lens Translation with Fixed Object-Screen Distance",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          70.716796875,
+          542.898193359375
+        ],
+        [
+          397.080810546875,
+          541.4619140625
+        ],
+        [
+          397.080810546875,
+          553.8073120117188
+        ],
+        [
+          69.552734375,
+          553.8073120117188
+        ]
+      ]
+    },
+    {
+      "title": "2.3.3 Physical Interpretation",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          70.86599731445312,
+          128.6845703125
+        ],
+        [
+          236.3352508544922,
+          128.6845703125
+        ],
+        [
+          236.3352508544922,
+          140.2313232421875
+        ],
+        [
+          70.134765625,
+          140.2313232421875
+        ]
+      ]
+    },
+    {
+      "title": "3 Results and discussion",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          70.86598205566406,
+          356.4471130371094
+        ],
+        [
+          253.56480407714844,
+          354.8076171875
+        ],
+        [
+          253.56480407714844,
+          370.7933044433594
+        ],
+        [
+          69.84375,
+          370.7933044433594
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Convex lenses",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          69.552734375,
+          382.7646484375
+        ],
+        [
+          183.4959259033203,
+          381.1201171875
+        ],
+        [
+          183.4959259033203,
+          395.02197265625
+        ],
+        [
+          69.552734375,
+          395.02197265625
+        ]
+      ]
+    },
+    {
+      "title": "3.2 Concave lenses",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          70.134765625,
+          286.5565185546875
+        ],
+        [
+          188.91163635253906,
+          284.9150390625
+        ],
+        [
+          188.91163635253906,
+          298.51171875
+        ],
+        [
+          68.970703125,
+          298.51171875
+        ]
+      ]
+    },
+    {
+      "title": "4 Conclusions",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.05793450881612,
+          289.4140694568121
+        ],
+        [
+          178.6498740554156,
+          288.2041015625
+        ],
+        [
+          178.6498740554156,
+          300.6607301869991
+        ],
+        [
+          69.05793450881612,
+          300.6607301869991
+        ]
+      ]
+    },
+    {
+      "title": "Appendixes",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.80856423173803,
+          591.6201171875
+        ],
+        [
+          153.12846347607052,
+          589.9755859375
+        ],
+        [
+          153.12846347607052,
+          605.5986328125
+        ],
+        [
+          69.80856423173803,
+          607.2431640625
+        ]
+      ]
+    },
+    {
+      "title": "A2 Calculation of Uncertainties",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.80856423173803,
+          619.3161175422974
+        ],
+        [
+          257.2578125,
+          617.9326171875
+        ],
+        [
+          256.71536523929467,
+          629.0632235084595
+        ],
+        [
+          69.80856423173803,
+          629.0632235084595
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          70.134765625,
+          678.369140625
+        ],
+        [
+          146.3413848876953,
+          678.369140625
+        ],
+        [
+          146.3413848876953,
+          693.2721710205078
+        ],
+        [
+          70.134765625,
+          693.2721710205078
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          65
+        ],
+        [
+          "Span",
+          35
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "TableOfContents",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          249
+        ],
+        [
+          "Line",
+          92
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          55
+        ],
+        [
+          "Span",
+          24
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Reference",
+          7
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          47
+        ],
+        [
+          "Line",
+          14
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          55
+        ],
+        [
+          "Span",
+          35
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          253
+        ],
+        [
+          "Line",
+          67
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          203
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "TableCell",
+          32
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          151
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "TableCell",
+          32
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          43
+        ],
+        [
+          "Span",
+          28
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          377
+        ],
+        [
+          "Line",
+          101
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data\\A2_2_S11_Pr28_corr"
+}

@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage[utf-8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Análisis de Propagación de Incertidumbre en el Logaritmo}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Contexto}
+
+El cálculo del flujo de calor del cuerpo está dado por:
+
+\[
+Q_{\text{cuerpo}} = \frac{\pi (T_{\text{cuerpo}} - T_{\text{ropa}}) \cdot k \cdot 2 \cdot h}{\ln(r_{\text{ext}}/r_{\text{int}})}
+\]
+
+donde el término del logaritmo aparece en el \textbf{denominador}.
+
+\section*{Paso 1: Construcción del Ratio}
+
+Primero se calcula el cociente entre los radios exterior e interior:
+
+\begin{align*}
+r_{\text{int}} &= 0.2 \pm 0.01 \text{ m} \\
+r_{\text{ext}} &= 0.20350000000000001 \pm 0.01414213562373095 \text{ m} \\
+\text{Ratio} &= \frac{r_{\text{ext}}}{r_{\text{int}}} = 1.0175 \pm 0.0500
+\end{align*}
+
+\section*{Paso 2: Propagación de Incertidumbre en el Logaritmo}
+
+La propagación de incertidumbre en funciones se realiza mediante la derivada:
+
+\[
+\delta f(x) = \left| \frac{df}{dx} \right| \cdot \delta x
+\]
+
+Para el logaritmo natural:
+\[
+\frac{d(\ln x)}{dx} = \frac{1}{x}
+\]
+
+En nuestro caso:
+\[
+\frac{d(\ln)}{dx} = \frac{1}{1.0175} = 0.9828
+\]
+
+Por lo tanto, la incertidumbre en el logaritmo es:
+\[
+\delta(\ln(\text{ratio})) = 0.9828 \times 0.0500 = 0.0491
+\]
+
+\section*{Paso 3: Resultado del Logaritmo}
+
+\[
+\ln(1.0175) = 0.01735 \pm 0.0491
+\]
+
+\textbf{Incertidumbre relativa:} 
+\[
+\frac{\delta(\ln)}{\ln} \times 100\% = \frac{0.0491}{0.01735} \times 100\% = 283.29\%
+\]
+
+\section*{¿Por qué es tan grande la incertidumbre?}
+
+Existen dos razones principales:
+
+\subsection*{1. El logaritmo de un número cercano a 1 es muy pequeño}
+
+Cuando el argumento del logaritmo está muy cercano a 1, el valor del logaritmo resultante es muy pequeño. En nuestro caso:
+\[
+\ln(1.0175) = 0.01735
+\]
+
+Una incertidumbre absoluta de $\delta(\ln) = 0.0491$ es enorme comparada con este valor pequeño, resultando en una incertidumbre relativa extremadamente grande.
+
+\subsection*{2. La incertidumbre del espesor de la ropa es desproporcionada}
+
+El espesor de la ropa es medido como:
+\[
+\text{espesor}_{\text{ropa}} = 0.0035 \pm 0.01 \text{ m}
+\]
+
+La incertidumbre relativa es:
+\[
+\frac{\delta(\text{espesor})}{\text{espesor}} = \frac{0.01}{0.0035} = 285.7\%
+\]
+
+Esta incertidumbre relativa extremadamente grande se propaga directamente al radio exterior y, posteriormente, al ratio $r_{\text{ext}}/r_{\text{int}}$, amplificando la incertidumbre en el logaritmo.
+
+\section*{Impacto en el Flujo del Cuerpo}
+
+Dado que el logaritmo aparece en el denominador de la fórmula para $Q_{\text{cuerpo}}$, la gran incertidumbre relativa del logaritmo genera una incertidumbre aún más pronunciada en el resultado final:
+
+\[
+Q_{\text{cuerpo}} = 3549.65 \pm 10056.28 \text{ kcal/día}
+\]
+
+Con una incertidumbre relativa de aproximadamente $284\%$, lo que indica que esta magnitud tiene una precisión muy baja debido principalmente a la propagación de la incertidumbre a través del logaritmo.
+
+\end{document}

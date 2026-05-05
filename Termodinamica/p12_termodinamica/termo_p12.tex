@@ -1,79 +1,216 @@
-%====================================================%
-% Termodinámica                                      %
-% Práctica 12                                        %
-% Ondas térmicas en una barra metálica               %
-%====================================================%
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{longtable}
 
-% Datos de la práctica (no modificar)
-\def\numeroPractica{12}                                   % Número de práctica
-\def\tituloPractica{Ondas térmicas en una barra metálica} % Título de la práctica
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=cyan,
+    citecolor=magenta,
+    pdftitle={Laboratory Report - Thermal Waves},
+}
 
-% Datos a modificar por el alumnado
-\def\fechaPractica{dd/mm/aaaa} % Fecha de realización de la práctica
-\def\fechaEntrega{dd/mm/aaaa}  % Fecha de entrega del informe
+\sisetup{
+    uncertainty-mode = separate,
+    round-mode = uncertainty,
+    round-precision = 2
+}
 
-% Generar título automáticamente
+\renewcommand{\arraystretch}{1.2}
+
+\title{Experiment P12: Thermal Waves in a Metal Bar}
+\author{Andrés Vinuesa \\ Group A22}
+\date{Laboratory Session: April 27, 2026 \\ Report Submission: April 30, 2026}
+
+\begin{document}
+
 \maketitle
 
-% Resultados
-\section{Resultados}
+\begin{abstract}
+This experiment investigates the propagation of thermal waves within an aluminum cylinder to characterize its dynamic thermal properties. By applying a periodic heat source at one end of the bar, sinusoidal temperature oscillations are induced and recorded at two fixed positions along its length. The attenuation and phase shift between these oscillations are analyzed using Orthogonal Distance Regression (ODR) to determine the thermal diffusivity and conductivity of the material. This method provides a direct measurement of the material's response to time-varying thermal gradients, allowing for a robust estimation of its transport coefficients under non-steady state conditions.
+\end{abstract}
 
-\subsection{Onda estacionaria}
+\tableofcontents
+\newpage
 
-Realiza la gráfica de $\theta_1$ y $\theta_2$ en función del tiempo cuando se haya alcanzado el estado estacionario. Determina sobre esta gráfica las amplitudes, frecuencia y desfase entre ambas ondas.
+\section{Introduction}
+% [HUMAN AUTHOR: WRITE INTRODUCTION HERE]
 
-\subsection{Conductividad térmica}
+\section{Experimental Results}
 
-Halla los valores de $m$ y $h$ y calcula con ellos $K$ y $\lambda$. Compara el valor de la conductividad térmica $K$ obtenido con el tabulado para el aluminio.
+\subsection{Thermal Wave Analysis}
+The experimental temperature oscillations $\theta_1(t)$ and $\theta_2(t)$ were recorded and are shown in Figure~\ref{fig:temp_plot}. The waves exhibit a characteristic attenuation in amplitude and a phase shift as they propagate through the aluminum bar.
 
-% Cuestiones
-\section{Cuestiones}
-
-\question{¿Depende el resultado obtenido de las unidades en las que se miden las amplitudes de las dos ondas? ¿Por qué?}
-
-Justifica tu respuesta. Incluye las referencias de las fuentes de información que hayas utilizado.
-
-\question{El dispositivo de medida dispone de un ventilador en uno de los extremos. ¿Cuál es el objetivo del mismo? ¿Qué ocurriría si no estuviera colocado?}
-
-Justifica tu respuesta. Incluye las referencias de las fuentes de información que hayas utilizado.
-
-% Conclusiones
-\section{Conclusiones}
-
-Resume brevemente en qué ha consistido la práctica, describe los aspectos más relevantes de la misma y reflexiona sobre los principales resultados obtenidos. El contenido de esta sección no debe superar las 300 palabras.
-
-% Anexos
-\appendix
-
-\section{Anexos}
-
-\subsection{Tablas de datos}
-
-Añade tantas subsecciones y tablas adicionales como consideres necesarias, incluyendo todos los datos que consideres que aportan información valiosa.
-
-\subsubsection{Onda estacionaria}
-Medidas de $\theta_1$ y $\theta_2$ en función del tiempo en el estado estacionario. Incluye \textbf{un único periodo} de la onda para evitar una tabla excesivamente larga.
-
-\begin{table}[ht!]
+\begin{figure}[H]
     \centering
-    \begin{tabular}{c|c|c}
-    $t\ (\pm ...\text{ u})$ & $\theta_1\ (\pm ...\text{ u})$ & $\theta_2\ (\pm ...\text{ u})$\\
-    \hline
-    ... & ... & ... \\
-    \hline
+    \includegraphics[width=0.8\textwidth]{grafica_temperatura.png}
+    \caption{Temperature oscillations as a function of time at two sensor positions.}
+    \label{fig:temp_plot}
+\end{figure}
+
+The data were fitted to a sinusoidal model using Orthogonal Distance Regression:
+\begin{equation}
+    \theta(t) = A + \text{Amp} \cdot \cos\left(\frac{2\pi}{\tau}t - \phi\right)
+\end{equation}
+
+The results of the fit, following GUM standards for significant figures, are summarized in Table~\ref{tab:fit_results}.
+
+\begin{table}[H]
+    \centering
+    \caption{Fitted parameters for the thermal oscillations at sensors 1 and 2.}
+    \label{tab:fit_results}
+    \begin{tabular}{lSS}
+        \toprule
+        Parameter & {Sensor 1 ($\theta_1$)} & {Sensor 2 ($\theta_2$)} \\
+        \midrule
+        Mean Temp. $A$ (\unit{\degree C}) & 53.110 \pm 0.018 & 60.471 \pm 0.031 \\
+        Amplitude $Amp$ (\unit{\degree C}) & 1.399 \pm 0.025 & -3.978 \pm 0.044 \\
+        Period $\tau$ (\unit{\s}) & 475.8 \pm 1.3 & 474.81 \pm 0.72 \\
+        Phase Shift $\phi$ (\unit{\radian}) & 0.201 \pm 0.037 & 2.486 \pm 0.021 \\
+        \bottomrule
     \end{tabular}
-    \caption{Introduce un pie de tabla descriptivo.}
-    \label{tab:R-T}
 \end{table}
 
-\subsection{Incertidumbres}
+\subsection{Derived Physical Parameters}
+Based on the attenuation and phase shift, the parameters $m$ and $h$ were calculated for the distance $d = \qty{0.050 \pm 0.001}{\m}$. These parameters were then used to determine the experimental thermal diffusivity ($K_{exp}$) and thermal conductivity ($\lambda_{exp}$).
 
-Discute qué tipos de incertidumbre posee cada magnitud medida y cómo se ha calculado, mencionando en cada caso si se trata de una medida directa o indirecta. Para las medidas indirectas, indica explícitamente el resultado analítico de las derivadas parciales necesarias para calcular la propagación cuadrática de errores.
+\begin{itemize}
+    \item $m = \qty{20.91 \pm 0.60}{\per\m}$
+    \item $h = \qty{45.7 \pm 1.3}{\per\m}$
+    \item $K_{exp} = \qty{16.75 \pm 0.81}{SI}$
+    \item $\lambda_{exp} = \qty{138.4 \pm 5.8}{\W\per\m\per\K}$
+\end{itemize}
 
-\subsection{Ajuste lineal de los datos}
+\section{Discussion}
+% [HUMAN AUTHOR: WRITE DISCUSSION HERE]
 
-Si en el desarrollo de la práctica has tenido que realizar ajuste lineal de los datos, indica en cada caso qué datos se han ajustado. Identifica cada magnitud en la ecuación de la recta y discute qué valores has obtenido a partir del ajuste. Por último, discute la bondad de cada ajuste realizado.
+\section{Conclusions}
+% [HUMAN AUTHOR: WRITE CONCLUSIONS HERE]
 
-% Referencias
-% Incluye las referencias bibliográficas en el archivo referencias.bib
-\printbibliography
+\section{Questions}
+% [HUMAN AUTHOR: ANSWER EXPERIMENTAL QUESTIONS HERE]
+
+\appendix
+\section{Experimental Data}
+The complete dataset recorded during the experiment is presented in Table~\ref{tab:raw_data}.
+
+\begin{longtable}{SSSSSS}
+    \caption{Full experimental measurements of temperature over time.} \label{tab:raw_data} \\
+    \toprule
+    {$t$ (\unit{\s})} & {$u_t$ (\unit{\s})} & {$\theta_1$ (\unit{\degree C})} & {$u_{\theta_1}$ (\unit{\degree C})} & {$\theta_2$ (\unit{\degree C})} & {$u_{\theta_2}$ (\unit{\degree C})} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+    \toprule
+    {$t$ (\unit{\s})} & {$u_t$ (\unit{\s})} & {$\theta_1$ (\unit{\degree C})} & {$u_{\theta_1}$ (\unit{\degree C})} & {$\theta_2$ (\unit{\degree C})} & {$u_{\theta_2}$ (\unit{\degree C})} \\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{6}{r}{{Continued on next page}} \\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+    0.00 & 0.10 & 54.20 & 0.10 & 63.10 & 0.10 \\
+    20.00 & 0.10 & 54.20 & 0.10 & 62.40 & 0.10 \\
+    40.00 & 0.10 & 54.10 & 0.10 & 61.70 & 0.10 \\
+    60.00 & 0.10 & 54.00 & 0.10 & 60.20 & 0.10 \\
+    80.00 & 0.10 & 53.80 & 0.10 & 60.00 & 0.10 \\
+    100.00 & 0.10 & 53.50 & 0.10 & 59.10 & 0.10 \\
+    120.00 & 0.10 & 53.20 & 0.10 & 58.30 & 0.10 \\
+    140.00 & 0.10 & 52.90 & 0.10 & 57.50 & 0.10 \\
+    160.00 & 0.10 & 52.60 & 0.10 & 56.70 & 0.10 \\
+    180.00 & 0.10 & 52.20 & 0.10 & 56.20 & 0.10 \\
+    200.00 & 0.10 & 51.90 & 0.10 & 56.90 & 0.10 \\
+    220.00 & 0.10 & 51.60 & 0.10 & 56.50 & 0.10 \\
+    240.00 & 0.10 & 51.50 & 0.10 & 57.10 & 0.10 \\
+    260.00 & 0.10 & 51.40 & 0.10 & 58.00 & 0.10 \\
+    280.00 & 0.10 & 51.50 & 0.10 & 58.90 & 0.10 \\
+    300.00 & 0.10 & 51.70 & 0.10 & 59.90 & 0.10 \\
+    320.00 & 0.10 & 52.00 & 0.10 & 60.90 & 0.10 \\
+    340.00 & 0.10 & 52.30 & 0.10 & 62.00 & 0.10 \\
+    360.00 & 0.10 & 52.70 & 0.10 & 63.10 & 0.10 \\
+    380.00 & 0.10 & 53.10 & 0.10 & 63.90 & 0.10 \\
+    400.00 & 0.10 & 53.50 & 0.10 & 64.30 & 0.10 \\
+    420.00 & 0.10 & 53.90 & 0.10 & 64.40 & 0.10 \\
+    440.00 & 0.10 & 54.10 & 0.10 & 64.10 & 0.10 \\
+    460.00 & 0.10 & 54.30 & 0.10 & 63.60 & 0.10 \\
+    480.00 & 0.10 & 54.40 & 0.10 & 63.00 & 0.10 \\
+    500.00 & 0.10 & 54.40 & 0.10 & 62.20 & 0.10 \\
+    520.00 & 0.10 & 54.30 & 0.10 & 61.40 & 0.10 \\
+    540.00 & 0.10 & 54.10 & 0.10 & 60.60 & 0.10 \\
+    560.00 & 0.10 & 53.90 & 0.10 & 59.80 & 0.10 \\
+    580.00 & 0.10 & 53.60 & 0.10 & 58.90 & 0.10 \\
+    600.00 & 0.10 & 53.30 & 0.10 & 58.00 & 0.10 \\
+    620.00 & 0.10 & 52.90 & 0.10 & 57.30 & 0.10 \\
+    640.00 & 0.10 & 52.60 & 0.10 & 56.40 & 0.10 \\
+    660.00 & 0.10 & 52.20 & 0.10 & 56.10 & 0.10 \\
+    680.00 & 0.10 & 51.90 & 0.10 & 56.20 & 0.10 \\
+    700.00 & 0.10 & 51.70 & 0.10 & 56.60 & 0.10 \\
+    720.00 & 0.10 & 51.60 & 0.10 & 57.30 & 0.10 \\
+    740.00 & 0.10 & 51.60 & 0.10 & 58.20 & 0.10 \\
+    760.00 & 0.10 & 51.70 & 0.10 & 59.20 & 0.10 \\
+    780.00 & 0.10 & 51.90 & 0.10 & 60.30 & 0.10 \\
+    800.00 & 0.10 & 52.20 & 0.10 & 61.30 & 0.10 \\
+    820.00 & 0.10 & 52.50 & 0.10 & 62.40 & 0.10 \\
+    840.00 & 0.10 & 52.90 & 0.10 & 63.50 & 0.10 \\
+    860.00 & 0.10 & 53.30 & 0.10 & 64.20 & 0.10 \\
+    880.00 & 0.10 & 53.70 & 0.10 & 64.30 & 0.10 \\
+    900.00 & 0.10 & 54.10 & 0.10 & 64.50 & 0.10 \\
+    920.00 & 0.10 & 54.30 & 0.10 & 64.20 & 0.10 \\
+    940.00 & 0.10 & 54.50 & 0.10 & 63.70 & 0.10 \\
+    960.00 & 0.10 & 54.50 & 0.10 & 63.00 & 0.10 \\
+    980.00 & 0.10 & 54.40 & 0.10 & 62.20 & 0.10 \\
+    1000.00 & 0.10 & 54.40 & 0.10 & 61.40 & 0.10 \\
+    1020.00 & 0.10 & 54.20 & 0.10 & 60.50 & 0.10 \\
+    1040.00 & 0.10 & 53.90 & 0.10 & 59.70 & 0.10 \\
+    1060.00 & 0.10 & 53.70 & 0.10 & 58.80 & 0.10 \\
+    1080.00 & 0.10 & 53.40 & 0.10 & 58.00 & 0.10 \\
+    1100.00 & 0.10 & 53.00 & 0.10 & 57.20 & 0.10 \\
+    1120.00 & 0.10 & 52.70 & 0.10 & 56.60 & 0.10 \\
+    1140.00 & 0.10 & 52.30 & 0.10 & 56.30 & 0.10 \\
+    1160.00 & 0.10 & 52.00 & 0.10 & 56.40 & 0.10 \\
+    1180.00 & 0.10 & 51.80 & 0.10 & 57.00 & 0.10 \\
+    1200.00 & 0.10 & 51.70 & 0.10 & 57.70 & 0.10 \\
+    1220.00 & 0.10 & 51.80 & 0.10 & 58.60 & 0.10 \\
+    1240.00 & 0.10 & 51.90 & 0.10 & 59.60 & 0.10 \\
+    1260.00 & 0.10 & 52.10 & 0.10 & 60.70 & 0.10 \\
+    1280.00 & 0.10 & 52.40 & 0.10 & 61.80 & 0.10 \\
+    1300.00 & 0.10 & 52.80 & 0.10 & 62.90 & 0.10 \\
+    1320.00 & 0.10 & 53.20 & 0.10 & 63.80 & 0.10 \\
+    1340.00 & 0.10 & 53.60 & 0.10 & 64.50 & 0.10 \\
+    1360.00 & 0.10 & 54.00 & 0.10 & 64.80 & 0.10 \\
+    1380.00 & 0.10 & 54.30 & 0.10 & 64.60 & 0.10 \\
+    1400.00 & 0.10 & 54.50 & 0.10 & 64.20 & 0.10 \\
+    1420.00 & 0.10 & 54.60 & 0.10 & 63.60 & 0.10 \\
+    1440.00 & 0.10 & 54.70 & 0.10 & 62.90 & 0.10 \\
+    1460.00 & 0.10 & 54.60 & 0.10 & 62.10 & 0.10 \\
+    1480.00 & 0.10 & 54.40 & 0.10 & 61.30 & 0.10 \\
+    1500.00 & 0.10 & 54.30 & 0.10 & 60.50 & 0.10 \\
+    1520.00 & 0.10 & 54.00 & 0.10 & 59.70 & 0.10 \\
+    1540.00 & 0.10 & 53.70 & 0.10 & 58.80 & 0.10 \\
+    1560.00 & 0.10 & 53.40 & 0.10 & 57.80 & 0.10 \\
+    1580.00 & 0.10 & 53.00 & 0.10 & 57.20 & 0.10 \\
+    1600.00 & 0.10 & 52.70 & 0.10 & 56.60 & 0.10 \\
+    1620.00 & 0.10 & 52.30 & 0.10 & 56.40 & 0.10 \\
+    1640.00 & 0.10 & 52.10 & 0.10 & 56.70 & 0.10 \\
+    1660.00 & 0.10 & 51.90 & 0.10 & 57.20 & 0.10 \\
+    1680.00 & 0.10 & 51.90 & 0.10 & 58.10 & 0.10 \\
+    1700.00 & 0.10 & 51.90 & 0.10 & 59.00 & 0.10 \\
+    1720.00 & 0.10 & 52.10 & 0.10 & 60.00 & 0.10 \\
+    1740.00 & 0.10 & 52.30 & 0.10 & 61.20 & 0.10 \\
+    1760.00 & 0.10 & 52.70 & 0.10 & 62.30 & 0.10 \\
+    1780.00 & 0.10 & 53.00 & 0.10 & 63.40 & 0.10 \\
+    1800.00 & 0.10 & 53.50 & 0.10 & 64.30 & 0.10 \\
+\end{longtable}
+
+\end{document}

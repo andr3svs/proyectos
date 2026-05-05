@@ -85,7 +85,8 @@ plt.title('Temperatura vs tiempo', fontsize=14)
 plt.legend()
 plt.grid(False)
 #Do the plot
-plt.show()
+plt.savefig(ruta('grafica_temperatura.png'))
+plt.close()
 """
 3.Fitting the data
 """
@@ -133,14 +134,14 @@ phase1=ufloat(phase_theta1, phase_err_theta1)
 phase2=ufloat(phase_theta2, phase_err_theta2)
 disphase=abs(phase1-phase2)
 
-m_parameter=abs(unumpy.log(amp1/amp2))/distance_between_sensors
-h_parameter=disphase/distance_between_sensors
+m_parameter=abs(unumpy.log(abs(amp1/amp2)))/distance_between_sensors
+h_parameter=abs(phase1-phase2)/distance_between_sensors
 
-K_exp=(specific_heat_capacity*density_aluminum*np.pi)/(h_parameter*m_parameter*(tau_fit_theta1+tau_fit_theta2)/2) #we use the average period    #540 is the period of the wave, which is a fixed parameter in this experiment
+K_exp=(specific_heat_capacity*density_aluminum*np.pi)/(h_parameter*m_parameter*(tau_fit_theta1+tau_fit_theta2)/2) 
 lambda_exp=K_exp*radius_of_cylinder*(h_parameter**2-m_parameter**2 )/2.0
 
 # Write all parameters to a LaTeX-formatted txt file
-with open("results.txt", "w") as f:
+with open("results.txt", "w", encoding="utf-8") as f:
     f.write("% Fitted Parameters for θ₁\n")
     f.write(f"A_{{\\theta_1}} = {A_fit_theta1:.4f} \\pm {A_err_theta1:.4f}\n")
     f.write(f"\\text{{Amp}}_{{\\theta_1}} = {amp_fit_theta1:.6f} \\pm {amp_err_theta1:.6f}\n")

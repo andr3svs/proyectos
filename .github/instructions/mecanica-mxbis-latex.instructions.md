@@ -14,7 +14,9 @@ Documents in the `Mecanica/m[XX]/` or `Mecanica/m[XX]bis*/` folders follow a sta
 ## Quality Requirements (Non-Negotiable)
 
 All reports must meet the following requirements:
-
+###
+If the latex does not exits yet create it following m3bis2.tex structure and populate it with placeholders for data, tables, and figures. Then follow the workflow to fill in the data from either Python or Excel source, ensuring all formatting and quality standards are met.
+If the scripts does not export the images create a modified copy that exports them
 ### **CRITICAL: Agent is a Template Maker Only**
 🔴 **Agent NEVER writes Discussion or Conclusions**
 - Discussion is reserved for human interpretation

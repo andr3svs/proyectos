@@ -1,0 +1,81 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{tipler}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=9642f35ee0d6a339c4aa855b19c9c9cb}{%
+           family={Tipler},
+           familyi={T\bibinitperiod},
+           given={P.\bibnamedelimi A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8991d56bb5dcbe0005faee9212c561e6}{%
+           family={Mosca},
+           familyi={M\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Reverté}%
+      }
+      \strng{namehash}{4215e1ff395354aee3b69bd05e44c9bb}
+      \strng{fullhash}{4215e1ff395354aee3b69bd05e44c9bb}
+      \strng{fullhashraw}{4215e1ff395354aee3b69bd05e44c9bb}
+      \strng{bibnamehash}{4215e1ff395354aee3b69bd05e44c9bb}
+      \strng{authorbibnamehash}{4215e1ff395354aee3b69bd05e44c9bb}
+      \strng{authornamehash}{4215e1ff395354aee3b69bd05e44c9bb}
+      \strng{authorfullhash}{4215e1ff395354aee3b69bd05e44c9bb}
+      \strng{authorfullhashraw}{4215e1ff395354aee3b69bd05e44c9bb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6ª}
+      \field{title}{Física para la ciencia y la tecnología}
+      \field{year}{2010}
+    \endentry
+    \entry{guia_p12}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=b4c25d2bc96ac07a40a5361b195d1ae6}{%
+           family={Departamento\bibnamedelimb de\bibnamedelima Física},
+           familyi={D\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Universidad\bibnamedelimb de\bibnamedelima [Nombre]},
+           giveni={U\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim [\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4c25d2bc96ac07a40a5361b195d1ae6}
+      \strng{fullhash}{b4c25d2bc96ac07a40a5361b195d1ae6}
+      \strng{fullhashraw}{b4c25d2bc96ac07a40a5361b195d1ae6}
+      \strng{bibnamehash}{b4c25d2bc96ac07a40a5361b195d1ae6}
+      \strng{authorbibnamehash}{b4c25d2bc96ac07a40a5361b195d1ae6}
+      \strng{authornamehash}{b4c25d2bc96ac07a40a5361b195d1ae6}
+      \strng{authorfullhash}{b4c25d2bc96ac07a40a5361b195d1ae6}
+      \strng{authorfullhashraw}{b4c25d2bc96ac07a40a5361b195d1ae6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Guía de laboratorio}
+      \field{title}{Práctica 12: Ondas térmicas en una barra metálica}
+      \field{year}{2026}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

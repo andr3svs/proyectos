@@ -1,0 +1,203 @@
+\documentclass[11pt, a4paper]{article}
+
+% Paquetes esenciales
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel} % Idioma español y renombrar "Cuadro" a "Tabla"
+\usepackage{amsmath, amsfonts, amssymb} % Matemáticas
+\usepackage{graphicx} % Gráficos
+\usepackage{geometry} % Márgenes
+\usepackage{booktabs} % Tablas profesionales
+\usepackage{caption}
+\usepackage{float} % Posicionamiento de figuras
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref} % Enlaces
+\usepackage{fancyhdr} % Encabezados
+\usepackage{siunitx} % Unidades del SI
+\sisetup{output-decimal-marker = {.}}
+
+% Configuración de márgenes
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% Configuración del encabezado (estilo profesional P4)
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Termodinámica - Grado en Física}
+\rhead{Práctica 7: Método de Clement-Desormes}
+\cfoot{\thepage}
+
+% Título y datos del documento
+\title{\vspace{-2cm}\textbf{Práctica 7: Determinación del coeficiente adiabático de gases \\ Método de Clement-Desormes}}
+\author{
+    \textbf{Andrés Vinuesa Espinosa} y \textbf{José María Martínez Herrada} \\
+    Grupo B2.4 \\
+    Universidad de Granada
+}
+\date{Realización: 08/04/2026 \quad | \quad Entrega: 22/04/2026}
+
+\begin{document}
+
+\maketitle
+
+\hrule
+\vspace{0.5cm}
+
+\begin{abstract}
+\noindent 
+En este informe se determina experimentalmente el coeficiente adiabático ($\gamma$) del aire y del dióxido de carbono ($CO_2$) utilizando el método de Clement-Desormes. Se analiza la dependencia de $\gamma$ con respecto a la presión inicial aplicada en el sistema y se comparan los resultados empíricos con los valores teóricos deducidos a partir de los grados de libertad de moléculas diatómicas y lineales poliatómicas. Finalmente, se discuten las contribuciones rotacionales y vibracionales en el caso del $CO_2$ \cite{guion}.
+\end{abstract}
+
+\vspace{0.5cm}
+\hrule
+
+\vspace{1cm}
+\tableofcontents
+\newpage
+
+% ---------------------------------------------------------
+% 1. RESULTADOS
+% ---------------------------------------------------------
+\section{Resultados}
+
+\subsection{Coeficiente adiabático del aire}
+En esta sección calculamos el valor del coeficiente adiabático $\gamma$ para el aire a diferentes presiones iniciales. Utilizando la aproximación del método de Clement-Desormes para variaciones de presión pequeñas frente a la atmosférica, la relación teórica viene dada por la ecuación:
+
+\begin{equation}
+    \gamma \approx \frac{h_1}{h_1 - h_2}
+    \label{eq:gamma_aprox}
+\end{equation}
+
+En la Tabla \ref{tab:resultados_aire} (Anexo \ref{anexo:tablas}) se recogen los valores obtenidos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{grafica_aire.png}
+    \caption{Gráfico de $\gamma$ frente a $h_1$ para el aire.}
+    \label{fig:gamma_aire}
+\end{figure}
+
+Al observar los resultados, vemos que los valores de $\gamma$ experimentan cierta dispersión dependiendo de la diferencia de altura inicial, oscilando entre $1.31$ y $1.46$. Teóricamente, el coeficiente adiabático es una propiedad intrínseca del gas dependiente de la temperatura, por lo que debería mantenerse constante frente a variaciones de presión inicial en un gas ideal. Las diferencias observadas de los $\gamma$ observados se podrían atribuir a errores instrumentales en las lecturas más pequeñas (como en $h_1=6.4$ cm) y al error experimental al no hacer la expansión adiábatica con unos instrumentos y sistemas de la máxima calidad.
+
+Suponiendo que el aire se comporta como un gas ideal diatómico puro (compuesto principalmente de $N_2$ y $O_2$), sus grados de libertad son $f=5$ (3 traslacionales y 2 rotacionales a temperatura ambiente)\cite{young}. Por tanto, el valor teórico esperado es:
+
+\begin{equation}
+    \gamma_{teo} = \frac{C_p}{C_v} = \frac{f+2}{f} = \frac{7}{5} = 1.40
+\end{equation}
+
+Calculando la media de nuestros valores experimentales, obtenemos un coeficiente de $\gamma_{exp} = 1.41 \pm 0.35$. Al compararlo con el valor teórico y bibliográfico ($\gamma_{bib} = 1.40 - 1.41$) \cite{young}, comprobamos que las mediciones concuerdan bastante bien con las predicciones, presentando un error menor al $1\%$. Esto corrobora el modelo teórico de gas diatómico para el aire a temperatura ambiente.
+
+\subsection{Coeficiente adiabático del $CO_2$}
+A continuación, repetimos el procedimiento habiendo purgado y llenado el sistema con dióxido de carbono ($CO_2$). Los valores exactos calculados y medidos se exponen en la Tabla \ref{tab:resultados_co2}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{grafica_co2.png}
+    \caption{Gráfico de $\gamma$ frente a $h_1$ para el $CO_2$.}
+    \label{fig:gamma_co2}
+\end{figure}
+
+Al igual que con el aire, $\gamma$ debería ser independiente de $h_1$. Sin embargo, encontramos valores que van desde $1.27$ hasta $1.46$. Estas variaciones responden a la mayor dificultad experimental para estabilizar térmica y mecánicamente un gas más denso como el $CO_2$, así como a posibles mezclas residuales de aire si el purgado del sistema no fue perfectamente hermético. 
+
+Considerando el $CO_2$ como una molécula lineal poliatómica, posee 3 grados de libertad traslacionales y 2 rotacionales. Si asumiésemos la ausencia total de contribución vibracional a temperatura ambiente ($f=5$), su valor teórico sería idéntico al del aire ($\gamma = 1.40$). La bibliografía, no obstante, sitúa el $\gamma$ del $CO_2$ en $1.294$ \cite{young}. Aunque el $CO_2$ es una molécula lineal similar a las del aire, el valor que nos dice en la bibliografía es de $\gamma \approx 1.3$ refleja la contribución de los modos vibracionales que aumentan los grados de libertad.
+
+Nuestra media experimental se sitúa en $\gamma_{exp} = 1.37 \pm 0.12$. Aunque superior al tabulado, es menor que $1.40$. El hecho de que nuestros resultados experimentales se aproximen a $1.4$ sugiere que, bajo las presiones y temperaturas del laboratorio, el gas se ha comportado parecido al aire, omitiendo la contribución vibracional que predice la teoría.
+
+% ---------------------------------------------------------
+% 2. CONCLUSIONES
+% ---------------------------------------------------------
+\section{Conclusiones}
+
+En esta práctica se ha determinado el coeficiente adiabático de dos gases de distinta naturaleza molecular (aire y $CO_2$) mediante el método de Clement-Desormes, analizando cómo influyen los grados de libertad en la capacidad calorífica de los fluidos.
+
+Para el caso del aire, el resultado experimental nos da un valor medio de $\gamma = 1.41 \pm 0.35$, el cual se ajusta perfectamente a las predicciones teóricas y bibliográficas ($\gamma \approx 1.40$) con un error inferior al 1\,\%. Por lo tanto, los datos tomados en la práctica corroboran el modelo de gas ideal diatómico para el aire a temperatura ambiente, demostrando que la energía térmica se distribuye de forma exclusiva entre sus 5 grados de libertad (traslacionales y rotacionales).
+
+Por su parte, el análisis para el $CO_2$ proporcionó un promedio de $\gamma = 1.37 \pm 0.12$. Aunque la bibliografía predice un valor cercano a $1.294$ debido a la activación de sus modos vibracionales, nuestro resultado se aproxima de forma notable al $1.40$. Esto sugiere que, bajo las presiones y temperaturas específicas de nuestro laboratorio, la predicción dela teoría ha quedado omitida, haciendo que el gas poliatómico se comporte de manera muy similar al aire.
+
+Finalmente, se concluye que la dispersión observada en los datos a distintas presiones iniciales refleja las limitaciones propias del diseño experimental. Las desviaciones encontradas se atribuyen a la dificultad práctica de aislar térmicamente el sistema para lograr una expansión estrictamente adiabática con el equipo disponible, así como al peso del error instrumental en las lecturas más pequeñas ($h_1=6.4$ cm). En el caso específico del $CO_2$, el margen de error se vio agravado por la muy probable mezcla de aire residual derivada de un purgado no perfectamente hermético.
+\newpage
+
+\section{Anexos}
+
+\subsection{Tablas de datos}
+\label{anexo:tablas}
+
+\begin{table}[H]
+\centering
+\caption{Alturas promedio del líquido manométrico para el \textbf{aire} y cálculo exacto de $\gamma$.}
+\vspace{0.2cm}
+\begin{tabular}{cccc}
+\toprule
+\textbf{Medida} & \textbf{$h_1$ (cm)} & \textbf{$h_2$ (cm)} & \textbf{$\gamma_{aire}$ exacto} \\
+\midrule
+1 & $24.60\pm 0.10$  & $7.20\pm 0.10$  & $1.41 \pm 0.20$ \\ 
+2 & $12.50\pm 0.10$ & $3.80\pm 0.10$ & $1.44 \pm 0.42$ \\
+3 & $35.80\pm 0.10$ & $11.30\pm 0.10$ & $1.46 \pm 0.15$ \\
+4 & $6.40\pm 0.10$ & $1.50\pm 0.10$ & $1.31 \pm 0.61$ \\
+\bottomrule
+\end{tabular}
+\label{tab:resultados_aire}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Alturas promedio del líquido manométrico para el \textbf{$CO_2$} y cálculo exacto de $\gamma$.}
+\vspace{0.2cm}
+\begin{tabular}{cccc}
+\toprule
+\textbf{Medida} & \textbf{$h_1$ (cm)} & \textbf{$h_2$ (cm)} & \textbf{$\gamma_{CO_2}$ exacto} \\
+\midrule
+1 & $32.10 \pm 0.10$ & $9.10 \pm 0.10$ & $1.394 \pm 0.094$ \\ 
+2 & $14.40 \pm 0.10$ & $3.10 \pm 0.10$ & $1.27 \pm 0.16$ \\
+3 & $24.50 \pm 0.10$ & $6.50 \pm 0.10$ & $1.36 \pm 0.12$ \\
+4 & $28.60 \pm 0.10$ & $9.00 \pm 0.10$ & $1.46 \pm 0.12$ \\
+\bottomrule
+\end{tabular}
+\label{tab:resultados_co2}
+\end{table}
+
+
+\subsection{Incertidumbres}
+\label{anexo:incertidumbres}
+A la hora de realizar las mediciones, nos enfrentamos a dos tipos de incertidumbres: directas e indirectas.
+
+\paragraph{Medidas Directas (Incertidumbre Tipo B):} 
+
+Las únicas magnitudes medidas de forma directa en el laboratorio han sido las diferencias de altura en el tubo manométrico ($h_1$ y $h_2$). Su error instrumental se asocia a la lectura en escala graduada. En este caso siendo 1mm el error del instrumento.
+
+\paragraph{Medidas Indirectas (Propagación Cuadrática de Errores):}
+El coeficiente adiabático $\gamma$ es una medida indirecta. Para calcular su incertidumbre $\Delta\gamma$, aplicamos la ley general de propagación cuadrática de errores para variables independientes:
+\begin{equation}
+    \Delta \gamma = \sqrt{ \left( \frac{\partial \gamma}{\partial h_1} \Delta h_1 \right)^2 + \left( \frac{\partial \gamma}{\partial h_2} \Delta h_2 \right)^2 }
+\end{equation}
+
+Utilizando la ecuación aproximada de Taylor $\gamma \approx \frac{h_1}{h_1 - h_2}$, el desarrollo analítico explícito de las derivadas parciales resulta en:
+
+\begin{equation}
+    \frac{\partial \gamma}{\partial h_1} = \frac{1 \cdot (h_1 - h_2) - h_1 \cdot 1}{(h_1 - h_2)^2} = \frac{-h_2}{(h_1 - h_2)^2}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial \gamma}{\partial h_2} = - \frac{h_1}{(h_1 - h_2)^2} \cdot (-1) = \frac{h_1}{(h_1 - h_2)^2}
+\end{equation}
+
+Sustituyendo las derivadas en la ecuación de propagación, obtenemos la expresión analítica final aproximada que rige la dinámica de los errores presentados en las tablas:
+\begin{equation}
+    \Delta \gamma \approx \frac{1}{(h_1 - h_2)^2} \sqrt{ (-h_2 \Delta h_1)^2 + (h_1 \Delta h_2)^2 }
+\end{equation}
+
+
+
+% ---------------------------------------------------------
+% REFERENCIAS 
+% ---------------------------------------------------------
+\begin{thebibliography}{9}
+\bibitem{guion} 
+Departamento de Termódinamica. \textit{Guion Práctica 7: Determinación del coeficiente adiabático de gases: método de Clement-Desormes}. Universidad de Granada, Curso 2025-2026.
+
+\bibitem{tipler} 
+Tipler, P. A., \& Mosca, G. (2010). \textit{Física para la ciencia y la tecnología. Vol. 1: Mecánica, oscilaciones y ondas, termodinámica} (6ª ed.). Reverté.
+
+\bibitem{young}
+Young, H. D., \& Freedman, R. A. (2013). \textit{Física Universitaria con Física Moderna} (13ª ed., Vol. 1). Pearson Educación.
+
+\end{thebibliography}
+
+\end{document}

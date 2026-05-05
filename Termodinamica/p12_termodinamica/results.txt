@@ -1,0 +1,17 @@
+% Fitted Parameters for θ₁
+A_{\theta_1} = 53.1101 \pm 0.0181
+\text{Amp}_{\theta_1} = 1.398529 \pm 0.025264
+\tau_{\theta_1} = 475.7577 \pm 1.2641
+\phi_{\theta_1} = 0.200628 \pm 0.037110
+
+% Fitted Parameters for θ₂
+A_{\theta_2} = 60.4713 \pm 0.0313
+\text{Amp}_{\theta_2} = -3.977787 \pm 0.044384
+\tau_{\theta_2} = 474.8073 \pm 0.7225
+\phi_{\theta_2} = 2.486117 \pm 0.021063
+
+% Derived Parameters
+m = 20.906088 \pm 0.595951
+h = 45.709780 \pm 1.250628
+K_{\exp} = 16.752219 \pm 0.814023
+\lambda_{\exp} = 138.400090 \pm 5.838424
