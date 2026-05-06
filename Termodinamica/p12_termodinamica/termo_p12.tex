@@ -86,9 +86,9 @@ A partir de la atenuación y el desfase, se calcularon los parámetros $m$ y $h$
 
 \begin{itemize}
     \item $m = (10.45 \pm 0.60)\,\mathrm{m^{-1}}$
-    \item $h = (22.9 \pm 1.3)\,\mathrm{m^{-1}}$
-    \item $K_{exp} = (67.00 \pm 0.81)\,\mathrm{W\,m^{-1}\,K^{-1}}$
-    \item $\lambda_{exp} = (2286.0 \pm 5.8)\,\mathrm{W\,m^{-2}\,K^{-1}}$
+    \item $h = (8.6 \pm 1.3)\,\mathrm{m^{-1}}$
+    \item $K_{exp} = (178.90 \pm 0.81)\,\mathrm{W\,m^{-1}\,K^{-1}}$
+    \item $\lambda_{exp} = (64.3 \pm 5.8)\,\mathrm{W\,m^{-2}\,K^{-1}}$
 \end{itemize}
 El análisis de los datos experimentales obtenidos en el estado estacionario nos ha permitido ver el comportamiento ondulatorio del flujo de calor a lo largo de la barra de aluminio. 
 
@@ -96,13 +96,13 @@ A partir del ajuste, se han determinado unas amplitudes de oscilación térmica 
 
 Ambos sensores registran un periodo de oscilación prácticamente idéntico ($\tau \approx 475$~s), lo que confirma que la frecuencia de excitación térmica se conserva durante la propagación.
 
-Utilizando la distancia conocida entre los sensores ($d = 0.1000 \pm 0.0025$~m) y el radio ($r = 0.0200 \pm 0.0025$~m), la diferencia de fase extraída de los ajustes, se han calculado los parámetros cinemáticos de la onda térmica. 
+Utilizando la distancia conocida entre los sensores ($d = 0.1000 \pm 0.0010$~m) y el radio ($r = 0.0200 \pm 0.0010$~m), la diferencia de fase extraída de los ajustes, se han calculado los parámetros cinemáticos de la onda térmica. 
 
-Hemos obtenido el coeficiente $m = 10.45 \pm 0.60$~m$^{-1}$ y por otro lado, la otra constante obtenida es $h = 22.9 \pm 1.3$~m$^{-1}$. 
+Hemos obtenido el coeficiente $m = 10.45 \pm 0.60$~m$^{-1}$ y por otro lado, la otra constante obtenida es $h = 8.6 \pm 1.3$~m$^{-1}$. 
 
-A partir de estos parámetros ondulatorios, se ha deducido el coeficiente de conductividad, obteniendo un valor de $\K_{exp} = 67.00 \pm 0.81$~W$\cdot$m$^{-1}$K$^{-1}$. 
+A partir de estos parámetros ondulatorios, se ha deducido el coeficiente de conductividad, obteniendo un valor de $\K_{exp} = 178.90 \pm 0.81$~W$\cdot$m$^{-1}$K$^{-1}$. 
 
-Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\K_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la obtenida un muchísimo menos que la bibliográfica, para ser exactos unas 3.54 veces más pequeña aún habiendo usando la capacidad calorífica y densidad teórica.
+Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\K_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la obtenida menor que la bibliográfica, para ser exactos unas 1.32 veces más pequeña aún habiendo usando la capacidad calorífica y densidad teórica.
 
 Esta discrepancia puede deberse tanto a errores en el propio montaje experimental como a los casos que se plantean a continuación por orden de severidad:
 \paragraph{}
@@ -124,7 +124,7 @@ No obstante, aunque es una explicación plausible, no tenemos forma de confirmar
 es decir, podríamos tener una confluencia de varios motivos, podriamos tener una aleación de aluminio con una conductividad térmica menor, que disminuye aún más
 por la disipación de calor por convección, y a su vez el modelo matemático que usamos no es lo suficientemente preciso, lo que explicaría la gran diferencia entre el valor obtenido y el valor teórico del aluminio puro.
 
-Con el resultado obtenido del coeficiente de conducción, hallaremos el coeficiente de pérdida lateral $\lambda$, que haciendo los cálculos correspondientes nos sale un valor de $\lambda_{exp} = (2286.0 \pm 5.8)\,\mathrm{W\,m^{-2}\,K^{-1}}$. Este resultado no podemos compararlo con uno teórico para ver el error obtenido, pues este valor no es una propiedad del material, este es un valor que depende factores externos como puede ser la corriente de aire en el laboratorio. Debido al grave error que hay en el coeficiente de conductividad, aunque podemos estimar con facilidad que este valor también puede llegar a ser un disparate. Esto debido a que la expresión de este coeficiente es $\lambda = \frac{K \cdot r}{2} (m^2 - h^2)$, lo que nos da un valor negativo ya que $m^2<<h^2$, por lo que lo invertiremos dándonos $h^2-m^2$ para tener un valor positivo. Igualmente nos da una diferencia muy grande saliéndonos un disparate de valor de la pérdida lateral que nos podría llegar a salir un poco elevado debido al pequeño ventilador que tiene el montaje experimental pero no tan elevado como nos sale a nosotros con los resultados obtenidos de h y m.
+Con el resultado obtenido del coeficiente de conducción, hallaremos el coeficiente de pérdida lateral $\lambda$, que haciendo los cálculos correspondientes nos sale un valor de $\lambda_{exp} = (64.3 \pm 5.8)\,\mathrm{W\,m^{-2}\,K^{-1}}$. Este resultado no podemos compararlo con uno teórico para ver el error obtenido, pues este valor no es una propiedad del material, este es un valor que depende factores externos como puede ser la corriente de aire en el laboratorio. Podemos estimar que este valor también puede llegar a tener error. Nos da un valor un poco grande de pérdida lateral que se puede explicar el que sea un poco elevado debido al pequeño ventilador que tiene el montaje experimental creando esa convección con el aire, haciendo que la pérdida lateral aumente significsttiva respecto al aire en reposo.
 
 \section{Cuestiones Teóricas}
 
@@ -310,15 +310,15 @@ Sustituyendo en la expresión general de propagación cuadrática, la \textbf{f�
 \end{equation}
 
 \paragraph{4. Coeficiente de pérdida de calor lateral ($\lambda_{exp}$):}
-A partir de la parte real de la ecuación diferencial del sistema, se obtiene la expresión para el coeficiente de pérdida de calor lateral. Aplicando la corrección en valor absoluto (ya que en este montaje empírico $h > m$), la magnitud se define como:
+A partir de la parte real de la ecuación diferencial del sistema, se obtiene la expresión para el coeficiente de pérdida de calor lateral que se define como:
 \begin{equation}
-    \lambda = \frac{K \cdot r}{2} (h^2 - m^2)
+    \lambda = \frac{K \cdot r}{2} (m^2 - h^2)
 \end{equation}
 
 Para evaluar su incertidumbre ($u_\lambda$), se asume que propagan error la conductividad térmica calculada ($K$), el radio de la barra ($r$), la constante de desfase ($h$) y el coeficiente de atenuación ($m$). Las derivadas parciales correspondientes son:
 \begin{align}
-    \frac{\partial \lambda}{\partial K} &= \frac{r}{2} (h^2 - m^2) \\
-    \frac{\partial \lambda}{\partial r} &= \frac{K}{2} (h^2 - m^2) \\
+    \frac{\partial \lambda}{\partial K} &= \frac{r}{2} (m^2 - h^2) \\
+    \frac{\partial \lambda}{\partial r} &= \frac{K}{2} (m^2 - h^2) \\
     \frac{\partial \lambda}{\partial h} &= K \cdot r \cdot h \\
     \frac{\partial \lambda}{\partial m} &= - K \cdot r \cdot m
 \end{align}
