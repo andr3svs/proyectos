@@ -100,9 +100,9 @@ Utilizando la distancia conocida entre los sensores ($d = 0.0500 \pm 0.0010$~m) 
 
 Hemos obtenido el coeficiente $m = 20.91 \pm 0.60$~m$^{-1}$ y por otro lado, la otra constante obtenida es $h = 45.7 \pm 1.3$~m$^{-1}$. 
 
-A partir de estos parámetros ondulatorios, se ha deducido el coeficiente de pérdida lateral experimental del material, obteniendo un valor de $\lambda_{exp} = 138.4 \pm 5.8$~W$\cdot$m$^{-1}$K$^{-1}$. 
+A partir de estos parámetros ondulatorios, se ha deducido el coeficiente de conductividad, obteniendo un valor de $\K_{exp} = 16.75 \pm 0.81$~W$\cdot$m$^{-1}$K$^{-1}$. 
 
-Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\lambda_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la obtenida un poco menos que la mitad de la bibliográfica.
+Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\K_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la obtenida un muchísimo menos que la bibliográfica, aún habiendo usando la capacidad calorífica y densidad teórica.
 
 Esta discrepancia puede deberse tanto a errores en el propio montaje experimental como a los casos que se plantean a continuación por orden de severidad:
 \paragraph{}
@@ -123,6 +123,8 @@ En caso de ser este el caso, podemos ver que según \cite{aluminio}, si nuestro 
 No obstante, aunque es una explicación plausible, no tenemos forma de confirmarla y no tiene en cuenta los fallos del modelo,
 es decir, podríamos tener una confluencia de varios motivos, podriamos tener una aleación de aluminio con una conductividad térmica menor, que disminuye aún más
 por la disipación de calor por convección, y a su vez el modelo matemático que usamos no es lo suficientemente preciso, lo que explicaría la gran diferencia entre el valor obtenido y el valor teórico del aluminio puro.
+
+Con el resultado obtenido del coeficiente de conducción, hallaremos el coeficiente de pérdida lateral $\lambda$, que haciendo los cálculos correspondientes nos sale un valor de $\lambda_{exp} = (138.4 \pm 5.8)\,\mathrm{W\,m^{-2}\,K^{-1}}$. Este resultado no podemos compararlo con uno teórico para ver el error obtenido, pues este valor no es una propiedad del material, este es un valor que depende factores externos como puede ser la corriente de aire en el laboratorio. Debido al grave error que hay en el coeficiente de conductividad, podemos estimar que este valor también puede llegar a ser un disparate. Esto debido a que la expresión de este coeficiente es 
 
 \section{Cuestiones Teóricas}
 
@@ -308,7 +310,7 @@ Sustituyendo en la expresión general de propagación cuadrática, la \textbf{f�
 \end{equation}
 
 \paragraph{4. Coeficiente de pérdida de calor lateral ($\lambda_{exp}$):}
-Asumiendo que la densidad ($\rho$) y el calor específico ($c$) del material se toman como valores tabulados exactos (es decir, sin incertidumbre apreciable frente a las medidas experimentales), la conductividad viene dada por $\lambda_{exp} = K_{exp} \rho c$. Su derivada parcial respecto a la única variable con error es:
+Asumiendo que la densidad ($\rho$) y el calor específico ($c$) del material se toman como valores tabulados exactos (es decir, sin incertidumbre apreciable frente a las medidas experimentales), la pérdida de calor lateral viene dada por $\lambda_{exp} = K_{exp} \rho c$. Su derivada parcial respecto a la única variable con error es:
 \begin{align}
     \frac{\partial \lambda_{exp}}{\partial K_{exp}} &= \rho c
 \end{align}
