@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  5 MAY 2026 19:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  6 MAY 2026 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -72,35 +72,35 @@ Package: babel 2024/01/07 v24.1 The Babel package
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+(C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
 df
-Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks21
+\es@quotdepth=\count266
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
 ))
-(C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
--english.tex
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 11.
+(C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
+-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
 )
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count266
+\etb@tempcnta=\count267
 )
-\csq@reset=\count267
-\csq@gtype=\count268
-\csq@glevel=\count269
-\csq@qlevel=\count270
-\csq@maxlvl=\count271
-\csq@tshold=\count272
-\csq@ltx@everypar=\toks21
+\csq@reset=\count268
+\csq@gtype=\count269
+\csq@glevel=\count270
+\csq@qlevel=\count271
+\csq@maxlvl=\count272
+\csq@tshold=\count273
+\csq@ltx@everypar=\toks22
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
@@ -112,10 +112,10 @@ Package csquotes Info: ... configuration file loaded successfully.
 File: csquotes.cfg 
 )) (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count273
-\float@exts=\toks22
+\c@float@type=\count274
+\float@exts=\toks23
 \float@box=\box51
-\@float@everytoks=\toks23
+\@float@everytoks=\toks24
 \@floatcapt=\box52
 )
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
@@ -128,7 +128,7 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks24
+\@emptytoks=\toks25
 \ex@=\dimen150
 ))
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
@@ -138,14 +138,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count274
+\inf@bad=\count275
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count275
-\leftroot@=\count276
+\uproot@=\count276
+\leftroot@=\count277
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count277
-\DOTSCASE@=\count278
+\classnum@=\count278
+\DOTSCASE@=\count279
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -158,31 +158,31 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen152
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count279
+\macc@depth=\count280
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count280
+\c@MaxMatrixCols=\count281
 \dotsspace@=\muskip16
-\c@parentequation=\count281
-\dspbrk@lvl=\count282
-\tag@help=\toks25
-\row@=\count283
-\column@=\count284
-\maxfields@=\count285
-\andhelp@=\toks26
+\c@parentequation=\count282
+\dspbrk@lvl=\count283
+\tag@help=\toks26
+\row@=\count284
+\column@=\count285
+\maxfields@=\count286
+\andhelp@=\toks27
 \eqnshift@=\dimen153
 \alignsep@=\dimen154
 \tagshift@=\dimen155
 \tagwidth@=\dimen156
 \totwidth@=\dimen157
 \lineht@=\dimen158
-\@envbody=\toks27
+\@envbody=\toks28
 \multlinegap=\skip51
 \multlinetaggap=\skip52
-\mathdisplay@stack=\toks28
+\mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
@@ -259,11 +259,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count286
+\c@section@level=\count287
 )
 \@linkdim=\dimen161
-\Hy@linkcounter=\count287
-\Hy@pagecounter=\count288
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
  (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -271,7 +271,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count289
+\Hy@SavedSpaceFactor=\count290
  (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -284,7 +284,7 @@ Package hyperref Info: Plain pages OFF on input line 4196.
 Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4448.
-\c@Hy@tempcnt=\count290
+\c@Hy@tempcnt=\count291
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
@@ -301,7 +301,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count291
+\Fld@menulength=\count292
 \Field@Width=\dimen163
 \Fld@charsize=\dimen164
 Package hyperref Info: Hyper figures OFF on input line 6065.
@@ -316,9 +316,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6095.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count292
-\c@Item=\count293
-\c@Hfootnote=\count294
+\Hy@abspage=\count293
+\c@Item=\count294
+\c@Hfootnote=\count295
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -329,8 +329,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count295
-\c@bookmark@seq@number=\count296
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -363,29 +363,29 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen172
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count297
-\c@continuedfloat=\count298
+\c@caption@flags=\count298
+\c@continuedfloat=\count299
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count299
+\c@subfigure=\count300
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count300
+\c@subtable=\count301
 ) (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2026-03-26 v3.5.1 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count301
-\l__siunitx_number_exponent_fixed_int=\count302
-\l__siunitx_number_min_decimal_int=\count303
-\l__siunitx_number_min_integer_int=\count304
-\l__siunitx_number_round_precision_int=\count305
-\l__siunitx_number_lower_threshold_int=\count306
-\l__siunitx_number_upper_threshold_int=\count307
-\l__siunitx_number_group_first_int=\count308
-\l__siunitx_number_group_size_int=\count309
-\l__siunitx_number_group_min_int=\count310
-\l__siunitx_number_group_minimum_int=\count311
-\l__siunitx_compound_count_int=\count312
+\l__siunitx_number_uncert_offset_int=\count302
+\l__siunitx_number_exponent_fixed_int=\count303
+\l__siunitx_number_min_decimal_int=\count304
+\l__siunitx_number_min_integer_int=\count305
+\l__siunitx_number_round_precision_int=\count306
+\l__siunitx_number_lower_threshold_int=\count307
+\l__siunitx_number_upper_threshold_int=\count308
+\l__siunitx_number_group_first_int=\count309
+\l__siunitx_number_group_size_int=\count310
+\l__siunitx_number_group_min_int=\count311
+\l__siunitx_number_group_minimum_int=\count312
+\l__siunitx_compound_count_int=\count313
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
 ns.sty
@@ -402,9 +402,9 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
 \l__siunitx_table_after_box=\box60
 \l__siunitx_table_before_dim=\dimen175
 \l__siunitx_table_carry_dim=\dimen176
-\l__siunitx_unit_tmp_int=\count313
-\l__siunitx_unit_position_int=\count314
-\l__siunitx_unit_total_int=\count315
+\l__siunitx_unit_tmp_int=\count314
+\l__siunitx_unit_position_int=\count315
+\l__siunitx_unit_total_int=\count316
 \l__siunitx_sexagesimal_tmp_dim=\dimen177
 \l__siunitx_sexagesimal_marker_box=\box61
 \l__siunitx_sexagesimal_unit_box=\box62
@@ -413,7 +413,7 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen178
 \ar@mcellbox=\box63
 \extrarowheight=\dimen179
-\NC@list=\toks29
+\NC@list=\toks30
 \extratabsurround=\skip54
 \backup@length=\skip55
 \ar@cellbox=\box64
@@ -430,12 +430,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen187
 \cmidrulekern=\dimen188
 \defaultaddspace=\dimen189
-\@cmidla=\count316
-\@cmidlb=\count317
+\@cmidla=\count317
+\@cmidlb=\count318
 \@aboverulesep=\dimen190
 \@belowrulesep=\dimen191
-\@thisruleclass=\count318
-\@lastruleclass=\count319
+\@thisruleclass=\count319
+\@lastruleclass=\count320
 \@thisrulewidth=\dimen192
 )
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
@@ -444,24 +444,24 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LTright=\skip57
 \LTpre=\skip58
 \LTpost=\skip59
-\LTchunksize=\count320
+\LTchunksize=\count321
 \LTcapwidth=\dimen193
 \LT@head=\box65
 \LT@firsthead=\box66
 \LT@foot=\box67
 \LT@lastfoot=\box68
 \LT@gbox=\box69
-\LT@cols=\count321
-\LT@rows=\count322
-\c@LT@tables=\count323
-\c@LT@chunks=\count324
-\LT@p@ftn=\toks30
+\LT@cols=\count322
+\LT@rows=\count323
+\c@LT@tables=\count324
+\c@LT@chunks=\count325
+\LT@p@ftn=\toks31
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 22.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'english'.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
@@ -475,9 +475,14 @@ Package color Info: Driver file: pdftex.def on input line 149.
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count325
+\l__color_backend_stack_int=\count326
 \l__pdf_internal_box=\box70
-) (termo_p12.aux)
+) (termo_p12.aux
+(C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex
+Package babel Info: Importing basic data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+))
 \openout1 = `termo_p12.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -533,21 +538,23 @@ LaTeX Font Info:    ... okay on input line 36.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \. on input line 36.
+LaTeX Info: Redefining \% on input line 36.
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
+\scratchcounter=\count327
 \scratchdimen=\dimen194
 \scratchbox=\box71
-\nofMPsegments=\count327
-\nofMParguments=\count328
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count329
+\nofMPsegments=\count328
+\nofMParguments=\count329
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count330
 \MPscratchDim=\dimen195
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
-\everyMPtoPDFconversion=\toks32
+\MPnumerator=\count331
+\makeMPintoPDFobject=\count332
+\everyMPtoPDFconversion=\toks33
 )
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -573,12 +580,12 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: End \AtBeginDocument code.
 
 (C:\Users\josma\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
-slations-basic-dictionary-english.trsl
-File: translations-basic-dictionary-english.trsl (english translation file `tra
+slations-basic-dictionary-spanish.trsl
+File: translations-basic-dictionary-spanish.trsl (spanish translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 36.
+or `spanish'. on input line 36.
  (termo_p12.toc)
 \tf@toc=\write4
 \openout4 = `termo_p12.toc'.
@@ -586,7 +593,7 @@ or `english'. on input line 36.
  [1
 
 {C:/Users/josma/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<./Termodinamica/p12_termodinamica/grafica_temperatura.png, id=55, 462.528pt x 
+<./Termodinamica/p12_termodinamica/grafica_temperatura.png, id=60, 462.528pt x 
 346.896pt>
 File: ./Termodinamica/p12_termodinamica/grafica_temperatura.png Graphic file (t
 ype png)
@@ -594,24 +601,249 @@ ype png)
 Package pdftex.def Info: ./Termodinamica/p12_termodinamica/grafica_temperatura.
 png  used on input line 57.
 (pdftex.def)             Requested size: 364.19667pt x 273.16086pt.
- [2 <./Termodinamica/p12_termodinamica/grafica_temperatura.png>] [3] [4] [5] [6
-]
-Underfull \hbox (badness 2503) in paragraph at lines 241--242
-[]\OT1/cmr/m/n/10.95 Universidad de Granada (2026). \OT1/cmr/m/it/10.95 Guiones
- de Pr^^Sacticas de F^^S^^Psica\OT1/cmr/m/n/10.95 . Disponible en:
+ [2 <./Termodinamica/p12_termodinamica/grafica_temperatura.png>]
+! Undefined control sequence.
+\K ->\ERROR 
+            
+l.103 ...conductividad, obteniendo un valor de $\K
+                                                  _{exp} = 178.90 \pm 0.81$~...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\K ->\ERROR 
+            
+l.105 ...e el aluminio a temperatura ambiente ($\K
+                                                  _{teo} \approx 237$~W$\cdo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Lunn2025' on page 3 undefined on input line 105.
+
+
+LaTeX Warning: Citation `aluminio' on page 3 undefined on input line 122.
+
+[3]
+! Undefined control sequence.
+<argument> ...int_\l__siunitx_print_unit_mode_str 
+                                                  :n
+l.146 ...$u_t$ (s)} & {$\theta_1$ (\unit{\celsius}
+                                                  )} & {$u_{\theta_1}$ (\uni...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 ...$u_t$ (s)} & {$\theta_1$ (\unit{\celsius}
+                                                  )} & {$u_{\theta_1}$ (\uni...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> ...int_\l__siunitx_print_unit_mode_str 
+                                                  :n
+l.146 ...ius})} & {$u_{\theta_1}$ (\unit{\celsius}
+                                                  )} & {$\theta_2$ (\unit{\c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 ...ius})} & {$u_{\theta_1}$ (\unit{\celsius}
+                                                  )} & {$\theta_2$ (\unit{\c...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> ...int_\l__siunitx_print_unit_mode_str 
+                                                  :n
+l.146 ...celsius})} & {$\theta_2$ (\unit{\celsius}
+                                                  )} & {$u_{\theta_2}$ (\uni...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 ...celsius})} & {$\theta_2$ (\unit{\celsius}
+                                                  )} & {$u_{\theta_2}$ (\uni...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> ...int_\l__siunitx_print_unit_mode_str 
+                                                  :n
+l.146 ...ius})} & {$u_{\theta_2}$ (\unit{\celsius}
+                                                  )} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 ...ius})} & {$u_{\theta_2}$ (\unit{\celsius}
+                                                  )} \\
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> ...int_\l__siunitx_print_unit_mode_str 
+                                                  :n
+l.151 ...$u_t$ (s)} & {$\theta_1$ (\unit{\celsius}
+                                                  )} & {$u_{\theta_1}$ (\uni...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 ...$u_t$ (s)} & {$\theta_1$ (\unit{\celsius}
+                                                  )} & {$u_{\theta_1}$ (\uni...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> ...int_\l__siunitx_print_unit_mode_str 
+                                                  :n
+l.151 ...ius})} & {$u_{\theta_1}$ (\unit{\celsius}
+                                                  )} & {$\theta_2$ (\unit{\c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 ...ius})} & {$u_{\theta_1}$ (\unit{\celsius}
+                                                  )} & {$\theta_2$ (\unit{\c...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> ...int_\l__siunitx_print_unit_mode_str 
+                                                  :n
+l.151 ...celsius})} & {$\theta_2$ (\unit{\celsius}
+                                                  )} & {$u_{\theta_2}$ (\uni...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 ...celsius})} & {$\theta_2$ (\unit{\celsius}
+                                                  )} & {$u_{\theta_2}$ (\uni...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> ...int_\l__siunitx_print_unit_mode_str 
+                                                  :n
+l.151 ...ius})} & {$u_{\theta_2}$ (\unit{\celsius}
+                                                  )} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 ...ius})} & {$u_{\theta_2}$ (\unit{\celsius}
+                                                  )} \\
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4] [5] [6] [7] [8] [9]
+Underfull \hbox (badness 2503) in paragraph at lines 337--338
+[]\OT1/cmr/m/n/10.95 Universidad de Gra-na-da (2026). \OT1/cmr/m/it/10.95 Guio-
+nes de Pr^^Sacti-cas de F^^S^^Psi-ca\OT1/cmr/m/n/10.95 . Dis-po-ni-ble en:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 [][]$\OT1/cmtt/m/n/10.95 https : / / pradogrado2526 . ugr . es / pluginfile . p
 hp / 710739 / mod _ resource / content / 2 /
  []
 
-[7] (termo_p12.aux)
+[10] (termo_p12.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -622,37 +854,46 @@ Package rerunfilecheck Warning: File `termo_p12.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `termo_p12.out':
-(rerunfilecheck)             Before: 0905003D0A73884E9EC517F5B02ADD3D;1026
-(rerunfilecheck)             After:  49B00CFB94F16C330C1C04725F0F32AD;1179.
+(rerunfilecheck)             Before: 49B00CFB94F16C330C1C04725F0F32AD;1179
+(rerunfilecheck)             After:  F9B09ACF7BD3EFB57167537E1EFA3ADD;1285.
  ) 
 Here is how much of TeX's memory you used:
- 17079 strings out of 474486
- 341278 string characters out of 5743756
- 1972542 words of memory out of 5000000
- 39160 multiletter control sequences out of 15000+600000
+ 17621 strings out of 474486
+ 349687 string characters out of 5743756
+ 1976542 words of memory out of 5000000
+ 39662 multiletter control sequences out of 15000+600000
  565301 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,845b,1217s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\josma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1095.pk><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/josma/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/josma/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/josma/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/josma/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/j
-osma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
-/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.
-pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr8.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/josma/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on termo_p12.pdf (7 pages, 229356 bytes).
+ 75i,10n,79p,899b,1219s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{appendix.B} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{appendix.A} has been referenced but does not exist,
+ replaced by a fixed one
+
+ <C:\Users\josma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
+95.pk><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/josma/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/josma/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/josma/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jos
+ma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
+sers/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.p
+fb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr6.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr8.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/josma/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on termo_p12.pdf (10 pages, 264801 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
