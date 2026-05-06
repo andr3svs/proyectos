@@ -44,7 +44,7 @@ Fixed parameters for the plot
 """
 specific_heat_capacity = 897  # J/(kg*K), specific heat capacity of aluminum IM NOT SURE
 density_aluminum = 2700  # kg/m^3, density of aluminum IM NOT SURE 
-radius_of_cylinder = 0.01  # meters, radius of the aluminum cylinder IM NOT SURE
+radius_of_cylinder = 0.02  # meters, radius of the aluminum cylinder IM NOT SURE
 distance_between_sensors = ufloat(0.05, 0.001) # meters, distance between the two sensors IM NOT SURE
 """
 INTRODUCING DATA
