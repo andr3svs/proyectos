@@ -82,13 +82,13 @@ Mediante este ajuste, se extrajeron los parámetros físicos de la onda. Se ha o
 \end{table}
 
 \subsection{Parámetros físicos derivados}
-A partir de la atenuación y el desfase, se calcularon los parámetros $m$ y $h$ para la distancia $d = (0.050 \pm 0.001)\,\mathrm{m}$. Estos parámetros se utilizaron posteriormente para determinar la difusividad térmica ($K_{exp}$) y la conductividad térmica experimental ($\lambda_{exp}$).
+A partir de la atenuación y el desfase, se calcularon los parámetros $m$ y $h$ para la distancia $d = (0.050 \pm 0.001)\,\mathrm{m}$. Estos parámetros se utilizaron posteriormente para determinar la condcutividad térmica ($K_{exp}$) y el coeficiente de pérdidas laterales ($\lambda_{exp}$).
 
 \begin{itemize}
     \item $m = (20.91 \pm 0.60)\,\mathrm{m^{-1}}$
     \item $h = (45.7 \pm 1.3)\,\mathrm{m^{-1}}$
-    \item $K_{exp} = (16.75 \pm 0.81)\,\mathrm{m^2\,s^{-1}}$
-    \item $\lambda_{exp} = (138.4 \pm 5.8)\,\mathrm{W\,m^{-1}\,K^{-1}}$
+    \item $K_{exp} = (16.75 \pm 0.81)\,\mathrm{W\,m^{-1}\,K^{-1}}$
+    \item $\lambda_{exp} = (138.4 \pm 5.8)\,\mathrm{W\,m^{-2}\,K^{-1}}$
 \end{itemize}
 El análisis de los datos experimentales obtenidos en el estado estacionario nos ha permitido ver el comportamiento ondulatorio del flujo de calor a lo largo de la barra de aluminio. 
 
@@ -100,7 +100,7 @@ Utilizando la distancia conocida entre los sensores ($d = 0.0500 \pm 0.0010$~m) 
 
 Hemos obtenido el coeficiente $m = 20.91 \pm 0.60$~m$^{-1}$ y por otro lado, la otra constante obtenida es $h = 45.7 \pm 1.3$~m$^{-1}$. 
 
-A partir de estos parámetros ondulatorios, se ha deducido la conductividad térmica experimental del material, obteniendo un valor de $\lambda_{exp} = 138.4 \pm 5.8$~W$\cdot$m$^{-1}$K$^{-1}$. 
+A partir de estos parámetros ondulatorios, se ha deducido el coeficiente de pérdida lateral experimental del material, obteniendo un valor de $\lambda_{exp} = 138.4 \pm 5.8$~W$\cdot$m$^{-1}$K$^{-1}$. 
 
 Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\lambda_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la obtenida un poco menos que la mitad de la bibliográfica.
 
@@ -291,21 +291,23 @@ Sustituyendo, la \textbf{fórmula final de la incertidumbre} es:
     u_h = \sqrt{ \left( \frac{u_{\phi}}{d} \right)^2 + \left( -\frac{\phi}{d^2} u_d \right)^2 }
 \end{equation}
 
-\paragraph{3. Difusividad térmica ($K_{exp}$):}
-A partir de $K_{exp} = \frac{\omega}{2 m h}$ (donde $\omega = 2\pi / \tau$), las derivadas parciales resultan:
-\begin{align}
-    \frac{\partial K_{exp}}{\partial \omega} &= \frac{1}{2 m h} \\
-    \frac{\partial K_{exp}}{\partial m} &= -\frac{\omega}{2 m^2 h} \\
-    \frac{\partial K_{exp}}{\partial h} &= -\frac{\omega}{2 m h^2}
-\end{align}
-\textit{Nota: La incertidumbre de la frecuencia angular se propaga como $u_{\omega} = \frac{2\pi}{\tau^2} u_{\tau}$.}
+\paragraph{3. Conductividad térmica ($K_{exp}$):}
 
-Sustituyendo, la \textbf{fórmula final de la incertidumbre} es:
+Asumiendo que el calor específico ($c$) y la densidad ($\rho$) del material son valores teóricos tabulados sin incertidumbre experimental apreciable, las magnitudes que propagan error son el coeficiente de atenuación ($m$), la constante de desfase ($h$) y el periodo de oscilación ($\tau$). 
+
+Las derivadas parciales correspondientes son:
+\begin{align}
+    \frac{\partial K}{\partial h} &= -\frac{c \rho \pi}{h^2 m \tau} \\
+    \frac{\partial K}{\partial m} &= -\frac{c \rho \pi}{h m^2 \tau} \\
+    \frac{\partial K}{\partial \tau} &= -\frac{c \rho \pi}{h m \tau^2}
+\end{align}
+
+Sustituyendo en la expresión general de propagación cuadrática, la \textbf{fórmula final de la incertidumbre} es:
 \begin{equation}
-    u_{K_{exp}} = \sqrt{ \left( \frac{u_{\omega}}{2 m h} \right)^2 + \left( -\frac{\omega}{2 m^2 h} u_m \right)^2 + \left( -\frac{\omega}{2 m h^2} u_h \right)^2 }
+    u_K = \sqrt{ \left( -\frac{c \rho \pi}{h^2 m \tau} u_h \right)^2 + \left( -\frac{c \rho \pi}{h m^2 \tau} u_m \right)^2 + \left( -\frac{c \rho \pi}{h m \tau^2} u_\tau \right)^2 }
 \end{equation}
 
-\paragraph{4. Conductividad térmica ($\lambda_{exp}$):}
+\paragraph{4. Coeficiente de pérdida de calor lateral ($\lambda_{exp}$):}
 Asumiendo que la densidad ($\rho$) y el calor específico ($c$) del material se toman como valores tabulados exactos (es decir, sin incertidumbre apreciable frente a las medidas experimentales), la conductividad viene dada por $\lambda_{exp} = K_{exp} \rho c$. Su derivada parcial respecto a la única variable con error es:
 \begin{align}
     \frac{\partial \lambda_{exp}}{\partial K_{exp}} &= \rho c
