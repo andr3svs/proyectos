@@ -310,14 +310,22 @@ Sustituyendo en la expresión general de propagación cuadrática, la \textbf{f�
 \end{equation}
 
 \paragraph{4. Coeficiente de pérdida de calor lateral ($\lambda_{exp}$):}
-Asumiendo que la densidad ($\rho$) y el calor específico ($c$) del material se toman como valores tabulados exactos (es decir, sin incertidumbre apreciable frente a las medidas experimentales), la pérdida de calor lateral viene dada por $\lambda_{exp} = K_{exp} \rho c$. Su derivada parcial respecto a la única variable con error es:
+A partir de la parte real de la ecuación diferencial del sistema, se obtiene la expresión para el coeficiente de pérdida de calor lateral. Aplicando la corrección en valor absoluto (ya que en este montaje empírico $h > m$), la magnitud se define como:
+\begin{equation}
+    \lambda = \frac{K \cdot r}{2} (h^2 - m^2)
+\end{equation}
+
+Para evaluar su incertidumbre ($u_\lambda$), se asume que propagan error la conductividad térmica calculada ($K$), el radio de la barra ($r$), la constante de desfase ($h$) y el coeficiente de atenuación ($m$). Las derivadas parciales correspondientes son:
 \begin{align}
-    \frac{\partial \lambda_{exp}}{\partial K_{exp}} &= \rho c
+    \frac{\partial \lambda}{\partial K} &= \frac{r}{2} (h^2 - m^2) \\
+    \frac{\partial \lambda}{\partial r} &= \frac{K}{2} (h^2 - m^2) \\
+    \frac{\partial \lambda}{\partial h} &= K \cdot r \cdot h \\
+    \frac{\partial \lambda}{\partial m} &= - K \cdot r \cdot m
 \end{align}
 
 Sustituyendo en la expresión general de propagación cuadrática, la \textbf{fórmula final de la incertidumbre} es:
 \begin{equation}
-    u_{\lambda_{exp}} = \sqrt{ \left( \rho c \cdot u_{K_{exp}} \right)^2 }
+    u_\lambda = \sqrt{ \left[ \frac{r(h^2 - m^2)}{2} u_K \right]^2 + \left[ \frac{K(h^2 - m^2)}{2} u_r \right]^2 + \left( K r h \cdot u_h \right)^2 + \left( -K r m \cdot u_m \right)^2 }
 \end{equation}
 
 
