@@ -30,8 +30,8 @@
 \renewcommand{\arraystretch}{1.2}
 
 \title{Práctica 12: Ondas térmicas en una barra metálica}
-\author{Andrés Vinuesa \\ Grupo A22}
-\date{Realización: 27 de abril de 2026 \\ Entrega: 30 de abril de 2026}
+\author{Andrés Vinuesa Espinosa y José María Martínez Herrada\\ Grupo B2}
+\date{Realización: 22 de abril de 2026 \\ Entrega: 6 de mayo de 2026}
 
 \begin{document}
 
@@ -82,13 +82,13 @@ Mediante este ajuste, se extrajeron los parámetros físicos de la onda. Se ha o
 \end{table}
 
 \subsection{Parámetros físicos derivados}
-A partir de la atenuación y el desfase, se calcularon los parámetros $m$ y $h$ para la distancia $d = (0.050 \pm 0.001)\,\mathrm{m}$. Estos parámetros se utilizaron posteriormente para determinar la difusividad térmica ($K_{exp}$) y la conductividad térmica experimental ($\lambda_{exp}$).
+A partir de la atenuación y el desfase, se calcularon los parámetros $m$ y $h$ para la distancia $d = (0.050 \pm 0.001)\,\mathrm{m}$. Estos parámetros se utilizaron posteriormente para determinar la condcutividad térmica ($K_{exp}$) y el coeficiente de pérdidas laterales ($\lambda_{exp}$).
 
 \begin{itemize}
-    \item $m = (20.91 \pm 0.60)\,\mathrm{m^{-1}}$
-    \item $h = (45.7 \pm 1.3)\,\mathrm{m^{-1}}$
-    \item $K_{exp} = (16.75 \pm 0.81)\,\mathrm{m^2\,s^{-1}}$
-    \item $\lambda_{exp} = (138.4 \pm 5.8)\,\mathrm{W\,m^{-1}\,K^{-1}}$
+    \item $m = (10.45 \pm 0.60)\,\mathrm{m^{-1}}$
+    \item $h = (8.6 \pm 1.3)\,\mathrm{m^{-1}}$
+    \item $K_{exp} = (178.90 \pm 0.81)\,\mathrm{W\,m^{-1}\,K^{-1}}$
+    \item $\lambda_{exp} = (64.3 \pm 5.8)\,\mathrm{W\,m^{-2}\,K^{-1}}$
 \end{itemize}
 El análisis de los datos experimentales obtenidos en el estado estacionario nos ha permitido ver el comportamiento ondulatorio del flujo de calor a lo largo de la barra de aluminio. 
 
@@ -96,13 +96,13 @@ A partir del ajuste, se han determinado unas amplitudes de oscilación térmica 
 
 Ambos sensores registran un periodo de oscilación prácticamente idéntico ($\tau \approx 475$~s), lo que confirma que la frecuencia de excitación térmica se conserva durante la propagación.
 
-Utilizando la distancia conocida entre los sensores ($d = 0.0500 \pm 0.0010$~m) y la diferencia de fase extraída de los ajustes, se han calculado los parámetros cinemáticos de la onda térmica. 
+Utilizando la distancia conocida entre los sensores ($d = 0.1000 \pm 0.0010$~m) y el radio ($r = 0.0200 \pm 0.0010$~m), la diferencia de fase extraída de los ajustes, se han calculado los parámetros cinemáticos de la onda térmica. 
 
-Hemos obtenido el coeficiente $m = 20.91 \pm 0.60$~m$^{-1}$ y por otro lado, la otra constante obtenida es $h = 45.7 \pm 1.3$~m$^{-1}$. 
+Hemos obtenido el coeficiente $m = 10.45 \pm 0.60$~m$^{-1}$ y por otro lado, la otra constante obtenida es $h = 8.6 \pm 1.3$~m$^{-1}$. 
 
-A partir de estos parámetros ondulatorios, se ha deducido la conductividad térmica experimental del material, obteniendo un valor de $\lambda_{exp} = 138.4 \pm 5.8$~W$\cdot$m$^{-1}$K$^{-1}$. 
+A partir de estos parámetros ondulatorios, se ha deducido el coeficiente de conductividad, obteniendo un valor de $K_{exp} = 178.90 \pm 0.81$~W$\cdot$m$^{-1}$K$^{-1}$. 
 
-Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($\lambda_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la obtenida un poco menos que la mitad de la bibliográfica.
+Al comparar este resultado con el valor teórico que tiene el aluminio a temperatura ambiente ($K_{teo} \approx 237$~W$\cdot$m$^{-1}$K$^{-1}$)~\cite{Lunn2025}, se observa un error significativo, siendo la obtenida menor que la bibliográfica, para ser exactos unas 1.32 veces más pequeña aún habiendo usado la capacidad calorífica y densidad teórica.
 
 Esta discrepancia puede deberse tanto a errores en el propio montaje experimental como a los casos que se plantean a continuación por orden de severidad:
 \paragraph{}
@@ -124,6 +124,8 @@ No obstante, aunque es una explicación plausible, no tenemos forma de confirmar
 es decir, podríamos tener una confluencia de varios motivos, podriamos tener una aleación de aluminio con una conductividad térmica menor, que disminuye aún más
 por la disipación de calor por convección, y a su vez el modelo matemático que usamos no es lo suficientemente preciso, lo que explicaría la gran diferencia entre el valor obtenido y el valor teórico del aluminio puro.
 
+Con el resultado obtenido del coeficiente de conducción, hallaremos el coeficiente de pérdida lateral $\lambda$, que haciendo los cálculos correspondientes nos sale un valor de $\lambda_{exp} = (64.3 \pm 5.8)\,\mathrm{W\,m^{-2}\,K^{-1}}$. Este resultado no podemos compararlo con uno teórico para ver el error obtenido, pues este valor no es una propiedad del material, este es un valor que depende factores externos como puede ser la corriente de aire en el laboratorio. Podemos estimar que este valor también puede llegar a tener error. Nos da un valor un poco grande de pérdida lateral que se puede explicar el que sea un poco elevado debido al pequeño ventilador que tiene el montaje experimental creando esa convección con el aire, haciendo que la pérdida lateral aumente significsttiva respecto al aire en reposo.
+
 \section{Cuestiones Teóricas}
 
 En relación con las cuestiones teóricas planteadas en la práctica de laboratorio, estas son las respuestas a las preguntas:
@@ -141,12 +143,12 @@ Todos los datos obtenidos durante el experimento se presentan en la Tabla~\ref{t
 \begin{longtable}{rrrrrr}
     \caption{Datos experimentales de temperatura en función del tiempo.} \label{tab:raw_data} \\
     \toprule
-    {$t$ (s)} & {$u_t$ (s)} & {$\theta_1$ (\unit{\celsius})} & {$u_{\theta_1}$ (\unit{\celsius})} & {$\theta_2$ (\unit{\celsius})} & {$u_{\theta_2}$ (\unit{\celsius})} \\
+    {$t$ (s)} & {$u_t$ (s)} & {$\theta_1$ (deg C)} & {$u_{\theta_1}$ (deg C)} & {$\theta_2$ (deg C)} & {$u_{\theta_2}$ (deg C)} \\
     \midrule
     \endfirsthead
     \multicolumn{6}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
     \toprule
-    {$t$ (s)} & {$u_t$ (s)} & {$\theta_1$ (\unit{\celsius})} & {$u_{\theta_1}$ (\unit{\celsius})} & {$\theta_2$ (\unit{\celsius})} & {$u_{\theta_2}$ (\unit{\celsius})} \\
+    {$t$ (s)} & {$u_t$ (s)} & {$\theta_1$ (deg C)} & {$u_{\theta_1}$ (deg C)} & {$\theta_2$ (deg C)} & {$u_{\theta_2}$ (deg C)} \\
     \midrule
     \endhead
     \midrule
@@ -256,7 +258,7 @@ Las medidas de temperatura ($\theta_1$, $\theta_2$), el tiempo ($t$) y la distan
 \begin{itemize}
     \item La incertidumbre en el tiempo viene dada por la resolución del cronómetro o sistema de adquisición: $u_t = 0.1$~s.
     \item La incertidumbre de los termopares está determinada por la precisión del instrumento de medida digital: $u_{\theta} = 0.1$~$^\circ$C.
-    \item La incertidumbre en la distancia se asume a partir del error de paralaje y la resolución de la regla graduada: $u_d = 0.001$~m.
+    \item La incertidumbre en la distancia se asume con resolución de la regla graduada: $u_d = 0.001$~m = $u_r = 0.001$~m
 \end{itemize}
 Adicionalmente, las amplitudes ($A_1$, $A_2$), el periodo ($\tau$) y el desfase temporal ($\phi$) proceden del ajuste, por lo que su incertidumbre es el error estándar de los parámetros que lo da el algoritmo que hemos usado.
 
@@ -291,29 +293,39 @@ Sustituyendo, la \textbf{fórmula final de la incertidumbre} es:
     u_h = \sqrt{ \left( \frac{u_{\phi}}{d} \right)^2 + \left( -\frac{\phi}{d^2} u_d \right)^2 }
 \end{equation}
 
-\paragraph{3. Difusividad térmica ($K_{exp}$):}
-A partir de $K_{exp} = \frac{\omega}{2 m h}$ (donde $\omega = 2\pi / \tau$), las derivadas parciales resultan:
-\begin{align}
-    \frac{\partial K_{exp}}{\partial \omega} &= \frac{1}{2 m h} \\
-    \frac{\partial K_{exp}}{\partial m} &= -\frac{\omega}{2 m^2 h} \\
-    \frac{\partial K_{exp}}{\partial h} &= -\frac{\omega}{2 m h^2}
-\end{align}
-\textit{Nota: La incertidumbre de la frecuencia angular se propaga como $u_{\omega} = \frac{2\pi}{\tau^2} u_{\tau}$.}
+\paragraph{3. Conductividad térmica ($K_{exp}$):}
 
-Sustituyendo, la \textbf{fórmula final de la incertidumbre} es:
-\begin{equation}
-    u_{K_{exp}} = \sqrt{ \left( \frac{u_{\omega}}{2 m h} \right)^2 + \left( -\frac{\omega}{2 m^2 h} u_m \right)^2 + \left( -\frac{\omega}{2 m h^2} u_h \right)^2 }
-\end{equation}
+Asumiendo que el calor específico ($c$) y la densidad ($\rho$) del material son valores teóricos tabulados sin incertidumbre experimental apreciable, las magnitudes que propagan error son el coeficiente de atenuación ($m$), la constante de desfase ($h$) y el periodo de oscilación ($\tau$). 
 
-\paragraph{4. Conductividad térmica ($\lambda_{exp}$):}
-Asumiendo que la densidad ($\rho$) y el calor específico ($c$) del material se toman como valores tabulados exactos (es decir, sin incertidumbre apreciable frente a las medidas experimentales), la conductividad viene dada por $\lambda_{exp} = K_{exp} \rho c$. Su derivada parcial respecto a la única variable con error es:
+Las derivadas parciales correspondientes son:
 \begin{align}
-    \frac{\partial \lambda_{exp}}{\partial K_{exp}} &= \rho c
+    \frac{\partial K}{\partial h} &= -\frac{c \rho \pi}{h^2 m \tau} \\
+    \frac{\partial K}{\partial m} &= -\frac{c \rho \pi}{h m^2 \tau} \\
+    \frac{\partial K}{\partial \tau} &= -\frac{c \rho \pi}{h m \tau^2}
 \end{align}
 
 Sustituyendo en la expresión general de propagación cuadrática, la \textbf{fórmula final de la incertidumbre} es:
 \begin{equation}
-    u_{\lambda_{exp}} = \sqrt{ \left( \rho c \cdot u_{K_{exp}} \right)^2 }
+    u_K = \sqrt{ \left( -\frac{c \rho \pi}{h^2 m \tau} u_h \right)^2 + \left( -\frac{c \rho \pi}{h m^2 \tau} u_m \right)^2 + \left( -\frac{c \rho \pi}{h m \tau^2} u_\tau \right)^2 }
+\end{equation}
+
+\paragraph{4. Coeficiente de pérdida de calor lateral ($\lambda_{exp}$):}
+A partir de la parte real de la ecuación diferencial del sistema, se obtiene la expresión para el coeficiente de pérdida de calor lateral que se define como:
+\begin{equation}
+    \lambda = \frac{K \cdot r}{2} (m^2 - h^2)
+\end{equation}
+
+Para evaluar su incertidumbre ($u_\lambda$), se asume que propagan error la conductividad térmica calculada ($K$), el radio de la barra ($r$), la constante de desfase ($h$) y el coeficiente de atenuación ($m$). Las derivadas parciales correspondientes son:
+\begin{align}
+    \frac{\partial \lambda}{\partial K} &= \frac{r}{2} (m^2 - h^2) \\
+    \frac{\partial \lambda}{\partial r} &= \frac{K}{2} (m^2 - h^2) \\
+    \frac{\partial \lambda}{\partial h} &= K \cdot r \cdot h \\
+    \frac{\partial \lambda}{\partial m} &= - K \cdot r \cdot m
+\end{align}
+
+Sustituyendo en la expresión general de propagación cuadrática, la \textbf{fórmula final de la incertidumbre} es:
+\begin{equation}
+    u_\lambda = \sqrt{ \left[ \frac{r(m^2 - h^2)}{2} u_K \right]^2 + \left[ \frac{K(m^2 - h^2)}{2} u_r \right]^2 + \left( K r h \cdot u_h \right)^2 + \left( -K r m \cdot u_m \right)^2 }
 \end{equation}
 
 
