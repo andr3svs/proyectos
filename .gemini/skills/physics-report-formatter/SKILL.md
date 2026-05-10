@@ -7,7 +7,7 @@ description: Specialized skill for generating standardized LaTeX laboratory repo
 
 ## Overview
 This skill transforms structured measurement data (from `data_provenance.md`) and university guidelines (Guiones) into a professionally formatted LaTeX report. It strictly follows the reference structures seen in experiments like M3bis2.
-
+DO NOT ADD ANY REASONAMENT; CHECK TWICE TO NOT MESS UP THE NOMENCLATURE OF THE VARIABLES, TABLES, FIGURES, ETC. DO NOT INTERPRET THE DATA IN ANY WAY. DO NOT WRITE ANY DISCUSSION OR CONCLUSIONS. ONLY FOCUS ON FORMATTING THE DATA AND STRUCTURE.
 ## Workflow
 
 ### 1. Structural Analysis
