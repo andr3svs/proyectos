@@ -130,3 +130,10 @@ print(f"A = {A_fit_temperature} ± {A_err_temperature}")
 print(f"B = {B_fit_temperature} ± {B_err_temperature}")
 print(f"R² = {r_squared:.6f}") 
 
+"""
+4. Calculo temperatura vaso agua
+"""
+resistencia_vaso=ufloat(11.5,11.5*0.08+0.00001)
+temperatura_vaso= B_fit_temperature_ufloat / unumpy.log(resistencia_vaso / A_fit_temperature_ufloat)
+print(f"\nCalculated temperature of the water bath:")
+print(f"T = {temperatura_vaso-273.15} ºC")
