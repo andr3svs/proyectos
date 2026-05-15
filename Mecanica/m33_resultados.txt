@@ -1,0 +1,10 @@
+Máximos en los índices: [ 1 16 22 39 46 61]
+Mínimos en los índices: [ 8 17 28 44 56]
+Fit MÁXIMOS: c = 380.54 ± 0.85 m/s
+Fit MÍNIMOS: c = 374.02 ± 1.15 m/s
+
+--- Parámetros Físicos ---
+Temperatura: theta = 27.5 °C
+Velocidad teórica a 27.5 °C: c = 347.58 m/s
+Diferencia MÁXIMOS: 9.48 %
+Diferencia MÍNIMOS: 7.61 %

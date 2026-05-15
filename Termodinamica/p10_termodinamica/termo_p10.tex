@@ -1,0 +1,73 @@
+%====================================================%
+% Termodinámica                                      %
+% Práctica 10                                        %
+% Calibrado de termistores                           %
+%====================================================%
+
+% Datos de la práctica (no modificar)
+\def\numeroPractica{10}                       % Número de práctica
+\def\tituloPractica{Calibrado de termistores} % Título de la práctica
+
+% Datos a modificar por el alumnado
+\def\fechaPractica{dd/mm/aaaa} % Fecha de realización de la práctica
+\def\fechaEntrega{dd/mm/aaaa}  % Fecha de entrega del informe
+
+% Generar título automáticamente
+\maketitle
+
+% Resultados
+\section{Resultados}
+
+\subsection{Calibrado mediante dos puntos}
+
+Determina los valores de las constantes $A$ y $B$, con sus cifras significativas, utilizando la relación NTC de entre resistencia y temperatura para dos temperaturas conocidas.
+
+\subsection{Calibrado mediante ajuste}
+
+Representa $\ln R$ en función de $1/T$ para el barrido de temperaturas medido. Mediante un ajuste por mínimos cuadrados, determine los valores de las constantes $A$ y $B$.
+
+\subsection{Medición de temperatura}
+
+Compara los valores obtenidos para las constantes $A$ y $B$ en los apartados anteriores y comente los resultados. Utilizando ambas parejas de valores en la ecuación termométrica, determina la temperatura del agua del grifo.
+
+% Conclusiones
+\section{Conclusiones}
+
+Resume brevemente en qué ha consistido la práctica, describe los aspectos más relevantes de la misma y reflexiona sobre los principales resultados obtenidos. El contenido de esta sección no debe superar las 300 palabras.
+
+% Anexos
+\appendix
+
+\section{Anexos}
+
+\subsection{Tablas de datos}
+
+Añade tantas subsecciones y tablas adicionales como consideres necesarias, incluyendo todos los datos que consideres que aportan información valiosa.
+
+\newpage % Este comando no hará falta cuando empecéis a rellenar la plantilla.
+
+\subsubsection{Relación resistencia-temperatura}
+
+\begin{table}[ht!]
+    \centering
+    \begin{tabular}{c|c}
+    $T\ (\pm ...\text{ u})$ & $R\ (\pm ...\text{ u})$\\
+    \hline
+    ... & ... \\
+    \hline
+    \end{tabular}
+    \caption{Introduce un pie de tabla descriptivo.}
+    \label{tab:T-R}
+\end{table}
+
+\subsection{Incertidumbres}
+
+Discute qué tipos de incertidumbre posee cada magnitud medida y cómo se ha calculado, mencionando en cada caso si se trata de una medida directa o indirecta. Para las medidas indirectas, indica explícitamente el resultado analítico de las derivadas parciales necesarias para calcular la propagación cuadrática de errores.
+
+\subsection{Ajuste lineal de los datos}
+
+Si en el desarrollo de la práctica has tenido que realizar ajuste lineal de los datos, indica en cada caso qué datos se han ajustado. Identifica cada magnitud en la ecuación de la recta y discute qué valores has obtenido a partir del ajuste. Por último, discute la bondad de cada ajuste realizado.
+
+% Referencias
+% Incluye las referencias bibliográficas en el archivo referencias.bib
+\printbibliography

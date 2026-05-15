@@ -1,0 +1,102 @@
+
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+
+% Core packages
+\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}
+\usepackage{multicol}
+\usepackage{multirow}
+
+% Paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1\baselineskip}
+
+\title{Práctica 6: Medidas de radiactividad ambiental}
+\author{Hao Chen Miguel Ángel Montero Gómez Andrés Vinuesa Espinosa}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+\section{Metodología}
+\section{Resultados}
+A partir de los valores medios de cuentas en 5 minutos, se obtiene las cuentas por minuto (cpm), suponiendo
+que la desintegraión radiactiva sigue una distribución de Poisson, lo cual es una hipótesis razonable, 
+ya que este es un suceso poco frecuente que ocurre de forma aleatoria e indepndiente.
+Se ha tomado un intervalo de confianza del 95\%,
+\begin{itemize}
+    \item \textbf{Cuentas por minuto (cpm)}:
+    \begin{itemize}
+        \item Interior: $c = \frac{103.67}{5} = \textbf{20.73} \pm \mathbf{3.99} \text{ cpm}$
+        \item Exterior: $c = \frac{94.67}{5} = \textbf{18.93} \pm \mathbf{3.81} \text{ cpm}$
+    \end{itemize}
+
+    \item \textbf{Dosis de exposición en mR/h} (dividiendo las cpm entre 1000):
+    \begin{itemize}
+        \item Interior: $20.73 / 1000 = (0.0207 \pm 0.0040) \text{ mR/h}$
+        \item Exterior: $18.93 / 1000 = (0.0189 \pm 0.0038) \text{ mR/h}$
+    \end{itemize}
+    
+    \item \textbf{Dosis absorbida en mGy/h} ($\approx 0.01 \times \text{dosis de exposición}$):
+    \begin{itemize}
+        \item Interior: $0.01 \times 0.0207 = (0.000207 \pm 0.000040) \text{ mGy/h}$
+        \item Exterior: $0.01 \times 0.0189 = (0.000189 \pm 0.000038) \text{ mGy/h}$
+    \end{itemize}
+    
+    \item \textbf{Dosis absorbida diaria en mGy/día}:
+    \begin{itemize}
+        \item Interior: $0.000207 \times 24 = (0.00498 \pm 0.00096) \text{ mGy/día}$
+        \item Exterior: $0.000189 \times 24 = (0.00454 \pm 0.00092) \text{ mGy/día}$
+    \end{itemize}
+    
+    \item \textbf{Dosis equivalente en mSv/h} ($Q=1$ para radiación $\gamma$):
+    \begin{itemize}
+        \item Interior: $1 \times 0.000207 = (0.000207 \pm 0.000040) \text{ mSv/h} \quad (\approx 0.21 \pm 0.04 \, \mu\text{Sv/h})$
+        \item Exterior: $1 \times 0.000189 = (0.000189 \pm 0.000038) \text{ mSv/h} \quad (\approx 0.19 \pm 0.04 \, \mu\text{Sv/h})$
+    \end{itemize}
+\end{itemize}
+Cabe recalacar, que nuestros datos pueden estar sesgados, ya que el detector de radiación fue colocado en tres lugares puntuales arbitrarios, 
+que pueden no ser una muestra representativa de la radiación de fondo en el campus, además, las medidas fueron tomadas en un día específico, lo que también puede influir a los resultados.
+Una forma de mitigar este error, podría ser realizar mediciones en más lugares y en intervalos temporales más ampios, idealmente un año, o un mes de cada estación, para así 
+obtener medidas que puedan tener menos sesgo experimental. Aunque a priori, la radiación de fondo debería ser relativamente constante,
+si nos limitamos a asumir esta hipótesis sin realizar medidas más exhaustivas, podríamos estar cometiendo un error de muestreo, lo que podría llevar a conclusiones erróneas sobre la radiación de fondo en el campus.
+
+
+\section{Comparación con fuentes de radiación conocidas}
+En la siguiente tabla se muestras los valores de dosis de radiación de fuentes conocidas, tanto naturales como artificiales, que vienen dadas por CITAR EL GUIÓN,
+en esta comparativa estamos asumiendo que la dosis de radiación gamma medida tanto en interior como exterior es representatvia de la radiación de fondo, y que 
+en el campus no se encuentra ningún objeto radiactivo que la perturbe.
+
+Como podemos observar, esto demuestra que la dosis de radiación gamma a la que nos exponemos por diversos procedimientos, es mucho menor
+que la que recibimos de forma natural en el ambiente.
+
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|l|l|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Origen}} & \multirow{2}{*}{\textbf{Fuente de Radiación}} & \textbf{Dosis típica} & \multicolumn{2}{c|}{\textbf{\% de la medida respecto a la fuente}} \\
+\cline{4-5}
+& & \textbf{(mSv/año)} & \textbf{Interior (1.82 mSv/a)} & \textbf{Exterior (1.66 mSv/a)} \\
+\hline
+Artificial & Fuentes médicas (Rayos X, medicina nuclear) & 1.28 & 142.2 \% & 129.7 \% \\
+Artificial & Productos de consumo (viajes, detectores, etc.) & 0.01 & 18200 \% & 16600 \% \\
+Artificial & Vertidos (industria nuclear, hospitales) & $< 0.001$ & $> 182000$ \% & $> 166000$ \% \\
+Natural & Radón (España media) & 1.15 & 158.3 \% & 144.3 \% \\
+Natural & Alimentos y bebidas (K-40, marisco) & 0.50 & 364.0 \% & 332.0 \% \\
+Natural & Rayos gamma (suelo, materiales construcción) & 0.48 & 379.2 \% & 345.8 \% \\
+Natural & Radiación cósmica & 0.39 & 466.7 \% & 425.6 \% \\
+\hline
+\hline
+\textbf{Experimental} & \textbf{Medida de radiación $\gamma$ (Interior)} & \textbf{1.82} & \textbf{100 \%} & \textbf{-} \\
+\textbf{Experimental} & \textbf{Medida de radiación $\gamma$ (Exterior)} & \textbf{1.66} & \textbf{-} & \textbf{100 \%} \\
+\hline
+\end{tabular}
+\caption{\footnotesize Comparativa de la dosis de radiación medida experimentalmente frente a fuentes comunes. El porcentaje muestra la proporción del valor experimental respecto a dichas fuentes.}
+\label{tab:comparativa_gamma}
+\end{table}
+
+\end{document}
