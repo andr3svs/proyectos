@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  16 MAY 2026 16:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.3)  17 MAY 2026 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -839,7 +839,7 @@ Package pdftex.def Info: m33_ajuste_minimos.png  used on input line 164.
 <unnamed.png, id=33, 1606.0pt x 1240.635pt>
 File: unnamed.png Graphic file (type png)
 <use unnamed.png>
-Package pdftex.def Info: unnamed.png  used on input line 204.
+Package pdftex.def Info: unnamed.png  used on input line 203.
 (pdftex.def)             Requested size: 307.2929pt x 237.37006pt.
 
 [5 <./m33_ajuste_maximos.png> <./m33_ajuste_minimos.png>] [6 <./unnamed.png>]
@@ -850,11 +850,11 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11329 strings out of 474486
- 176614 string characters out of 5743756
+ 11325 strings out of 474486
+ 176542 string characters out of 5743756
  1939542 words of memory out of 5000000
  33348 multiletter control sequences out of 15000+600000
- 620354 words of font info for 159 fonts, out of 8000000 for 9000
+ 620173 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,11n,93p,1009b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/NewTXM
@@ -867,7 +867,7 @@ ublic/newtx/txexs.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/type1
 pe1/public/newtx/txsys.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/newtx/ztmb.pfb><C:/Users/josma/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/newtx/ztmr.pfb>
-Output written on m33_report.pdf (8 pages, 15745237 bytes).
+Output written on m33_report.pdf (8 pages, 15744990 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
